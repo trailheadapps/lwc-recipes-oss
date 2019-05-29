@@ -1,0 +1,8 @@
+{
+    "extends": ["@salesforce/eslint-config-lwc/recommended"],
+    "rules": {
+        "@lwc/lwc/no-async-operation": "warn",
+        "@lwc/lwc/no-inner-html": "warn",
+        "@lwc/lwc/no-document-query": "warn"
+    }
+}

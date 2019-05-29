@@ -1,0 +1,20 @@
+:host {
+    width: 300px;
+}
+
+a {
+    display: flex;
+    margin-left: 6px;
+    text-decoration: none;
+    color: var(--color-text-link);
+}
+
+p {
+    margin: 0 0 8px 6px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

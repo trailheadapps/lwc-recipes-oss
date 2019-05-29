@@ -1,0 +1,36 @@
+<template>
+    <ui-card title="LibsMomentjs">
+        <div>
+            <ui-input
+                label="Current date/time"
+                type="datetime"
+                value={selectedDateTime}
+                onchange={handleDateTimeChange}
+                disabled
+            ></ui-input>
+            <ui-output
+                label="Day of year"
+                type="datetime"
+                date-type="dayOfYear"
+                value={dayOfYear}
+            ></ui-output>
+            <ui-output
+                label="Week of year"
+                type="datetime"
+                date-type="weekOfYear"
+                value={weekOfYear}
+            ></ui-output>
+            <ui-output
+                label="Calculated"
+                type="datetime"
+                value={calculatedDateTime}
+            ></ui-output>
+        </div>
+        <template if:true={error}>
+            <recipe-error-panel errors={error}></recipe-error-panel>
+        </template>
+        <recipe-view-source source="recipe/libsMomentjs" slot="footer">
+            Use moment.js in a Lightning web component.
+        </recipe-view-source>
+    </ui-card>
+</template>

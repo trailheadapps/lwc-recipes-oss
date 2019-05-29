@@ -1,0 +1,35 @@
+.field-label {
+    font-size: 1.4rem;
+    color: gray;
+    display: block;
+}
+
+div .checkbox {
+    display: block;
+    padding-bottom: 8px;
+}
+
+.checkbox .checkbox-label > span {
+    float: none;
+    padding-left: 1rem;
+}
+
+.input {
+    appearance: none;
+    background: 0 0;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-family: inherit;
+    position: relative;
+    padding: 4px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 4px;
+    width: 170px;
+    background-color: var(--color-bg-search);
+    outline: none;
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+<template
+    ><div class="page-nav">
+        <template if:true={urlPrevious}>
+            <p class="inner">
+                <!-- TODO Change arrow -->
+                <span class="previous"
+                    ><a href={urlPrevious}>{labelPrevious}</a> →</span
+                >
+            </p>
+        </template>
+        <template if:true={urlNext}>
+            <p class="inner">
+                <span class="next"><a href={urlNext}>{labelNext}</a> →</span>
+            </p>
+        </template>
+    </div>
+</template>

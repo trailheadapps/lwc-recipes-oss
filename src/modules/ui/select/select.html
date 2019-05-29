@@ -1,0 +1,10 @@
+<template>
+    <div>
+        <label class="field-label">{label}</label>
+        <select onchange={handleChange}>
+            <template for:each={options} for:item="option">
+                <option key={option.value}>{option.label}</option>
+            </template>
+        </select>
+    </div>
+</template>

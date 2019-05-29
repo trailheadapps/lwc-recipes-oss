@@ -1,0 +1,58 @@
+{
+    "name": "lwc-recipes-oss",
+    "version": "0.1.0",
+    "author": "Salesforce Developer Evangelism",
+    "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
+    "dependencies": {
+        "chart.js": "^2.8.0",
+        "d3": "^5.9.2",
+        "lwc-services": "^1",
+        "moment": "^2.24.0"
+    },
+    "description": "Lightning Web Components Recipes Open Source",
+    "devDependencies": {
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.5",
+        "prettier": "^1.17"
+    },
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
+    "husky": {
+        "hooks": {
+            "pre-push": "lint-staged"
+        }
+    },
+    "keywords": [
+        "lwc"
+    ],
+    "license": "CC0-1.0",
+    "lint-staged": {
+        "**/*.{html,js,json,yaml,yml,md}": [
+            "prettier --write"
+        ],
+        "**/modules/**": [
+            "eslint"
+        ],
+        "*": [
+            "git add"
+        ]
+    },
+    "repository": "trailheadapps/lwc-recipes-oss",
+    "scripts": {
+        "build": "lwc-services build",
+        "build:production": "lwc-services build --mode=production",
+        "lint": "eslint ./src/**/*.js",
+        "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
+        "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
+        "serve": "lwc-services build && lwc-services serve",
+        "serve:heroku": "lwc-services build --mode=production && lwc-services serve -i 0.0.0.0",
+        "test:unit": "lwc-services test",
+        "test:unit:coverage": "lwc-services test --coverage",
+        "test:unit:debug": "lwc-services test --debug",
+        "test:unit:watch": "lwc-services test --watch",
+        "watch": "lwc-services watch",
+        "watch:production": "lwc-services watch --mode=production"
+    }
+}

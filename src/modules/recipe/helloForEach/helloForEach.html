@@ -1,0 +1,14 @@
+<template>
+    <ui-card title="HelloForEach">
+        <ul>
+            <template for:each={contacts} for:item="contact">
+                <li key={contact.Id}>
+                    {contact.Name}, {contact.Title}
+                </li>
+            </template>
+        </ul>
+        <recipe-view-source source="recipe/helloForEach" slot="footer">
+            Loop through an array of items in a template.
+        </recipe-view-source>
+    </ui-card>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <ui-card title="HelloIterator">
+        <ul>
+            <template iterator:it={contacts}>
+                <div
+                    if:true={it.first}
+                    key={it.value.Id}
+                    class="list-first"
+                ></div>
+                <li key={it.value.Id}>
+                    {it.value.Name}, {it.value.Title}
+                    <div if:true={it.last} class="list-last"></div>
+                </li>
+            </template>
+        </ul>
+
+        <recipe-view-source source="recipe/helloIterator" slot="footer">
+            Loop through an array with special behavior for the first and last
+            items.
+        </recipe-view-source>
+    </ui-card>
+</template>
