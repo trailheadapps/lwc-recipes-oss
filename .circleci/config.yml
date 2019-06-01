@@ -50,7 +50,7 @@ jobs:
             - run:
                   name: Unit test Lightning Web Components
                   command: |
-                      npm run test:unit:coverage -- -- --runInBand
+                      yarn test:unit:coverage
             - persist_to_workspace:
                   # We're saving the generated coverage results (folder 'coverage', a sub-folder to 'project') so
                   # that we can upload them in another step to Codecov.io.
@@ -65,7 +65,7 @@ jobs:
             - run:
                   name: Push to Codecov.io
                   command: |
-                      # Uploading Apex and LWC tests
+                      # Uploading LWC tests
                       bash <(curl -s https://codecov.io/bash)
 
 workflows:
