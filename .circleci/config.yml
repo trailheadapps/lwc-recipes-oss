@@ -50,7 +50,7 @@ jobs:
             - run:
                   name: Unit test Lightning Web Components
                   command: |
-                      yarn test:unit:coverage
+                      yarn test:unit:coverage --runInBand
             - persist_to_workspace:
                   # We're saving the generated coverage results (folder 'coverage', a sub-folder to 'project') so
                   # that we can upload them in another step to Codecov.io.
