@@ -7,7 +7,6 @@ export default class Select extends LightningElement {
 
     handleChange(event) {
         const val = this.options[event.target.selectedIndex].value;
-        console.log(val);
         this.dispatchEvent(new CustomEvent('change'), {
             detail: val
         });
