@@ -1,1 +1,1 @@
-web: yarn serve:heroku -i $PORT
+web: yarn serve:production -i 0.0.0.0 -p $PORT
