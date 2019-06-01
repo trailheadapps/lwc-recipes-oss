@@ -40,7 +40,7 @@ jobs:
             - run:
                   name: Lint Lightning Web Components
                   command: |
-                      yarn lint:lwc
+                      yarn lint
     unit_test_lwc:
         # This unit tests Lightning Web Components.
         <<: *defaults
