@@ -39,6 +39,9 @@
             "git add"
         ]
     },
+    "jest": {
+        "maxWorkers": 1
+    },
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
         "build": "lwc-services build",
