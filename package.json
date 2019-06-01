@@ -47,7 +47,7 @@
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
         "serve": "lwc-services build && lwc-services serve",
-        "serve:heroku": "lwc-services serve -w scripts/webpack.heroku.js",
+        "serve:heroku": "lwc-services serve -m production -w scripts/webpack.heroku.js",
         "test:unit": "lwc-services test",
         "test:unit:coverage": "lwc-services test --coverage",
         "test:unit:debug": "lwc-services test --debug",
