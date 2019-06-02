@@ -6,7 +6,7 @@
     "dependencies": {
         "chart.js": "^2.8.0",
         "d3": "^5.9.2",
-        "lwc-services": "^1",
+        "lwc-services": "^1.0.6",
         "moment": "^2.24.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
@@ -47,7 +47,7 @@
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
         "serve": "lwc-services build && lwc-services serve",
-        "serve:heroku": "lwc-services serve -m production -w scripts/webpack.heroku.js",
+        "serve:heroku": "lwc-services serve",
         "test:unit": "lwc-services test",
         "test:unit:coverage": "lwc-services test --coverage",
         "test:unit:debug": "lwc-services test --debug",
