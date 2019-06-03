@@ -1,12 +1,12 @@
 {
     "name": "lwc-recipes-oss",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
         "chart.js": "^2.8.0",
         "d3": "^5.9.2",
-        "lwc-services": "^1.0.6",
+        "lwc-services": "^1",
         "moment": "^2.24.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
@@ -46,8 +46,7 @@
         "lint": "eslint ./src/**/*.js",
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
-        "serve": "lwc-services build && lwc-services serve",
-        "serve:heroku": "lwc-services serve",
+        "serve": "lwc-services serve",
         "test:unit": "lwc-services test",
         "test:unit:coverage": "lwc-services test --coverage",
         "test:unit:debug": "lwc-services test --debug",
