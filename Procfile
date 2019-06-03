@@ -1,1 +1,1 @@
-web: yarn serve -i 0.0.0.0
+web: yarn serve
