@@ -1,0 +1,22 @@
+{
+    "name": "lwc-recipes-oss",
+    "description": "Config for Heroku Pipelines and Review Apps",
+    "scripts": {},
+    "env": {
+        "NODE_ENV": {
+            "required": true
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "stack": "heroku-18"
+}
