@@ -1,12 +1,15 @@
 :host {
     flex: 0 0 var(--sizebar-width);
-    background: #fff;
     margin-top: 7px;
 }
 
 .active {
     background-color: var(--primary-color-blue);
     color: white;
+}
+
+nav {
+    border: 3px solid white;
 }
 
 nav.nav ul.nav__list {

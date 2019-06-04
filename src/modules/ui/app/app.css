@@ -12,9 +12,7 @@ section {
     margin-top: 2px;
 }
 
-/* TODO re-evaluate 
 .page-background {
     background-image: linear-gradient(to bottom, transparent, #fafafa),
         url('resources/images/background.png');
-    height: 94vh;
-} */
+}
