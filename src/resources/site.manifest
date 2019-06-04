@@ -1,0 +1,13 @@
+{
+    "background_color": "#fff",
+    "display": "standalone",
+    "icons": [{
+        "src": "images/logo.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }],
+    "name": "Lightning Web Components Recipes",
+    "short_name": "LWC Recipes",
+    "start_url": "/",
+    "theme_color": "#fff"
+}
