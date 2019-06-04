@@ -32,7 +32,7 @@
         "**/*.{html,js,json,yaml,yml,md}": [
             "prettier --write"
         ],
-        "**/modules/**": [
+        "**/modules/**/*.js": [
             "eslint"
         ],
         "*": [
