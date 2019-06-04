@@ -7,7 +7,7 @@ button {
     padding: 10px 10px;
     min-width: 100px;
     text-align: center;
-    text-decoration: none;
+    text-decoration: var(--text-decoration);
     display: inline-block;
 }
 
