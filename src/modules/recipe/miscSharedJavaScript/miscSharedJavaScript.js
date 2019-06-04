@@ -14,7 +14,7 @@ export default class MiscSharedJavaScript extends LightningElement {
     }
 
     termChange(event) {
-        this.term = parseInt(event.detail, 10);
+        this.term = parseInt(event.target.value, 10);
     }
 
     rateChange(event) {
