@@ -12,6 +12,16 @@ section {
     margin-top: 2px;
 }
 
+article.container {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 380px) {
+    article.container {
+        margin-bottom: 34px;
+    }
+}
+
 /* TODO re-evaluate 
 .page-background {
     background-image: linear-gradient(to bottom, transparent, #fafafa),

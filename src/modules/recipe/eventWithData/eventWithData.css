@@ -10,7 +10,7 @@ recipe-contact-list-item {
     border: solid 1px #ecebea;
     border-radius: 4px;
     display: block;
-    margin: 8px 0;
+    margin: 15px 0;
     padding: 14px 2px 0 2px;
 }
 
@@ -41,6 +41,12 @@ p {
 @media (max-width: 400px) {
     .contact-details {
         padding-left: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    div.contacts {
+        display: block;
     }
 }
 

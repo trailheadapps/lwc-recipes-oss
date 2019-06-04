@@ -8,6 +8,6 @@ p {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: var(--text-decoration);
     color: var(--color-text-link);
 }

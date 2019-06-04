@@ -2,11 +2,12 @@ import { LightningElement, track } from 'lwc';
 import DATA from './data';
 
 export default class LibsD3 extends LightningElement {
-    // TODO: Recalculate based on window size
-    @track svgWidth = 400;
+    @track svgWidth = 0;
     @track svgHeight = 400;
 
     d3Initialized = false;
+
+    disconnectedCallback() {}
 
     renderedCallback() {
         if (this.d3Initialized) {
@@ -14,6 +15,9 @@ export default class LibsD3 extends LightningElement {
         }
         this.d3Initialized = true;
         this.initializeD3();
+
+        const div = this.template.querySelector('div');
+        this.svgHeight = this.svgWidth = div.clientWidth;
     }
 
     async initializeD3() {

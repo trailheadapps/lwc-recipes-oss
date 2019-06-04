@@ -5,7 +5,7 @@
 a {
     display: flex;
     margin-left: 6px;
-    text-decoration: none;
+    text-decoration: var(--text-decoration);
     color: var(--color-text-link);
 }
 

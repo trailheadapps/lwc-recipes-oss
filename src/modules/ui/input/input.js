@@ -27,7 +27,17 @@ export default class Input extends LightningElement {
     _checked = false;
 
     changeHandler() {
+        this.dispatchEvent(new CustomEvent('change'));
+    }
+
+    changeCheckboxHandler() {
         this._checked = !this._checked;
+        const checkboxEl = this.template.querySelector('div.checkbox span');
+        if (this._checked) {
+            checkboxEl.classList.add('checked');
+        } else {
+            checkboxEl.classList.remove('checked');
+        }
         this.dispatchEvent(new CustomEvent('change'));
     }
 

@@ -15,11 +15,11 @@
             </template>
             <template if:true={isCheckboxField}>
                 <div class="checkbox">
-                    <input
-                        type="checkbox"
-                        value={valuePrivate}
-                        onchange={changeHandler}
-                    />
+                    <input type="checkbox" />
+                    <span
+                        class="checkbox"
+                        onclick={changeCheckboxHandler}
+                    ></span>
                     <label class="checkbox-label">
                         <span>{label}</span>
                     </label>

@@ -49,7 +49,7 @@ ul {
     overflow: hidden;
     color: #333;
     padding: 2rem;
-    text-decoration: none;
+    text-decoration: var(--text-decoration);
 }
 
 .nav li.active a {

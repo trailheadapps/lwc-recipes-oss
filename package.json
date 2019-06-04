@@ -21,7 +21,7 @@
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "husky": {
         "hooks": {
-            "pre-push": "lint-staged"
+            "pre-commit": "lint-staged"
         }
     },
     "keywords": [
@@ -32,7 +32,7 @@
         "**/*.{html,js,json,yaml,yml,md}": [
             "prettier --write"
         ],
-        "**/modules/**": [
+        "**/modules/**/*.js": [
             "eslint"
         ],
         "*": [
