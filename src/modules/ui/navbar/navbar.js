@@ -7,7 +7,7 @@ export default class NavBar extends LightningElement {
         Object.keys(value).forEach(key => {
             this._navItemsPrivate.push(value[key]);
             if (value[key].visible) {
-                this._currentNavItem = value[key].value;
+                this.currentNavItem = value[key].value;
             }
         });
     }
@@ -15,7 +15,19 @@ export default class NavBar extends LightningElement {
         return this._navItemsPrivate;
     }
 
-    @track _currentNavItem;
+    @api
+    set selectedItem(value) {
+        console.log(value);
+        if (value && this.currentNavItem !== value) {
+            this.styleNavItem(this.currentNavItem, value);
+            this.currentNavItem = value;
+        }
+    }
+    get selectedItem() {
+        return this.currentNavItem;
+    }
+
+    @track currentNavItem;
     _isRendered = false;
     _navItemsPrivate = [];
 
@@ -23,20 +35,14 @@ export default class NavBar extends LightningElement {
         if (this._isRendered) return;
         this._isRendered = true;
         this.template
-            .querySelector(`a[data-item="${this._currentNavItem}"]`)
+            .querySelector(`a[data-item="${this.currentNavItem}"]`)
             .parentNode.parentNode.classList.add('active');
     }
 
     handleNavItemClick(event) {
         const choice = event.currentTarget.dataset.item;
-        const tabOld = this.template.querySelector(
-            `a[data-item="${this._currentNavItem}"]`
-        ).parentNode.parentNode;
-        const tabNew = this.template.querySelector(`a[data-item="${choice}"]`)
-            .parentNode.parentNode;
-        this._currentNavItem = choice;
-        tabOld.classList.remove('active');
-        tabNew.classList.add('active');
+        this.styleNavItem(this.currentNavItem, choice);
+        this.currentNavItem = choice;
         event.preventDefault();
         this.dispatchEvent(
             new CustomEvent('categorychange', {
@@ -44,5 +50,14 @@ export default class NavBar extends LightningElement {
                 bubbles: true
             })
         );
+    }
+
+    styleNavItem(itemOld, itemNew) {
+        const tabOld = this.template.querySelector(`a[data-item="${itemOld}"]`)
+            .parentNode.parentNode;
+        const tabNew = this.template.querySelector(`a[data-item="${itemNew}"]`)
+            .parentNode.parentNode;
+        tabOld.classList.remove('active');
+        tabNew.classList.add('active');
     }
 }

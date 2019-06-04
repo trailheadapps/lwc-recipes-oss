@@ -1,63 +1,81 @@
 import { LightningElement, track } from 'lwc';
+import { navigationItems, navigationElements } from './navigation';
 
 export default class App extends LightningElement {
-    @track navigationItems = {
-        hello: {
-            title: 'Hello',
-            value: 'hello',
-            visible: false
-        },
-        composition: {
-            title: 'Composition',
-            value: 'composition',
-            visible: false
-        },
-        child: {
-            title: 'Child-to-Parent',
-            value: 'child',
-            visible: false
-        },
-        parent: {
-            title: 'Parent-to-Child',
-            value: 'parent',
-            visible: false
-        },
-        // wire: {
-        //     title: 'Wire',
-        //     value: 'wire',
-        //     visible: false
-        // },
-        misc: {
-            title: 'Misc',
-            value: 'misc',
-            visible: false
-        },
-        party: {
-            title: '3rd Party Libs',
-            value: 'party',
-            visible: false
-        }
-    };
-
     @track currentNavigationItem = 'hello';
-    // TODO
-    @track nextNavigationItem = this.navigationItems.party;
-    @track previousNavigationItem = this.navigationItems.hello;
+    @track navigationItems = navigationItems;
+    @track nextNavigationItem;
+    @track previousNavigationItem;
+
+    navigationElements = navigationElements;
 
     connectedCallback() {
         if (window.location.hash) {
-            this.currentNavigationItem = window.location.hash.substring(
+            const location = window.location.hash.substring(
                 1,
                 window.location.hash.length
             );
+            if (this.navigationElements.indexOf(location) > -1) {
+                this.currentNavigationItem = location;
+            }
         }
         this.navigationItems[this.currentNavigationItem].visible = true;
+        this.calculateNavFooterElements();
     }
 
     handleCategoryChange(event) {
-        this.navigationItems[this.currentNavigationItem].visible = false;
-        this.currentNavigationItem = event.detail;
-        this.navigationItems[event.detail].visible = true;
+        if (event) {
+            this.navigationItems[this.currentNavigationItem].visible = false;
+            this.currentNavigationItem = event.detail;
+        }
+        this.scrollAndLocation();
+        this.calculateNavFooterElements();
+        this.navigationItems[this.currentNavigationItem].visible = true;
+    }
+
+    handleNavigateNext() {
+        this.hideCurrentNavigationItemFromNav();
+        this.currentNavigationItem = this.navigationItems[
+            this.navigationElements[
+                this.navigationElements.indexOf(this.currentNavigationItem) + 1
+            ]
+        ].value;
+        this.handleCategoryChange();
+    }
+
+    handleNavigatePrevious() {
+        this.hideCurrentNavigationItemFromNav();
+        this.currentNavigationItem = this.navigationItems[
+            this.navigationElements[
+                this.navigationElements.indexOf(this.currentNavigationItem) - 1
+            ]
+        ].value;
+        this.handleCategoryChange();
+    }
+
+    calculateNavFooterElements() {
+        this.nextNavigationItem = this.navigationItems[
+            this.navigationElements[
+                this.navigationElements.indexOf(this.currentNavigationItem) + 1
+            ]
+        ];
+        this.previousNavigationItem = this.navigationItems[
+            this.navigationElements[
+                this.navigationElements.indexOf(this.currentNavigationItem) - 1
+            ]
+        ];
+    }
+
+    hideCurrentNavigationItemFromNav() {
+        this.navigationItems[
+            this.navigationElements[
+                this.navigationElements.indexOf(this.currentNavigationItem)
+            ]
+        ].visible = false;
+    }
+
+    scrollAndLocation() {
         window.location.href = '#'.concat(this.currentNavigationItem);
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 }

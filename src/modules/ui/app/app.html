@@ -2,6 +2,7 @@
     <section class="content container page-background">
         <ui-navbar
             nav-items={navigationItems}
+            selected-item={currentNavigationItem}
             oncategorychange={handleCategoryChange}
         >
         </ui-navbar>
@@ -42,8 +43,10 @@
                     <recipe-libs-momentjs></recipe-libs-momentjs>
                 </template>
                 <ui-navfooter
-                    label-next="Something"
-                    url-next="Somethig"
+                    label-next={nextNavigationItem}
+                    label-previous={previousNavigationItem}
+                    onnextclicked={handleNavigateNext}
+                    onpreviousclicked={handleNavigatePrevious}
                 ></ui-navfooter>
             </div>
         </article>
