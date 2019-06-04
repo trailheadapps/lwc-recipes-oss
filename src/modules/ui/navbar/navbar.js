@@ -17,7 +17,6 @@ export default class NavBar extends LightningElement {
 
     @api
     set selectedItem(value) {
-        console.log(value);
         if (value && this.currentNavItem !== value) {
             this.styleNavItem(this.currentNavItem, value);
             this.currentNavItem = value;
