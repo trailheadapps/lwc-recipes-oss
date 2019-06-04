@@ -276,6 +276,9 @@ h1 {
     }
 }
 
+.github-corner {
+    display: none;
+}
 
 .outerHero {
     background-color: var(--color-bg-hero);
@@ -334,10 +337,6 @@ h1 {
 
     .card {
         padding: 4rem;
-    }
-
-    .home .section h4 {
-        /* margin-bottom: unset; */
     }
 
     .benefits {
