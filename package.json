@@ -1,6 +1,6 @@
 {
     "name": "lwc-recipes-oss",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
@@ -16,7 +16,7 @@
         "prettier": "^1.17"
     },
     "engines": {
-        "node": ">=8.0.0"
+        "node": ">=10.0.0"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "husky": {
@@ -41,13 +41,12 @@
     },
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
-        "build": "lwc-services build",
-        "build:production": "lwc-services build --mode=production",
+        "build": "lwc-services build --mode production",
+        "build:development": "lwc-services build",
         "lint": "eslint ./src/**/*.js",
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
-        "serve": "lwc-services build && lwc-services serve",
-        "serve:heroku": "lwc-services build --mode=production && lwc-services serve -i 0.0.0.0",
+        "serve": "lwc-services serve",
         "test:unit": "lwc-services test",
         "test:unit:coverage": "lwc-services test --coverage",
         "test:unit:debug": "lwc-services test --debug",

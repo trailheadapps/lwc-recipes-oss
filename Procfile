@@ -1,1 +1,1 @@
-web: yarn serve:heroku
+web: yarn serve
