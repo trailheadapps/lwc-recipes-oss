@@ -4,14 +4,41 @@
     display: block;
 }
 
-div .checkbox {
+div.checkbox {
     display: block;
     padding-bottom: 8px;
+    position: relative;
 }
 
-.checkbox .checkbox-label > span {
+div.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+div.checkbox .checkbox-label > span {
     float: none;
-    padding-left: 1rem;
+    padding-left: 2rem;
+}
+
+div.checkbox span.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    margin-top: 5px;
+    background-color: #eee;
+}
+
+div.checkbox span.checkbox:hover {
+    background-color: #ccc;
+}
+
+div.checkbox span.checkbox.checked {
+    background-color: var(--button-color-bg);
 }
 
 .input {
