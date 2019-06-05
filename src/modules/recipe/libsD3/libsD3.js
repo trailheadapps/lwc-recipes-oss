@@ -21,7 +21,7 @@ export default class LibsD3 extends LightningElement {
     }
 
     async initializeD3() {
-        const d3 = await require(/* webpackChunkName: "d3js" */ 'd3');
+        const d3 = await import(/* webpackChunkName: "d3js" */ 'd3');
 
         // Example adopted from https://bl.ocks.org/mbostock/2675ff61ea5e063ede2b5d63c08020c7
         const svg = d3.select(this.template.querySelector('svg.d3'));

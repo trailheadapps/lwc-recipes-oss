@@ -45,7 +45,9 @@ export default class Output extends LightningElement {
     async calculateDateTime() {
         if (this.type === 'datetime') {
             if (!this.moment) {
-                this.moment = await require(/* webpackChunkName: "moment" */ 'moment');
+                this.moment = await import(
+                    /* webpackChunkName: "moment" */ 'moment'
+                );
             }
             const mom = this.moment(this._val);
             switch (this.dateType) {

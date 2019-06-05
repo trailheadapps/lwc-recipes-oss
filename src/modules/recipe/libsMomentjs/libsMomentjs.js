@@ -16,7 +16,7 @@ export default class LibsMomentjs extends LightningElement {
     }
 
     async setMomentValues(dateTime) {
-        const moment = await require(/* webpackChunkName: "moment" */ 'moment');
+        const moment = await import(/* webpackChunkName: "moment" */ 'moment');
         const mom = moment.utc(dateTime);
         this.selectedDateTime = dateTime;
         this.weekOfYear = mom.week();

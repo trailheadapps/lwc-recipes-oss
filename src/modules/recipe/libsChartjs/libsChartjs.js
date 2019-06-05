@@ -54,7 +54,7 @@ export default class LibsChartjs extends LightningElement {
     }
 
     async loadChartJs() {
-        await require(/* webpackChunkName: "chartJs" */ 'chart.js');
+        await import(/* webpackChunkName: "chartJs" */ 'chart.js');
         const ctx = this.template
             .querySelector('canvas.donut')
             .getContext('2d');
