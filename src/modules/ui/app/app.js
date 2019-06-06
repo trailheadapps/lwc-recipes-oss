@@ -54,6 +54,7 @@ export default class App extends LightningElement {
                 return;
             }
         }
+        this.updateGoogleAnalyticsForSPA(this.currentNavigationItem);
         this.scrollAndLocation();
         this.calculateNavFooterElements();
         this.navigationItems[this.currentNavigationItem].visible = true;
@@ -110,5 +111,15 @@ export default class App extends LightningElement {
         }
         this._isWindowHistoryUpdate = false;
         document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+
+    updateGoogleAnalyticsForSPA(newPage) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            window.dataLayer.push(arguments);
+        }
+        gtag('config', 'UA-45076517-19', {
+            page_path: '#'.concat(newPage)
+        });
     }
 }
