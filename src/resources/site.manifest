@@ -8,6 +8,6 @@
     }],
     "name": "Lightning Web Components Recipes",
     "short_name": "LWC Recipes",
-    "start_url": "/",
+    "start_url": "/#hello",
     "theme_color": "#fff"
 }
