@@ -8,8 +8,21 @@ export default class App extends LightningElement {
     @track previousNavigationItem;
 
     navigationElements = navigationElements;
+    _isWindowHistoryUpdate = false;
 
     connectedCallback() {
+        let that = this;
+        window.onpopstate = function(event) {
+            if (event.state && event.state.page) {
+                that._isWindowHistoryUpdate = true;
+                that.navigationItems[
+                    that.currentNavigationItem
+                ].visible = false;
+                that.currentNavigationItem = event.state.page;
+                that.hideCurrentNavigationItemFromNav();
+                that.handleCategoryChange();
+            }
+        };
         if (window.location.hash) {
             const location = window.location.hash.substring(
                 1,
@@ -17,7 +30,14 @@ export default class App extends LightningElement {
             );
             if (this.navigationElements.indexOf(location) > -1) {
                 this.currentNavigationItem = location;
+                window.history.replaceState({ page: location }, null, '');
             }
+        } else {
+            window.history.replaceState(
+                { page: this.currentNavigationItem },
+                null,
+                ''
+            );
         }
         this.navigationItems[this.currentNavigationItem].visible = true;
         this.calculateNavFooterElements();
@@ -25,8 +45,14 @@ export default class App extends LightningElement {
 
     handleCategoryChange(event) {
         if (event) {
-            this.navigationItems[this.currentNavigationItem].visible = false;
-            this.currentNavigationItem = event.detail;
+            if (this.currentNavigationItem !== event.detail) {
+                this.navigationItems[
+                    this.currentNavigationItem
+                ].visible = false;
+                this.currentNavigationItem = event.detail;
+            } else {
+                return;
+            }
         }
         this.scrollAndLocation();
         this.calculateNavFooterElements();
@@ -75,7 +101,14 @@ export default class App extends LightningElement {
     }
 
     scrollAndLocation() {
-        window.location.href = '#'.concat(this.currentNavigationItem);
+        if (!this._isWindowHistoryUpdate) {
+            window.history.pushState(
+                { page: this.currentNavigationItem },
+                null,
+                '#'.concat(this.currentNavigationItem)
+            );
+        }
+        this._isWindowHistoryUpdate = false;
         document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
 }
