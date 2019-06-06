@@ -2,7 +2,7 @@
     "background_color": "#fff",
     "display": "standalone",
     "icons": [{
-        "src": "images/logo.png",
+        "src": "images/apple-touch-icon.png",
         "type": "image/png",
         "sizes": "512x512"
     }],
