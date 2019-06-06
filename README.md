@@ -4,6 +4,16 @@
 
 A collection of easy-to-digest code examples for Lightning Web Components Open Source. Each recipe demonstrates how to code a specific task in 30 lines of code or less. A View Source link takes you right to the code in GitHub. From Hello World to data access and third-party libraries, there is a recipe for that!
 
+## Recipes Live Version
+
+Check out [https://lwc-recipes-oss.herokuapp.com](https://lwc-recipes-oss.herokuapp.com) live on Heroku.
+
+## Deploy to Heroku
+
+If you want to deploy LWC Recipess OSS to Heroku - there's a button for that.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## Local Development
 
 1. Clone the `lwc-recipes-oss` repository:
