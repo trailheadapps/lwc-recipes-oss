@@ -26,7 +26,8 @@ export default class Input extends LightningElement {
 
     _checked = false;
 
-    changeHandler() {
+    changeHandler(event) {
+        this._value = this.calculateValue(event.target.value);
         this.dispatchEvent(new CustomEvent('change'));
     }
 
