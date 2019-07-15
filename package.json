@@ -6,7 +6,7 @@
     "dependencies": {
         "chart.js": "^2.8.0",
         "d3": "^5.9.2",
-        "lwc-services": "^1.2.0",
+        "lwc-services": "^1.2.2",
         "moment": "^2.24.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
