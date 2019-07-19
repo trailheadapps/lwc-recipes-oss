@@ -11,6 +11,7 @@
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
+        "@salesforce/wire-service-jest-util": "^2.2.5",
         "husky": "^2.3",
         "lint-staged": "^8.1.5"
     },
