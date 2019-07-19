@@ -1,5 +1,5 @@
 import { createElement } from 'lwc';
-import EventWithdata from 'recipe/EventWithdata';
+import EventWithdata from 'recipe/eventWithdata';
 import { registerLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
 import getContactList from 'data/wireGetContactListProvider';
 
