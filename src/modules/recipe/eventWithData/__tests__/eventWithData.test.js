@@ -1,5 +1,5 @@
 import { createElement } from 'lwc';
-import EventWithdata from 'recipe/eventWithdata';
+import EventWithData from 'recipe/eventWithData';
 import { registerLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
 import getContactList from 'data/wireGetContactListProvider';
 
@@ -29,7 +29,7 @@ describe('recipe-event-with-data', () => {
     it('renders contact list from wire', () => {
         // Create initial element
         const element = createElement('recipe-event-with-data', {
-            is: EventWithdata
+            is: EventWithData
         });
         document.body.appendChild(element);
 
@@ -50,7 +50,7 @@ describe('recipe-event-with-data', () => {
     it('renders error panel when wire fails', () => {
         // Create initial element
         const element = createElement('recipe-event-with-data', {
-            is: EventWithdata
+            is: EventWithData
         });
         document.body.appendChild(element);
 
