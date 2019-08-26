@@ -993,6 +993,11 @@
     eslint-plugin-import "^2.14.0"
     eslint-plugin-jest "^22.0.0"
 
+"@salesforce/wire-service-jest-util@^2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.2.5.tgz#b62c7f2a23eb849f8dbdc855634eaa1142a679c9"
+  integrity sha512-eOU8F4RQdPUXShocWHsEx+eHuPorzvCHUlWM5VDne4jfL6MY1C351UrrSGXqjnZFaFBjJrpS2P1eGq0UjCnJLw==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"

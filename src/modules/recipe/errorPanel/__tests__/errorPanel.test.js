@@ -7,6 +7,8 @@ describe('recipe-error-panel', () => {
         while (document.body.firstChild) {
             document.body.removeChild(document.body.firstChild);
         }
+        // Clear mocks so that every test run has a clean implementation
+        jest.clearAllMocks();
     });
 
     it('displays a default friendly message', () => {
@@ -61,6 +63,7 @@ describe('recipe-error-panel', () => {
         element.errors = ERROR_MESSAGES_INPUT;
         document.body.appendChild(element);
 
+        // Simulate checking 'show details'
         const inputEl = element.shadowRoot.querySelector('ui-input');
         inputEl.checked = true;
         inputEl.dispatchEvent(new CustomEvent('change'));
@@ -70,7 +73,7 @@ describe('recipe-error-panel', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             const messageTexts = Array.from(
-                element.shadowRoot.querySelectorAll('p[class="error-message"]')
+                element.shadowRoot.querySelectorAll('p.error-message')
             ).map(errorMessage => (errorMessage = errorMessage.textContent));
             expect(messageTexts).toEqual(ERROR_MESSAGES_OUTPUT);
         });
