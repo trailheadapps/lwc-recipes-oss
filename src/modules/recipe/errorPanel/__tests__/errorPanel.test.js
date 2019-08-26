@@ -1,6 +1,5 @@
 import { createElement } from 'lwc';
 import ErrorPanel from 'recipe/errorPanel';
-import * as ldsUtilsDependency from 'recipe/ldsUtils';
 
 describe('recipe-error-panel', () => {
     afterEach(() => {
@@ -78,23 +77,5 @@ describe('recipe-error-panel', () => {
             ).map(errorMessage => (errorMessage = errorMessage.textContent));
             expect(messageTexts).toEqual(ERROR_MESSAGES_OUTPUT);
         });
-    });
-
-    it('calls ldsUtils.reduceErrors', () => {
-        const MESSAGE = 'Errors should be reduced';
-
-        // Mock ldsUtils.reduceErrors
-        const reduceErrorsMock = jest.fn();
-        reduceErrorsMock.mockReturnValue([]);
-        ldsUtilsDependency.reduceErrors = reduceErrorsMock;
-
-        // Create initial element
-        const element = createElement('recipe-error-panel', {
-            is: ErrorPanel
-        });
-        element.errors = MESSAGE;
-        document.body.appendChild(element);
-
-        expect(reduceErrorsMock).toHaveBeenCalledWith(MESSAGE);
     });
 });
