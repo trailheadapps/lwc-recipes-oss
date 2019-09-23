@@ -6,6 +6,7 @@
     "dependencies": {
         "chart.js": "^2.8.0",
         "d3": "^5.12.0",
+        "globby": "^10.0.1",
         "lwc-services": "^1.3.0-beta.21",
         "moment": "^2.24.0"
     },
