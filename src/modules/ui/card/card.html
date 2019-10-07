@@ -1,0 +1,19 @@
+<template>
+    <div class="card">
+        <template if:true={showHeader}></template>
+        <div class="card-header">
+            <template if:true={title}>
+                <div class="card-title">{title}</div>
+            </template>
+            <template if:true={subtitle}>
+                <div class="card-subtitle">{subtitle}</div>
+            </template>
+        </div>
+        <div class="card-body">
+            <slot></slot>
+        </div>
+        <div class="card-footer">
+            <slot name="footer"></slot>
+        </div>
+    </div>
+</template>

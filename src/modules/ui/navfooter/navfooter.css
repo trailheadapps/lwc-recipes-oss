@@ -1,0 +1,13 @@
+a {
+    text-decoration: var(--text-decoration);
+    color: var(--color-text-link);
+}
+
+.next {
+    float: right;
+    margin-right: 10px;
+}
+
+.previous {
+    margin-left: 10px;
+}

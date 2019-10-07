@@ -1,0 +1,22 @@
+<template>
+    <template if:true={label}>
+        <label class="field-label">{label}</label>
+    </template>
+    <p>
+        <template if:true={isDateTime}>
+            {dateTimeValue}
+        </template>
+        <template if:true={isEmail}>
+            <a href={hrefEmail}>{value}</a>
+        </template>
+        <template if:true={isNumber}>
+            {formattedNumber}
+        </template>
+        <template if:true={isPhonenumber}>
+            <a href={hrefPhonenumber}>{formattedPhonenumber}</a>
+        </template>
+        <template if:true={isText}>
+            {value}
+        </template>
+    </p>
+</template>
