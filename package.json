@@ -49,10 +49,10 @@
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
         "serve": "lwc-services serve",
-        "test:unit": "lwc-services test",
-        "test:unit:coverage": "lwc-services test --coverage",
-        "test:unit:debug": "lwc-services test --debug",
-        "test:unit:watch": "lwc-services test --watch",
+        "test:unit": "lwc-services test:unit",
+        "test:unit:coverage": "lwc-services test:unit --coverage",
+        "test:unit:debug": "lwc-services test:unit --debug",
+        "test:unit:watch": "lwc-services test:unit --watch",
         "watch": "lwc-services watch",
         "watch:production": "lwc-services watch --mode=production"
     }
