@@ -6,9 +6,8 @@
     "dependencies": {
         "chart.js": "^2.8.0",
         "d3": "^5.12.0",
-        "globby": "^10.0.1",
-        "lwc-services": "^1.3.2",
         "lwc-recipes-oss-ui-components": "^0.3.1",
+        "lwc-services": "^1.3.3",
         "moment": "^2.24.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
@@ -50,7 +49,7 @@
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
         "serve": "lwc-services serve",
-        "test:unit": "lwc-services test",
+        "test:unit": "lwc-services test:unit",
         "test:unit:coverage": "lwc-services test --coverage",
         "test:unit:debug": "lwc-services test --debug",
         "test:unit:watch": "lwc-services test --watch",
