@@ -1,0 +1,13 @@
+.field-label {
+    font-size: 1.4rem;
+    color: gray;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: var(--text-decoration);
+    color: var(--color-text-link);
+}
