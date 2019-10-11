@@ -36,3 +36,11 @@ yarn watch
 ```
 
 4. Enjoy the app!
+
+## Modifications for Edge browser users
+
+The Edge browser currently doesn't support native shadow DOM. If you want to use this application you have to manually add the synthetic shadow DOM to your clone. Add to the first line of the [index.html](https://github.com/trailheadapps/lwc-recipes-oss/blob/master/src/index.js#L1) this code:
+
+```javascript
+import '@lwc/synthetic-shadow';
+```
