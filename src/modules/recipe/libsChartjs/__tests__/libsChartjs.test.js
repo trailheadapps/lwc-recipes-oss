@@ -7,8 +7,6 @@ describe('recipe-libs-chartjs', () => {
         while (document.body.firstChild) {
             document.body.removeChild(document.body.firstChild);
         }
-        // Clear mocks so that every test run has a clean implementation
-        jest.clearAllMocks();
     });
 
     it('contains a canvas element for ChartJs', () => {
@@ -19,7 +17,7 @@ describe('recipe-libs-chartjs', () => {
         document.body.appendChild(element);
 
         // Querying the DOM element that has the lwc:dom directive set.
-        const domEl = element.shadowRoot.querySelector('canvas[class="donut"]');
+        const domEl = element.shadowRoot.querySelector('canvas.donut');
         expect(domEl).not.toBeNull();
     });
 });

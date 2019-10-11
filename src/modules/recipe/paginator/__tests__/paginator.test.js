@@ -7,6 +7,8 @@ describe('recipe-paginator', () => {
         while (document.body.firstChild) {
             document.body.removeChild(document.body.firstChild);
         }
+        // Clear mocks so that every test run has a clean implementation
+        jest.clearAllMocks();
     });
 
     it('sends "next" and "previous" events on button click', () => {
@@ -32,8 +34,8 @@ describe('recipe-paginator', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Validate if mocked events got fired
-            expect(handlerPrevious.mock.calls.length).toBe(1);
-            expect(handlerNext.mock.calls.length).toBe(1);
+            expect(handlerPrevious).toHaveBeenCalledTimes(1);
+            expect(handlerNext).toHaveBeenCalledTimes(1);
         });
     });
 });

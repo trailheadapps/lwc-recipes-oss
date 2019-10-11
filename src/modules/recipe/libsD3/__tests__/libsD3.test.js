@@ -19,7 +19,7 @@ describe('recipe-libs-d3', () => {
         document.body.appendChild(element);
 
         // Querying the DOM element that has the lwc:dom directive set.
-        const domEl = element.shadowRoot.querySelector('svg[class="d3"]');
+        const domEl = element.shadowRoot.querySelector('svg.d3');
         expect(domEl).not.toBeNull();
     });
 });

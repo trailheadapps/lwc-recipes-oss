@@ -5,14 +5,17 @@
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
         "chart.js": "^2.8.0",
-        "d3": "^5.9.2",
-        "lwc-services": "^1.2.0",
+        "d3": "^5.12.0",
+        "lwc-recipes-oss-ui-components": "^0.3.1",
+        "lwc-services": "^1.3.3",
         "moment": "^2.24.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
-        "husky": "^2.3",
-        "lint-staged": "^8.1.5"
+        "@salesforce/wire-service-jest-util": "^2.2.5",
+        "husky": "^3.0",
+        "jest-canvas-mock": "^2.1.1",
+        "lint-staged": "^9.3.0"
     },
     "engines": {
         "node": ">=10.0.0"
@@ -46,10 +49,10 @@
         "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
         "serve": "lwc-services serve",
-        "test:unit": "lwc-services test",
-        "test:unit:coverage": "lwc-services test --coverage",
-        "test:unit:debug": "lwc-services test --debug",
-        "test:unit:watch": "lwc-services test --watch",
+        "test:unit": "lwc-services test:unit",
+        "test:unit:coverage": "lwc-services test:unit --coverage",
+        "test:unit:debug": "lwc-services test:unit --debug",
+        "test:unit:watch": "lwc-services test:unit --watch",
         "watch": "lwc-services watch",
         "watch:production": "lwc-services watch --mode=production"
     }

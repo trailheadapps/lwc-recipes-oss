@@ -1,10 +1,12 @@
 import { createElement } from 'lwc';
 import TodoList from 'recipe/todoList';
 
-let TODOS = [
+const TODOS = [
     { id: 1, description: 'Explore recipes', priority: false },
-    { id: 2, description: 'Install Ebikes sample app', priority: false }
+    { id: 2, description: 'Install Ebikes sample app', priority: false },
+    { id: 3, description: 'Something with high priority', priority: true }
 ];
+const PRIORITY_TODO_INDEX = 2;
 
 describe('recipe-todo-list', () => {
     afterEach(() => {
@@ -38,7 +40,7 @@ describe('recipe-todo-list', () => {
         document.body.appendChild(element);
 
         // Query list items for initial values
-        let listItemEls = element.shadowRoot.querySelectorAll('li');
+        const listItemEls = element.shadowRoot.querySelectorAll('li');
         expect(listItemEls.length).toBe(todosLength);
     });
 
@@ -56,10 +58,39 @@ describe('recipe-todo-list', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Validate rendered output for first todo object
-            let outputEls = element.shadowRoot.querySelectorAll('p');
+            const outputEls = element.shadowRoot.querySelectorAll('p');
             expect(outputEls[0].textContent).toBe(TODOS[0].description);
             const msg = `Priority: ${TODOS[0].priority}`;
             expect(outputEls[1].textContent).toBe(msg);
+        });
+    });
+
+    it('filters priority items', () => {
+        // Create initial element
+        const element = createElement('recipe-todo-list', {
+            is: TodoList
+        });
+        // Set public properties
+        element.todos = TODOS;
+        document.body.appendChild(element);
+
+        // Click filter checkbox
+        const inputEl = element.shadowRoot.querySelector('ui-input');
+        inputEl.checked = true;
+        inputEl.dispatchEvent(new CustomEvent('change'));
+
+        // Validate that we only render items with priority
+        return Promise.resolve().then(() => {
+            const todoItemsEls = element.shadowRoot.querySelectorAll(
+                '.todo-content'
+            );
+            expect(todoItemsEls.length).toBe(1);
+            const todoDescriptionEl = element.shadowRoot.querySelector(
+                '.todo-content > p'
+            );
+            expect(todoDescriptionEl.textContent).toBe(
+                TODOS[PRIORITY_TODO_INDEX].description
+            );
         });
     });
 });
