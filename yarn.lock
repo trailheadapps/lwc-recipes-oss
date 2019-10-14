@@ -7221,10 +7221,10 @@ lwc-recipes-oss-ui-components@^0.3.1:
   dependencies:
     moment "^2.24.0"
 
-lwc-services@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/lwc-services/-/lwc-services-1.3.3.tgz#795722d31ee9232aaf4183e61427381c92f28150"
-  integrity sha512-yV/mItuso2+RfcUSJ8+URr8Yj4FXomEgDuvTvCkvcK0+bZs3iVq6DDAAmEjcZddk4kj7NPQSulnn00k8frc3dw==
+lwc-services@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/lwc-services/-/lwc-services-1.3.4.tgz#0091862a940982d8deb4df68e6dab13b200adb58"
+  integrity sha512-GuGcYMdTDxnQuIlRc5qzQGPrB4LxvemBlQvdeeGbWNr5Pm4ftnNoOAk0KkoD8wPLHarl0YakGEEDS1N4EWajtQ==
   dependencies:
     "@babel/core" "^7.4.5"
     "@babel/plugin-proposal-object-rest-spread" "^7.4.3"
@@ -7232,10 +7232,10 @@ lwc-services@^1.3.3:
     "@babel/plugin-syntax-decorators" "^7.2.0"
     "@babel/preset-typescript" "^7.3.3"
     "@lwc/eslint-plugin-lwc" "^0.8"
-    "@lwc/jest-preset" muenzpraeger/lwc-jest-preset-ts-fix
-    "@lwc/jest-resolver" muenzpraeger/lwc-jest-resolver-resolution-fix
+    "@lwc/jest-preset" "github:muenzpraeger/lwc-jest-preset-ts-fix"
+    "@lwc/jest-resolver" "github:muenzpraeger/lwc-jest-resolver-resolution-fix"
     "@lwc/jest-serializer" "1.1.0-alpha1"
-    "@lwc/jest-transformer" muenzpraeger/lwc-jest-transformer-ts-fix
+    "@lwc/jest-transformer" "github:muenzpraeger/lwc-jest-transformer-ts-fix"
     "@lwc/rollup-plugin" "^1.1.0"
     "@oclif/command" "^1"
     "@oclif/config" "^1"
