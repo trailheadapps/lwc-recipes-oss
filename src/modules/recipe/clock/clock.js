@@ -1,4 +1,4 @@
-import { LightningElement, api, track } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class Clock extends LightningElement {
     @api
@@ -6,5 +6,5 @@ export default class Clock extends LightningElement {
         this.timestamp = new Date().toISOString();
     }
 
-    @track timestamp = new Date().toISOString();
+    timestamp = new Date().toISOString();
 }
