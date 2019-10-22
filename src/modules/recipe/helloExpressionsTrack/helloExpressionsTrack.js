@@ -1,7 +1,7 @@
-import { LightningElement , track } from 'lwc';
+import { LightningElement, track } from 'lwc';
 
 export default class HelloExpressionsTrack extends LightningElement {
-    @track fullName = {firstName : '', lastName : ''};
+    @track fullName = { firstName: '', lastName: '' };
 
     handleChange(event) {
         const field = event.target.name;
@@ -9,10 +9,12 @@ export default class HelloExpressionsTrack extends LightningElement {
             this.fullName.firstName = event.target.value;
         } else if (field === 'lastName') {
             this.fullName.lastName = event.target.value;
-        } 
+        }
     }
 
     get uppercasedFullName() {
-        return `${this.fullName.firstName} ${this.fullName.lastName}`.trim().toUpperCase();
+        return `${this.fullName.firstName} ${this.fullName.lastName}`
+            .trim()
+            .toUpperCase();
     }
 }
