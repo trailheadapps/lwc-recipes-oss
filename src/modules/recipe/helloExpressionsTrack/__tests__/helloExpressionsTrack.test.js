@@ -3,7 +3,7 @@ import HelloExpressionsTrack from 'recipe/HelloExpressionsTrack';
 
 const PREFIX = 'Uppercased Full Name:';
 
-describe('recipe-hello-expressions', () => {
+describe('recipe-hello-expressions-track', () => {
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM
         while (document.body.firstChild) {
@@ -27,7 +27,7 @@ describe('recipe-hello-expressions', () => {
 
     it('displays first name as uppercase', () => {
         // Create initial element
-        const element = createElement('recipe-hello-expressions', {
+        const element = createElement('recipe-hello-expressions-track', {
             is: HelloExpressionsTrack
         });
         document.body.appendChild(element);
@@ -46,7 +46,7 @@ describe('recipe-hello-expressions', () => {
 
     it('displays last name as uppercase', () => {
         // Create initial element
-        const element = createElement('recipe-hello-expressions', {
+        const element = createElement('recipe-hello-expressions-track', {
             is: HelloExpressionsTrack
         });
         document.body.appendChild(element);
@@ -65,7 +65,7 @@ describe('recipe-hello-expressions', () => {
 
     it('displays first and last name as uppercase', () => {
         // Create initial element
-        const element = createElement('recipe-hello-expressions', {
+        const element = createElement('recipe-hello-expressions-track', {
             is: HelloExpressionsTrack
         });
         document.body.appendChild(element);
