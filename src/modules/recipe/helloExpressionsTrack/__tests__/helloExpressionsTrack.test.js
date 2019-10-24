@@ -1,5 +1,5 @@
 import { createElement } from 'lwc';
-import HelloExpressionsTrack from 'recipe/HelloExpressionsTrack';
+import HelloExpressionsTrack from 'recipe/helloExpressionsTrack';
 
 const PREFIX = 'Uppercased Full Name:';
 
