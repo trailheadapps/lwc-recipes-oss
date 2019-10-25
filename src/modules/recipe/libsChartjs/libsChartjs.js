@@ -1,11 +1,11 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 
 const generateRandomNumber = () => {
     return Math.round(Math.random() * 100);
 };
 
 export default class LibsChartjs extends LightningElement {
-    @track error;
+    error;
     chart;
     chartjsInitialized = false;
 

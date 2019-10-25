@@ -1,4 +1,4 @@
-import { LightningElement, api, track } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class NavBar extends LightningElement {
     @api
@@ -26,7 +26,7 @@ export default class NavBar extends LightningElement {
         return this.currentNavItem;
     }
 
-    @track currentNavItem;
+    currentNavItem;
     _isRendered = false;
     _navItemsPrivate = [];
 

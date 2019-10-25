@@ -3,7 +3,7 @@ version: 2
 # Defining default values for all jobs
 defaults: &defaults
     docker:
-        - image: circleci/node:lts-browsers
+        - image: circleci/node:dubnium
 
 jobs:
     setup_tooling:
