@@ -867,8 +867,9 @@
   resolved "https://registry.yarnpkg.com/@lwc/features/-/features-1.1.1.tgz#fe56cd148612a5746703251620d89d3087f0fd23"
   integrity sha512-QcwsNH6aYsrZ+rSTDAK6YM/B8c9I+TNM03m70KD8E874tMrs330mtZGDRB1YKc/EpwL4R1o6yNEgVNw3y6h+WA==
 
-"@lwc/jest-preset@github:muenzpraeger/lwc-jest-preset-ts-fix":
+"@lwc/jest-preset@muenzpraeger/lwc-jest-preset-ts-fix":
   version "1.1.0-alpha1"
+  uid "5f2a28563055cbf674dc97f3b184bab0d4c849e2"
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-preset-ts-fix/tar.gz/5f2a28563055cbf674dc97f3b184bab0d4c849e2"
   dependencies:
     "@lwc/jest-resolver" "1.1.0-alpha1"
@@ -882,8 +883,9 @@
   resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-1.1.0-alpha1.tgz#09ed751dd0d41ba1a340dab67e58f39fd526237d"
   integrity sha512-jexhw4p78jWbnv28eRWTLCdBHnfycUCaaY642njrfXlJQYuu//HTVqqi3anmWF/fEs9nd7zcpCR+UTe+tv5lwQ==
 
-"@lwc/jest-resolver@github:muenzpraeger/lwc-jest-resolver-resolution-fix":
+"@lwc/jest-resolver@muenzpraeger/lwc-jest-resolver-resolution-fix":
   version "2.2.0"
+  uid "772221f6dce07cddacb73cde21685fd16cad51db"
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-resolver-resolution-fix/tar.gz/772221f6dce07cddacb73cde21685fd16cad51db"
 
 "@lwc/jest-serializer@1.1.0-alpha1":
@@ -893,8 +895,9 @@
   dependencies:
     pretty-format "~24.8.0"
 
-"@lwc/jest-transformer@1.1.0-alpha1", "@lwc/jest-transformer@github:muenzpraeger/lwc-jest-transformer-ts-fix":
+"@lwc/jest-transformer@1.1.0-alpha1", "@lwc/jest-transformer@muenzpraeger/lwc-jest-transformer-ts-fix":
   version "1.1.0-alpha1"
+  uid a222f1f0f971a2b844fe2124321a2fabb3cc0520
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-transformer-ts-fix/tar.gz/a222f1f0f971a2b844fe2124321a2fabb3cc0520"
   dependencies:
     "@babel/core" "7.1.0"
@@ -2698,10 +2701,10 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chart.js@^2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.9.2.tgz#5f7397f2fc33ca406836dbaed3cc39943bbb9f80"
-  integrity sha512-AagP9h27gU7hhx8F64BOFpNZGV0R1Pz1nhsi0M1+KLhtniX6ElqLl0z0obKSiuGMl9tcRe6ZhruCGCJWmH6snQ==
+chart.js@^2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.9.3.tgz#ae3884114dafd381bc600f5b35a189138aac1ef7"
+  integrity sha512-+2jlOobSk52c1VU6fzkh3UwqHMdSlgH1xFv9FKMqHiNCpXsGPQa/+81AFa+i3jZ253Mq9aAycPwDjnn1XbRNNw==
   dependencies:
     chartjs-color "^2.1.0"
     moment "^2.10.2"

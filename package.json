@@ -4,7 +4,7 @@
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
-        "chart.js": "^2.9.2",
+        "chart.js": "^2.9.3",
         "d3": "^5.12.0",
         "lwc-recipes-oss-ui-components": "^0.3.1",
         "lwc-services": "^1.3.9",
