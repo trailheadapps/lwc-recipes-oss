@@ -1,0 +1,52 @@
+# Unique name for this workflow
+name: CI
+
+# Definition when the workflow should run
+on:
+    pull_request:
+        types: [opened, synchronize, reopened]
+        branches:
+            - master
+
+# Jobs to be executed
+jobs:
+    formatting-and-linting:
+        runs-on: ubuntu-latest
+        steps:
+            # Checkout the code in the pull request
+            - name: 'Checkout source code'
+              uses: actions/checkout@v1
+
+            # Cache node_modules to speed up the process
+            - name: Restore node_modules cache
+              id: cache-yarn
+              uses: actions/cache@v1
+              with:
+                  path: node_modules
+                  key: yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      yarn-${{ env.cache-name }}-
+                      yarn-
+
+            # Install npm dependencies for Prettier and Jest
+            - name: 'Install npm dependencies'
+              if: steps.cache-yarn.outputs.cache-hit != 'true'
+              run: yarn install
+
+            # Prettier formatting
+            - name: 'Code formatting verification with Prettier'
+              run: yarn prettier:verify
+
+            # ESlint
+            - name: 'Lint Lightning Web Components'
+              run: yarn lint
+
+            # Unit tests
+            - name: 'Unit test Lightning Web Components'
+              run: yarn test:unit:coverage
+
+            # Upload code coverage data
+            - name: 'Upload code coverage for LWC to Codecov.io'
+              uses: codecov/codecov-action@v1
+              with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
