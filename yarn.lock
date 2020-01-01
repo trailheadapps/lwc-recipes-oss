@@ -867,8 +867,9 @@
   resolved "https://registry.yarnpkg.com/@lwc/features/-/features-1.1.1.tgz#fe56cd148612a5746703251620d89d3087f0fd23"
   integrity sha512-QcwsNH6aYsrZ+rSTDAK6YM/B8c9I+TNM03m70KD8E874tMrs330mtZGDRB1YKc/EpwL4R1o6yNEgVNw3y6h+WA==
 
-"@lwc/jest-preset@github:muenzpraeger/lwc-jest-preset-ts-fix":
+"@lwc/jest-preset@muenzpraeger/lwc-jest-preset-ts-fix":
   version "1.1.0-alpha1"
+  uid "5f2a28563055cbf674dc97f3b184bab0d4c849e2"
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-preset-ts-fix/tar.gz/5f2a28563055cbf674dc97f3b184bab0d4c849e2"
   dependencies:
     "@lwc/jest-resolver" "1.1.0-alpha1"
@@ -882,8 +883,9 @@
   resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-1.1.0-alpha1.tgz#09ed751dd0d41ba1a340dab67e58f39fd526237d"
   integrity sha512-jexhw4p78jWbnv28eRWTLCdBHnfycUCaaY642njrfXlJQYuu//HTVqqi3anmWF/fEs9nd7zcpCR+UTe+tv5lwQ==
 
-"@lwc/jest-resolver@github:muenzpraeger/lwc-jest-resolver-resolution-fix":
+"@lwc/jest-resolver@muenzpraeger/lwc-jest-resolver-resolution-fix":
   version "2.2.0"
+  uid "772221f6dce07cddacb73cde21685fd16cad51db"
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-resolver-resolution-fix/tar.gz/772221f6dce07cddacb73cde21685fd16cad51db"
 
 "@lwc/jest-serializer@1.1.0-alpha1":
@@ -893,7 +895,7 @@
   dependencies:
     pretty-format "~24.8.0"
 
-"@lwc/jest-transformer@1.1.0-alpha1", "@lwc/jest-transformer@github:muenzpraeger/lwc-jest-transformer-ts-fix":
+"@lwc/jest-transformer@1.1.0-alpha1", "@lwc/jest-transformer@muenzpraeger/lwc-jest-transformer-ts-fix":
   version "1.1.0-alpha1"
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-transformer-ts-fix/tar.gz/a222f1f0f971a2b844fe2124321a2fabb3cc0520"
   dependencies:
@@ -3641,10 +3643,10 @@ d3-zoom@1:
     d3-selection "1"
     d3-transition "1"
 
-d3@^5.12.0:
-  version "5.12.0"
-  resolved "https://registry.yarnpkg.com/d3/-/d3-5.12.0.tgz#0ddeac879c28c882317cd439b495290acd59ab61"
-  integrity sha512-flYVMoVuhPFHd9zVCe2BxIszUWqBcd5fvQGMNRmSiBrgdnh6Vlruh60RJQTouAK9xPbOB0plxMvBm4MoyODXNg==
+d3@^5.15.0:
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/d3/-/d3-5.15.0.tgz#ffd44958e6a3cb8a59a84429c45429b8bca5677a"
+  integrity sha512-C+E80SL2nLLtmykZ6klwYj5rPqB5nlfN5LdWEAVdWPppqTD8taoJi2PxLZjPeYT8FFRR2yucXq+kBlOnnvZeLg==
   dependencies:
     d3-array "1"
     d3-axis "1"
