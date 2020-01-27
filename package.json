@@ -31,7 +31,7 @@
     ],
     "license": "CC0-1.0",
     "lint-staged": {
-        "**/*.{html,js,json,yaml,yml,md}": [
+        "**/*.{css,html,js,json,yaml,yml,md}": [
             "prettier --write"
         ],
         "**/modules/**/*.js": [
@@ -43,8 +43,8 @@
         "build": "lwc-services build --mode production",
         "build:development": "lwc-services build",
         "lint": "eslint ./src/**/*.js",
-        "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
-        "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
+        "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
+        "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,yaml,yml}\"",
         "serve": "lwc-services serve",
         "test:unit": "lwc-services test:unit",
         "test:unit:coverage": "lwc-services test:unit --coverage",
