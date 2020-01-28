@@ -874,8 +874,9 @@
   resolved "https://registry.yarnpkg.com/@lwc/features/-/features-1.1.1.tgz#fe56cd148612a5746703251620d89d3087f0fd23"
   integrity sha512-QcwsNH6aYsrZ+rSTDAK6YM/B8c9I+TNM03m70KD8E874tMrs330mtZGDRB1YKc/EpwL4R1o6yNEgVNw3y6h+WA==
 
-"@lwc/jest-preset@github:muenzpraeger/lwc-jest-preset-ts-fix":
+"@lwc/jest-preset@muenzpraeger/lwc-jest-preset-ts-fix":
   version "1.1.0-alpha1"
+  uid "5f2a28563055cbf674dc97f3b184bab0d4c849e2"
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-preset-ts-fix/tar.gz/5f2a28563055cbf674dc97f3b184bab0d4c849e2"
   dependencies:
     "@lwc/jest-resolver" "1.1.0-alpha1"
@@ -889,8 +890,9 @@
   resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-1.1.0-alpha1.tgz#09ed751dd0d41ba1a340dab67e58f39fd526237d"
   integrity sha512-jexhw4p78jWbnv28eRWTLCdBHnfycUCaaY642njrfXlJQYuu//HTVqqi3anmWF/fEs9nd7zcpCR+UTe+tv5lwQ==
 
-"@lwc/jest-resolver@github:muenzpraeger/lwc-jest-resolver-resolution-fix":
+"@lwc/jest-resolver@muenzpraeger/lwc-jest-resolver-resolution-fix":
   version "2.2.0"
+  uid "772221f6dce07cddacb73cde21685fd16cad51db"
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-resolver-resolution-fix/tar.gz/772221f6dce07cddacb73cde21685fd16cad51db"
 
 "@lwc/jest-serializer@1.1.0-alpha1":
@@ -900,8 +902,9 @@
   dependencies:
     pretty-format "~24.8.0"
 
-"@lwc/jest-transformer@1.1.0-alpha1", "@lwc/jest-transformer@github:muenzpraeger/lwc-jest-transformer-ts-fix":
+"@lwc/jest-transformer@1.1.0-alpha1", "@lwc/jest-transformer@muenzpraeger/lwc-jest-transformer-ts-fix":
   version "1.1.0-alpha1"
+  uid a222f1f0f971a2b844fe2124321a2fabb3cc0520
   resolved "https://codeload.github.com/muenzpraeger/lwc-jest-transformer-ts-fix/tar.gz/a222f1f0f971a2b844fe2124321a2fabb3cc0520"
   dependencies:
     "@babel/core" "7.1.0"
@@ -7068,10 +7071,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^10.0.2:
-  version "10.0.2"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.0.2.tgz#cfdd9fa5080b05fc6e29536897da1795bc67c7f9"
-  integrity sha512-ZldhtIfT7bynVa7nmU/1jbK05r9hYQXbIQqZSotqdBCAcGJDEUqaUB7kG3ZCdoe9Qkj6HUM3x2yjCGJRxPUQLA==
+lint-staged@^10.0.3:
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.0.3.tgz#fd27e25c308fb857d9cb44caa5fa845408d07df4"
+  integrity sha512-N071+M0yxKX0u67UOB8emFms29ekzrKoX1UlPcLS615O/rhx3+xRk5so8uU4tjdg4yNsD3ntdPSsuZnUPzblLA==
   dependencies:
     chalk "^3.0.0"
     commander "^4.0.1"
