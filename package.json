@@ -15,7 +15,7 @@
         "@salesforce/wire-service-jest-util": "^2.3.0",
         "husky": "^3.1.0",
         "jest-canvas-mock": "^2.2.0",
-        "lint-staged": "^10.0.2"
+        "lint-staged": "^10.0.3"
     },
     "engines": {
         "node": ">=10.0.0"
