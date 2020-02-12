@@ -1,11 +1,11 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 
 export default class LibsMomentjs extends LightningElement {
-    @track error;
-    @track selectedDateTime = new Date().toISOString();
-    @track weekOfYear;
-    @track dayOfYear;
-    @track calculatedDateTime;
+    error;
+    selectedDateTime = new Date().toISOString();
+    weekOfYear;
+    dayOfYear;
+    calculatedDateTime;
 
     momentInitialized = false;
 

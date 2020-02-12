@@ -1,12 +1,12 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 import { findContacts } from 'data/simpleProvider';
 
 /** The delay used when debouncing event handlers before a method call. */
 const DELAY = 350;
 
 export default class CompositionContactSearch extends LightningElement {
-    @track contacts;
-    @track error;
+    contacts;
+    error;
 
     handleKeyChange(event) {
         // Debouncing this method: Do not actually invoke the method call as long as this function is

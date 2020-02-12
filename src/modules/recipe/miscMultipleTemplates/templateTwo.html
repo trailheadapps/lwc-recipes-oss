@@ -1,0 +1,16 @@
+<template>
+    <ui-card title="MiscMultipleTemplates">
+        <div>
+            Template Two
+        </div>
+        <p class="margin-vertical-small">
+            <ui-button
+                label="Switch Templates"
+                onclick={switchTemplate}
+            ></ui-button>
+        </p>
+        <recipe-view-source source="recipe/miscMultipleTemplates" slot="footer">
+            Choose which template to render.
+        </recipe-view-source>
+    </ui-card>
+</template>

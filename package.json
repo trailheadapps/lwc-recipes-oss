@@ -4,18 +4,18 @@
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
-        "chart.js": "^2.8.0",
-        "d3": "^5.12.0",
+        "chart.js": "^2.9.3",
+        "d3": "^5.15.0",
         "lwc-recipes-oss-ui-components": "^0.3.1",
-        "lwc-services": "^1.3.3",
+        "lwc-services": "^1.3.12",
         "moment": "^2.24.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
-        "@salesforce/wire-service-jest-util": "^2.2.5",
-        "husky": "^3.0",
-        "jest-canvas-mock": "^2.1.1",
-        "lint-staged": "^9.3.0"
+        "@salesforce/wire-service-jest-util": "^2.3.0",
+        "husky": "^4.2.1",
+        "jest-canvas-mock": "^2.2.0",
+        "lint-staged": "^10.0.7"
     },
     "engines": {
         "node": ">=10.0.0"
@@ -31,14 +31,11 @@
     ],
     "license": "CC0-1.0",
     "lint-staged": {
-        "**/*.{html,js,json,yaml,yml,md}": [
+        "**/*.{css,html,js,json,yaml,yml,md}": [
             "prettier --write"
         ],
         "**/modules/**/*.js": [
             "eslint"
-        ],
-        "*": [
-            "git add"
         ]
     },
     "repository": "trailheadapps/lwc-recipes-oss",
@@ -46,8 +43,8 @@
         "build": "lwc-services build --mode production",
         "build:development": "lwc-services build",
         "lint": "eslint ./src/**/*.js",
-        "prettier": "prettier --write '**/*.{css,html,js,json,md,yaml,yml}'",
-        "prettier:verify": "prettier --list-different '**/*.{css,html,js,json,md,yaml,yml}'",
+        "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
+        "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,yaml,yml}\"",
         "serve": "lwc-services serve",
         "test:unit": "lwc-services test:unit",
         "test:unit:coverage": "lwc-services test:unit --coverage",

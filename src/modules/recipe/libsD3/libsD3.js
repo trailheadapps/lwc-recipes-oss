@@ -1,9 +1,9 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 import DATA from './data';
 
 export default class LibsD3 extends LightningElement {
-    @track svgWidth = 0;
-    @track svgHeight = 400;
+    svgWidth = 0;
+    svgHeight = 400;
 
     d3Initialized = false;
 
