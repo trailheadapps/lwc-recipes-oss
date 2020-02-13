@@ -12,7 +12,6 @@
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
-        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
         "@salesforce/wire-service-jest-util": "^2.3.0",
         "husky": "^4.2.1",
         "jest-canvas-mock": "^2.2.0",
