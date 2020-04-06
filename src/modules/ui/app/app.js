@@ -12,7 +12,7 @@ export default class App extends LightningElement {
 
     connectedCallback() {
         let that = this;
-        window.onpopstate = function(event) {
+        window.onpopstate = function (event) {
             if (event.state && event.state.page) {
                 that._isWindowHistoryUpdate = true;
                 that.navigationItems[

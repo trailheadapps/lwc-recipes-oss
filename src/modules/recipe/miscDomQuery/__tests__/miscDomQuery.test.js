@@ -20,7 +20,7 @@ describe('recipe-misc-dom-query', () => {
         const uiInputCheckedEls = element.shadowRoot.querySelectorAll(
             'ui-input'
         );
-        uiInputCheckedEls.forEach(input => {
+        uiInputCheckedEls.forEach((input) => {
             expect(input.checked).toBeFalsy();
         });
     });

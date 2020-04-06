@@ -38,7 +38,7 @@ describe('recipe-composition-iteration', () => {
         ];
         const contactTileNames = Array.from(
             element.shadowRoot.querySelectorAll('recipe-contact-tile')
-        ).map(contactTile => contactTile.contact.Name);
+        ).map((contactTile) => contactTile.contact.Name);
         expect(contactTileNames).toEqual(CONTACT_LIST_EXPECTED);
     });
 });

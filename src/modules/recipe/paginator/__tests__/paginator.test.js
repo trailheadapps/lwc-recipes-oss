@@ -25,7 +25,7 @@ describe('recipe-paginator', () => {
         element.addEventListener('previous', handlerPrevious);
         element.addEventListener('next', handlerNext);
 
-        element.shadowRoot.querySelectorAll('ui-button').forEach(button => {
+        element.shadowRoot.querySelectorAll('ui-button').forEach((button) => {
             button.click();
         });
 

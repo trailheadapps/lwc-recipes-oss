@@ -9,8 +9,8 @@
         "d3": "^5.15.0",
         "express": "^4.17.1",
         "helmet": "^3.22.0",
-        "moment": "^2.24.0",
-        "lwc-recipes-oss-ui-components": "^0.3.1"
+        "lwc-recipes-oss-ui-components": "^0.3.1",
+        "moment": "^2.24.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
@@ -18,7 +18,8 @@
         "husky": "^4.2.3",
         "jest-canvas-mock": "^2.2.0",
         "lint-staged": "^10.1.1",
-        "lwc-services": "^2.0.0"
+        "lwc-services": "^2.0.0",
+        "prettier": "^2.0.2"
     },
     "engines": {
         "node": ">=10.0.0"
