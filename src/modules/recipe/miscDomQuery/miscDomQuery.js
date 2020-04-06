@@ -7,9 +7,9 @@ export default class MiscDomQuery extends LightningElement {
         // Query the DOM
         const checked = Array.from(this.template.querySelectorAll('ui-input'))
             // Filter to only checked items
-            .filter(element => element.checked)
+            .filter((element) => element.checked)
             // Map to their labels
-            .map(element => element.label);
+            .map((element) => element.label);
         this.selection = checked.join(', ');
     }
 }

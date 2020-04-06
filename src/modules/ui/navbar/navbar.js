@@ -4,7 +4,7 @@ export default class NavBar extends LightningElement {
     @api
     set navItems(value) {
         this._navItemsPrivate = [];
-        Object.keys(value).forEach(key => {
+        Object.keys(value).forEach((key) => {
             this._navItemsPrivate.push(value[key]);
             if (value[key].visible) {
                 this.currentNavItem = value[key].value;

@@ -74,7 +74,7 @@ describe('recipe-error-panel', () => {
         return Promise.resolve().then(() => {
             const messageTexts = Array.from(
                 element.shadowRoot.querySelectorAll('p.error-message')
-            ).map(errorMessage => (errorMessage = errorMessage.textContent));
+            ).map((errorMessage) => (errorMessage = errorMessage.textContent));
             expect(messageTexts).toEqual(ERROR_MESSAGES_OUTPUT);
         });
     });

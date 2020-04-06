@@ -8,7 +8,7 @@ export default function getContactList() {
     });
 }
 
-register(getContactList, eventTarget => {
+register(getContactList, (eventTarget) => {
     eventTarget.addEventListener('connect', () => {
         eventTarget.dispatchEvent(new ValueChangedEvent({ data: contacts }));
     });

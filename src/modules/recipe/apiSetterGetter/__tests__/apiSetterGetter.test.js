@@ -19,7 +19,7 @@ describe('recipe-api-setter-getter', () => {
         ).todos.length;
 
         // Select input fields for simulating user input
-        uiInputEls.forEach(el => {
+        uiInputEls.forEach((el) => {
             if (el.label === 'Description') {
                 el.value = TODO_DESCRIPTION;
             } else if (el.label === 'Priority') {
