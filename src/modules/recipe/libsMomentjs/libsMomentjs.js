@@ -1,7 +1,6 @@
 import { LightningElement } from 'lwc';
 
 export default class LibsMomentjs extends LightningElement {
-    error;
     selectedDateTime = new Date().toISOString();
     weekOfYear;
     dayOfYear;

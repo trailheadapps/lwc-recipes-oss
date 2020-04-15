@@ -26,9 +26,6 @@
                 value={calculatedDateTime}
             ></ui-output>
         </div>
-        <template if:true={error}>
-            <recipe-error-panel errors={error}></recipe-error-panel>
-        </template>
         <recipe-view-source source="recipe/libsMomentjs" slot="footer">
             Calculate date/time values in a Lightning web component by
             incorporating moment.js.

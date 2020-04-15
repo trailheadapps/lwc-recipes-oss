@@ -3,9 +3,6 @@
         <div>
             <canvas class="donut" lwc:dom="manual"></canvas>
         </div>
-        <template if:true={error}>
-            <recipe-error-panel errors={error}></recipe-error-panel>
-        </template>
         <recipe-view-source source="recipe/libsChartjs" slot="footer">
             Use Chart.js in a Lightning web component.
         </recipe-view-source>
