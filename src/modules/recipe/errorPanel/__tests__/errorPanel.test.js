@@ -20,7 +20,7 @@ describe('recipe-error-panel', () => {
         });
         document.body.appendChild(element);
 
-        const messageEl = element.shadowRoot.querySelector('p');
+        const messageEl = element.shadowRoot.querySelector('h3');
         expect(messageEl.textContent).toBe(MESSAGE);
     });
 
@@ -34,7 +34,7 @@ describe('recipe-error-panel', () => {
         element.friendlyMessage = MESSAGE;
         document.body.appendChild(element);
 
-        const messageEl = element.shadowRoot.querySelector('p');
+        const messageEl = element.shadowRoot.querySelector('h3');
         expect(messageEl.textContent).toBe(MESSAGE);
     });
 
@@ -73,7 +73,7 @@ describe('recipe-error-panel', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             const messageTexts = Array.from(
-                element.shadowRoot.querySelectorAll('p.error-message')
+                element.shadowRoot.querySelectorAll('p')
             ).map((errorMessage) => (errorMessage = errorMessage.textContent));
             expect(messageTexts).toEqual(ERROR_MESSAGES_OUTPUT);
         });
