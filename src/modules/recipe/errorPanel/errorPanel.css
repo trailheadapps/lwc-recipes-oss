@@ -1,7 +1,30 @@
-:host > div {
+.padding-around-small {
+    padding: 4px;
+}
+.illustration__svg {
+    margin-bottom: 1rem;
+}
+
+.text-longform {
     text-align: center;
 }
 
-.padding-around-small {
-    padding: 4px;
+.text-heading_medium {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0px 0px 12px 0px;
+}
+
+.text-body-regular {
+    font-size: 13px;
+    margin: 0px 0px 12px 0px;
+}
+
+.align--absolute-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
 }
