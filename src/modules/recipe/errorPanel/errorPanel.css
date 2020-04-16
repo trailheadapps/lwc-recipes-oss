@@ -1,8 +1,9 @@
-.padding-around-small {
-    padding: 4px;
+.illustration {
+    text-align: center;
 }
+
 .illustration__svg {
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .text-longform {
@@ -19,6 +20,11 @@
 .text-body-regular {
     font-size: 13px;
     margin: 0px 0px 12px 0px;
+}
+
+.var-m-vertical_small {
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .align--absolute-center {
