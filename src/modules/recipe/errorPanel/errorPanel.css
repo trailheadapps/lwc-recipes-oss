@@ -2,10 +2,6 @@
     text-align: center;
 }
 
-.illustration__svg {
-    margin-bottom: 16px;
-}
-
 .text-longform {
     text-align: center;
 }
@@ -22,9 +18,18 @@
     margin: 0px 0px 12px 0px;
 }
 
-.var-m-vertical_small {
+.m-bottom_medium {
+    margin-bottom: 16px;
+}
+
+.m-vertical_small {
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.p-vertical_x-small {
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .align--absolute-center {
