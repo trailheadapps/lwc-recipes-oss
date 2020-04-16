@@ -1,7 +1,41 @@
-:host > div {
+.illustration {
     text-align: center;
 }
 
-.padding-around-small {
-    padding: 4px;
+.text-longform {
+    text-align: center;
+}
+
+.text-heading_medium {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 0px 0px 12px 0px;
+}
+
+.text-body-regular {
+    font-size: 13px;
+    margin: 0px 0px 12px 0px;
+}
+
+.m-bottom_medium {
+    margin-bottom: 16px;
+}
+
+.m-vertical_small {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.p-vertical_x-small {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.align--absolute-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
 }

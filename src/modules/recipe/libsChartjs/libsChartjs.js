@@ -5,7 +5,6 @@ const generateRandomNumber = () => {
 };
 
 export default class LibsChartjs extends LightningElement {
-    error;
     chart;
     chartjsInitialized = false;
 
