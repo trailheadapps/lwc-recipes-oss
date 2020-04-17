@@ -14,14 +14,12 @@ export default class CompositionContactSearch extends LightningElement {
         window.clearTimeout(this.delayTimeout);
         const searchKey = event.target.value;
         // eslint-disable-next-line @lwc/lwc/no-async-operation
-        this.error = new Error('ERRRRRORRRR');
-        // this.delayTimeout = setTimeout(() => {
-        //     try {
-        //         //this.contacts = findContacts(searchKey);
-        //         throw new Error("ERRRRRORRRR");
-        //     } catch (e) {
-        //         this.error = e;
-        //     }
-        // }, DELAY);
+        this.delayTimeout = setTimeout(() => {
+            try {
+                this.contacts = findContacts(searchKey);
+            } catch (e) {
+                this.error = e;
+            }
+        }, DELAY);
     }
 }
