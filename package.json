@@ -9,7 +9,6 @@
         "d3": "^5.15.0",
         "express": "^4.17.1",
         "helmet": "^3.22.0",
-        "lwc-recipes-oss-ui-components": "^0.3.1",
         "moment": "^2.24.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
@@ -17,8 +16,9 @@
         "@salesforce/wire-service-jest-util": "^2.3.0",
         "husky": "^4.2.3",
         "jest-canvas-mock": "^2.2.0",
+        "lwc-recipes-oss-ui-components": "^0.3.2",
         "lint-staged": "^10.1.1",
-        "lwc-services": "^2.0.0",
+        "lwc-services": "^2.0.6",
         "prettier": "^2.0.2"
     },
     "engines": {
@@ -42,10 +42,17 @@
             "eslint"
         ]
     },
+    "lwc": {
+        "modules": [
+            {
+                "npm": "lwc-recipes-oss-ui-components"
+            }
+        ]
+    },
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
         "build": "lwc-services build --mode production",
-        "build:development": "lwc-services build",
+        "build:development": "lwc-services build -b rollup",
         "lint": "eslint ./src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
         "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,yaml,yml}\"",
