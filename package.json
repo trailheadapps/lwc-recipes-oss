@@ -15,7 +15,7 @@
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
         "@salesforce/wire-service-jest-util": "^2.3.0",
-        "husky": "^4.2.3",
+        "husky": "^4.2.5",
         "jest-canvas-mock": "^2.2.0",
         "lint-staged": "^10.1.1",
         "lwc-services": "^2.0.0",
