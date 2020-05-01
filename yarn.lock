@@ -8054,10 +8054,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lwc-recipes-oss-ui-components@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/lwc-recipes-oss-ui-components/-/lwc-recipes-oss-ui-components-0.3.1.tgz#dca8876b6f128c0d7e95fa8047ec4044c92d3468"
-  integrity sha512-j5ZfTaFaGeg+AaZc/WtxQ2a3hg47SNa/MFFtpEr+NlOUN4ISw2l/EiKPG5Z+JhpNnYWQ3rgQMZF2M9U/ieNTtw==
+lwc-recipes-oss-ui-components@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/lwc-recipes-oss-ui-components/-/lwc-recipes-oss-ui-components-0.3.2.tgz#5dcc5d5c4bc47fdbabd4d4a1a979acc0f38a4c52"
+  integrity sha512-OCa1bsE4/jflCgkrKur7VZ5HcgEu3LRAXf2XjByiqFlYzIUPqsrZ/MeUB0tGZqrS8kE/OfDtuGJ2dVNvoeTuXA==
   dependencies:
     moment "^2.24.0"
 
