@@ -2024,10 +2024,10 @@
     eslint-plugin-jest "^23.6.0"
     eslint-restricted-globals "^0.2.0"
 
-"@salesforce/wire-service-jest-util@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.3.0.tgz#9f0397df063440714bfea0a4b410262958176fd5"
-  integrity sha512-azaDjiC9TIh9+bp5ZZphBQJHCHhEaRN/COPOs7Wrz+NBMSZ1tuOXd7x/eMzgneQIOUcKqASAT61nFZuok6gz9A==
+"@salesforce/wire-service-jest-util@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.4.0.tgz#4fb92e6d251770582eb7dfdcc097ceb3e24c90b7"
+  integrity sha512-/2fAgbv/bdFEtH1p7x7O8yifOw2jimgvv3nfI2ehR6s65OJIg8Pnb55itotBmHgbb6Ld6Wm9rte+3BS0ef9/gA==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
