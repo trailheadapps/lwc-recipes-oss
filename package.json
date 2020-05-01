@@ -6,7 +6,7 @@
     "dependencies": {
         "chart.js": "^2.9.3",
         "compression": "^1.7.4",
-        "d3": "^5.15.0",
+        "d3": "^5.16.0",
         "express": "^4.17.1",
         "helmet": "^3.22.0",
         "lwc-recipes-oss-ui-components": "^0.3.1",
