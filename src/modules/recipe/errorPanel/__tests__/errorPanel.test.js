@@ -45,7 +45,7 @@ describe('recipe-error-panel', () => {
         });
         document.body.appendChild(element);
 
-        const inputEl = element.shadowRoot.querySelector('ui-input');
+        const inputEl = element.shadowRoot.querySelector('a');
         expect(inputEl).toBeNull();
     });
 
@@ -64,9 +64,9 @@ describe('recipe-error-panel', () => {
         document.body.appendChild(element);
 
         // Simulate checking 'show details'
-        const inputEl = element.shadowRoot.querySelector('ui-input');
+        const inputEl = element.shadowRoot.querySelector('a');
         inputEl.checked = true;
-        inputEl.dispatchEvent(new CustomEvent('change'));
+        inputEl.dispatchEvent(new CustomEvent('click'));
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
