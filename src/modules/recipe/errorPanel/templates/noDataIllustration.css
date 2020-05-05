@@ -36,12 +36,13 @@
 a {
     color: #006dcc;
     text-decoration: none;
-    transition: color .1s linear;
+    transition: color 0.1s linear;
     font-size: 13px;
     cursor: pointer;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
     text-decoration: underline;
     color: #005fb2;
 }
