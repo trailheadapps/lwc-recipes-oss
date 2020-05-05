@@ -19,14 +19,9 @@ describe('recipe-event-simple', () => {
         const paginatorEl = element.shadowRoot.querySelector(
             'recipe-paginator'
         );
-        const buttonEls = paginatorEl.shadowRoot.querySelectorAll('ui-button');
 
-        // First click "Next", so that the page property increments to 2
-        buttonEls.forEach((buttonEl) => {
-            if (buttonEl.label === 'Next') {
-                buttonEl.click();
-            }
-        });
+        // Send event to increment page number
+        paginatorEl.dispatchEvent(new CustomEvent('next'));
 
         const pageEl = element.shadowRoot.querySelector('p');
 
@@ -38,23 +33,15 @@ describe('recipe-event-simple', () => {
                 // Verify that property is correctly incremented.
                 expect(pageEl.textContent).toBe('Page 2');
 
-                // Now click "Previous", so that the page property decrements to 1
-                buttonEls.forEach((buttonEl) => {
-                    if (buttonEl.label === 'Previous') {
-                        buttonEl.click();
-                    }
-                });
+                // Send event to decrement page number
+                paginatorEl.dispatchEvent(new CustomEvent('previous'));
             })
             .then(() => {
                 // Verify that property is correctly incremented.
                 expect(pageEl.textContent).toBe('Page 1');
 
                 // Decrement again
-                buttonEls.forEach((buttonEl) => {
-                    if (buttonEl.label === 'Previous') {
-                        buttonEl.click();
-                    }
-                });
+                paginatorEl.dispatchEvent(new CustomEvent('previous'));
             })
             .then(() => {
                 // Verify that property is not decremented, and the initial value stays on 1.
