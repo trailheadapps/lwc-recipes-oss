@@ -5,6 +5,10 @@ const { jestConfig } = require('lwc-services/lib/config/jestConfig');
 
 module.exports = {
     ...jestConfig,
+    // Stubs for 3rd party components
+    moduleNameMapper: {
+        '^ui/(.+)$': '<rootDir>/jest-mocks/ui/$1/$1'
+    },
     // Adding canvas mock for Chartjs tests
     setupFiles: ['jest-canvas-mock']
 };
