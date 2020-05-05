@@ -9,7 +9,7 @@
         "d3": "^5.15.0",
         "express": "^4.17.1",
         "helmet": "^3.22.0",
-        "moment": "^2.24.0"
+        "moment": "^2.25.3"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
