@@ -10,7 +10,7 @@
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
-        "@salesforce/wire-service-jest-util": "^2.3.0",
+        "@salesforce/wire-service-jest-util": "^2.4.2",
         "chart.js": "^2.9.3",
         "d3": "^5.15.0",
         "husky": "^4.2.3",
