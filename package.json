@@ -6,20 +6,20 @@
     "dependencies": {
         "compression": "^1.7.4",
         "express": "^4.17.1",
-        "helmet": "^3.22.0"
+        "helmet": "^3.22.2"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
         "@salesforce/wire-service-jest-util": "^2.4.2",
         "chart.js": "^2.9.3",
-        "d3": "^5.15.0",
-        "husky": "^4.2.3",
+        "d3": "^5.16.0",
+        "husky": "^4.2.5",
         "jest-canvas-mock": "^2.2.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lint-staged": "^10.2.7",
-        "lwc-services": "^2.0.6",
-        "moment": "^2.25.3",
-        "prettier": "^2.0.2"
+        "lint-staged": "^10.2.11",
+        "lwc-services": "^2.1.1",
+        "moment": "^2.27.0",
+        "prettier": "^2.0.5"
     },
     "engines": {
         "node": ">=10.0.0"
