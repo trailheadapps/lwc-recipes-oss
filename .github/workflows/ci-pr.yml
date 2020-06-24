@@ -4,7 +4,7 @@ name: CI (PR)
 # Definition when the workflow should run
 on:
     pull_request:
-        types: [opened, synchronize, reopened]
+        types: [opened, edited, synchronize, reopened]
 
 # Jobs to be executed
 jobs:
@@ -29,7 +29,7 @@ jobs:
             # Install npm dependencies for Prettier and Jest
             - name: 'Install npm dependencies'
               if: steps.cache-yarn.outputs.cache-hit != 'true'
-              run: yarn install
+              run: yarn install --frozen-lockfile
 
             # Prettier formatting
             - name: 'Code formatting verification with Prettier'
