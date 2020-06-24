@@ -42,13 +42,6 @@
             "eslint"
         ]
     },
-    "lwc": {
-        "modules": [
-            {
-                "npm": "lwc-recipes-oss-ui-components"
-            }
-        ]
-    },
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
         "build": "lwc-services build --mode production",
