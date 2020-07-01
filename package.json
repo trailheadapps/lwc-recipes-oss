@@ -6,7 +6,7 @@
     "dependencies": {
         "compression": "^1.7.4",
         "express": "^4.17.1",
-        "helmet": "^3.22.2"
+        "helmet": "^3.23.3"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
