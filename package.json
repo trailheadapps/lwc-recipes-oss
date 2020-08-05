@@ -17,7 +17,7 @@
         "jest-canvas-mock": "^2.2.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lint-staged": "^10.2.11",
-        "lwc-services": "^2.1.1",
+        "lwc-services": "^2.1.4",
         "moment": "^2.27.0",
         "prettier": "^2.0.5"
     },
