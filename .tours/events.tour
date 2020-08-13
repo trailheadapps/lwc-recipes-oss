@@ -1,0 +1,47 @@
+{
+  "title": "3 - Events",
+  "steps": [
+    {
+      "file": "src/modules/recipe/paginator/paginator.js",
+      "selection": {
+        "start": {
+          "line": 5,
+          "character": 14
+        },
+        "end": {
+          "line": 5,
+          "character": 27
+        }
+      },
+      "description": "Events are used to send data from a child component to its parent component(s) in the heirarchy.\n\nTo create an event, use the `CustomEvent()` constructor. To dispatch an event, call `dispatchEvent()`.\n\nHere a `CustomEvent` with the name `previous` is being fired."
+    },
+    {
+      "file": "src/modules/recipe/eventSimple/eventSimple.html",
+      "selection": {
+        "start": {
+          "line": 6,
+          "character": 17
+        },
+        "end": {
+          "line": 6,
+          "character": 27
+        }
+      },
+      "description": "In the parent component, you can use the `on<eventname>` attribute to add an event handler. Here, we are using the `onprevious` attribute to add the `handlePrevious` function."
+    },
+    {
+      "file": "src/modules/recipe/contactListItem/contactListItem.js",
+      "selection": {
+        "start": {
+          "line": 10,
+          "character": 55
+        },
+        "end": {
+          "line": 12,
+          "character": 10
+        }
+      },
+      "description": "You can optionally send data along with the event.\n\nRead more about events [here](https://lwc.dev/guide/events)"
+    }
+  ]
+}
