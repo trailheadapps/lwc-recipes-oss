@@ -9,11 +9,16 @@ app.use(
     helmet.contentSecurityPolicy({
         directives: {
             defaultSrc: ["'self'"],
-            scriptSrcElem: ["'self'", "'unsafe-inline'", "*.googletagmanager.com", "*.google-analytics.com"],
+            scriptSrcElem: [
+                "'self'",
+                "'unsafe-inline'",
+                '*.googletagmanager.com',
+                '*.google-analytics.com'
+            ],
             styleSrc: ["'self'", "'unsafe-inline'"],
-            connectSrc: ["*.google-analytics.com", "www.googleapis.com"],
-            imgSrc: ["'self'", "*.google-analytics.com"]
-        },
+            connectSrc: ['*.google-analytics.com', 'www.googleapis.com'],
+            imgSrc: ["'self'", '*.google-analytics.com']
+        }
     })
 );
 app.use(compression());
