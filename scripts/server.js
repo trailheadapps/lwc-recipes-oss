@@ -5,7 +5,22 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-app.use(helmet());
+app.use(
+    helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc: ["'self'"],
+            scriptSrcElem: [
+                "'self'",
+                "'unsafe-inline'",
+                '*.googletagmanager.com',
+                '*.google-analytics.com'
+            ],
+            styleSrc: ["'self'", "'unsafe-inline'"],
+            connectSrc: ['*.google-analytics.com', 'www.googleapis.com'],
+            imgSrc: ["'self'", '*.google-analytics.com']
+        }
+    })
+);
 app.use(compression());
 
 const HOST = process.env.HOST || 'localhost';
