@@ -244,9 +244,7 @@
                 <a onclick={handleShowDetailsClick}>Show details</a>
                 <template if:true={viewDetails}>
                     <template for:each={errorMessages} for:item="message">
-                        <p class="text-body_regular" key={message}>
-                            {message}
-                        </p>
+                        <p class="text-body_regular" key={message}>{message}</p>
                     </template>
                 </template>
             </template>
