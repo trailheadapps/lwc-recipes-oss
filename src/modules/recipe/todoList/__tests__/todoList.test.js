@@ -93,4 +93,14 @@ describe('recipe-todo-list', () => {
             );
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-todo-list', {
+            is: TodoList
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

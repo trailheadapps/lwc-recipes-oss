@@ -125,4 +125,14 @@ describe('recipe-event-bubbling', () => {
                 expect(contactNameEl.textContent).toBe(CONTACT.Name);
             });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-event-bubbling', {
+            is: EventBubbling
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

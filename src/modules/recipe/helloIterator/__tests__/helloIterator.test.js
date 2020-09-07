@@ -46,4 +46,14 @@ describe('recipe-hello-iterator', () => {
             element.shadowRoot.querySelector('li:last-child').lastChild.tagName
         ).toBe('DIV');
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-hello-iterator', {
+            is: HelloIterator
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

@@ -42,4 +42,14 @@ describe('recipe-hello-conditional-rendering', () => {
             expect(detailEl.textContent).toBe('These are the details!');
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-hello-conditional-rendering', {
+            is: HelloConditionalRendering
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

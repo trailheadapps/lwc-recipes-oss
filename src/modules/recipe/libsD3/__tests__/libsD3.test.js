@@ -22,4 +22,14 @@ describe('recipe-libs-d3', () => {
         const domEl = element.shadowRoot.querySelector('svg.d3');
         expect(domEl).not.toBeNull();
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-libs-d3', {
+            is: LibsD3
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

@@ -20,4 +20,14 @@ describe('recipe-libs-chartjs', () => {
         const domEl = element.shadowRoot.querySelector('canvas.donut');
         expect(domEl).not.toBeNull();
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-libs-chartjs', {
+            is: LibsChartjs
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

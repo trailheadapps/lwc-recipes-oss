@@ -120,4 +120,14 @@ describe('recipe-composition-contact-search', () => {
             expect(errorPanelEl).not.toBeNull();
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-composition-contact-search', {
+            is: CompositionContactSearch
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });
