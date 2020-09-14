@@ -13,7 +13,7 @@
           "character": 30
         }
       },
-      "description": "Install the libraries you want to use as node modules."
+      "description": "Install the node modules corresponding to the libraries you want to use. Here we've installed the `chart.js` library which we've used in the `libsChartjs` recipe."
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",
@@ -27,7 +27,7 @@
           "character": 34
         }
       },
-      "description": "Load the libraries in your web component using the `require` keyword."
+      "description": "Load the libraries in your Lightning web component using the `require` keyword."
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",

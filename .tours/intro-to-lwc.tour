@@ -2,6 +2,10 @@
   "title": "1 - Intro to LWC",
   "steps": [
     {
+      "directory": "src/modules/recipe/helloBinding",
+      "description": "Lightning Web Components is all about Web Standards. To see it in action, lets look at the `HelloBinding` recipe. This recipe shows a greeting message on screen, along with a text box that lets you modify the message."
+    },
+    {
       "file": "src/modules/recipe/helloBinding/helloBinding.js",
       "selection": {
         "start": {
@@ -13,7 +17,7 @@
           "character": 7
         }
       },
-      "description": "Lightning Web Components is all about Web Standards. Each component starts with ECMAScript(ES) modules that you import using standard ES syntax."
+      "description": "Each component starts with ECMAScript(ES) modules that you import using standard ES syntax."
     },
     {
       "file": "src/modules/recipe/helloBinding/helloBinding.js",
@@ -72,6 +76,10 @@
       "description": "You bind a property by enclosing it in {}. Since the property `greeting` is reactive, the message here gets updated whenever the its value changes."
     },
     {
+      "directory": "src/modules/recipe/helloConditionalRendering",
+      "description": "Next, lets look at the `HelloConditionalRendering` recipe. This recipe shows how you can conditionally hide and show HTML nodes based on JavaScript property values."
+    },
+    {
       "file": "src/modules/recipe/helloConditionalRendering/helloConditionalRendering.html",
       "selection": {
         "start": {
@@ -84,6 +92,24 @@
         }
       },
       "description": "Use the `if:true` or `if:false` directive to conditionally hide and show the content within the tag. It must be assigned a boolean value."
+    },
+    {
+      "file": "src/modules/recipe/helloConditionalRendering/helloConditionalRendering.js",
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 14
+        },
+        "end": {
+          "line": 7,
+          "character": 31
+        }
+      },
+      "description": "Any update to the boolean value auto triggers a rerender of the UI, thereby showing or hiding the elements needed."
+    },
+    {
+      "directory": "src/modules/recipe/helloForEach",
+      "description": "Finally, lets look at the `HelloForEach` recipe. This recipe shows a list of values on the UI by iterating over the elements of an array."
     },
     {
       "file": "src/modules/recipe/helloForEach/helloForEach.html",

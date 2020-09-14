@@ -2,8 +2,8 @@
   "title": "2 - Composition in LWC",
   "steps": [
     {
-      "directory": "src/modules/recipe",
-      "description": "Lightning web components are created as component bundles and are placed in sub-folders inside the `modules` folder. These sub folders denote a `namespace`. A namespace illustrates the concepts of owner and container. Here, we have 3 namespaces - data, recipe and ui.\n\nLearn more about component bundles [here](https://lwc.dev/guide/reference#component-bundles)"
+      "directory": "src/modules",
+      "description": "Lightning web components are created as component bundles and are placed in sub-folders inside the `modules` folder. These sub folders denote a `namespace`. A namespace illustrates the concepts of owner and container. Here, we have 3 namespaces - `data`, `recipe` and `ui`.\n\nLearn more about component bundles [here](https://lwc.dev/guide/reference#component-bundles)"
     },
     {
       "file": "src/modules/recipe/compositionBasics/compositionBasics.html",
@@ -17,7 +17,7 @@
           "character": 33
         }
       },
-      "description": "You can add components within the body of another component. The child component's tag name follows kebab case. Here, we have embedded the `contactTile` component that belongs to the `recipe` namespace."
+      "description": "You can embed a component inside another component by using custom elements. Each component you create has a corresponding custom element because LWC uses the Custom Elements Web Standard. The custom element of a component follows the kebab case notation. \n\nHere, we have embedded the `contactTile` component that belongs to the `recipe` namespace."
     },
     {
       "file": "src/modules/recipe/compositionBasics/compositionBasics.html",

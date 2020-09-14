@@ -1,0 +1,14 @@
+{
+  "title": "👋 Introducing LWC Recipes",
+  "steps": [
+    {
+      "directory": "src",
+      "description": "Recipes is a collection of easy-to-digest code examples for Lightning Web Components Open Source."
+    },
+    {
+      "directory": "src/modules/recipe",
+      "description": "Each recipe demonstrates how to code a specific task in about 30 lines of code or less. From Hello World to data access and third-party libraries, there is a recipe for that!"
+    }
+  ],
+  "isPrimary": true
+}

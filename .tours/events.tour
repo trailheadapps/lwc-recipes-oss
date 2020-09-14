@@ -2,6 +2,10 @@
   "title": "3 - Events",
   "steps": [
     {
+      "directory": "src/modules/recipe/paginator",
+      "description": "Events are used to send data from a child component to its parent component(s) in the heirarchy.\n\nTo see it in action, lets look at the `paginator` component which is embedded inside the `contactList` component. This component facilitates pagination by showing the \"Previous\" and \"Next\" buttons. On click of each of these buttons, events are fired which are handled by the parent component. "
+    },
+    {
       "file": "src/modules/recipe/paginator/paginator.js",
       "selection": {
         "start": {
@@ -13,7 +17,7 @@
           "character": 27
         }
       },
-      "description": "Events are used to send data from a child component to its parent component(s) in the heirarchy.\n\nTo create an event, use the `CustomEvent()` constructor. To dispatch an event, call `dispatchEvent()`.\n\nHere a `CustomEvent` with the name `previous` is being fired."
+      "description": "To create an event, use the `CustomEvent()` constructor. To dispatch an event, call `dispatchEvent()`.\n\nHere a `CustomEvent` with the name `previous` is being fired."
     },
     {
       "file": "src/modules/recipe/eventSimple/eventSimple.html",
