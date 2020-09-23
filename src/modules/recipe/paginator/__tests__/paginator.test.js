@@ -40,7 +40,7 @@ describe('recipe-paginator', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-paginator', {
+        const element = createElement('recipe-paginator', {
             is: Paginator
         });
 

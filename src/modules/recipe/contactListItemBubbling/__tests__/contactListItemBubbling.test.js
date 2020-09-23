@@ -56,10 +56,11 @@ describe('recipe-contact-list-item-bubbling', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-contact-list-item-bubbling', {
+        const element = createElement('recipe-contact-list-item-bubbling', {
             is: ContactListItemBubbling
         });
 
+        element.contact = CONTACT;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());

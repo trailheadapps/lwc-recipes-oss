@@ -70,7 +70,7 @@ describe('recipe-misc-dom-query', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-misc-dom-query', {
+        const element = createElement('recipe-misc-dom-query', {
             is: MiscDomQuery
         });
 

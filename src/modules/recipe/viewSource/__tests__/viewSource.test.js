@@ -29,7 +29,7 @@ describe('recipe-view-source', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-view-source', {
+        const element = createElement('recipe-view-source', {
             is: ViewSource
         });
 

@@ -37,7 +37,7 @@ describe('recipe-hello-binding', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-hello-binding', {
+        const element = createElement('recipe-hello-binding', {
             is: HelloBinding
         });
 

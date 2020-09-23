@@ -38,7 +38,7 @@ describe('recipe-hello-iterator', () => {
 
         // Verify first ul's first child is a div
         expect(
-            element.shadowRoot.querySelector('ul:first-child').firstChild
+            element.shadowRoot.querySelector('li:first-child').firstChild
                 .tagName
         ).toBe('DIV');
         // Verify last li's last child is a div
@@ -48,7 +48,7 @@ describe('recipe-hello-iterator', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-hello-iterator', {
+        const element = createElement('recipe-hello-iterator', {
             is: HelloIterator
         });
 

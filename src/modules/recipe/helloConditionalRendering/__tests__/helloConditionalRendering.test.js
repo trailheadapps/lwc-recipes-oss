@@ -43,8 +43,23 @@ describe('recipe-hello-conditional-rendering', () => {
         });
     });
 
-    it('is accessible', () => {
-        const element = createElement('c-hello-conditional-rendering', {
+    it('is accessible when details are visible', () => {
+        const element = createElement('recipe-hello-conditional-rendering', {
+            is: HelloConditionalRendering
+        });
+
+        document.body.appendChild(element);
+
+        // Toggle checkbox to show details
+        const inputEl = element.shadowRoot.querySelector('ui-input');
+        inputEl.checked = true;
+        inputEl.dispatchEvent(new CustomEvent('change'));
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
+
+    it('is accessible when details are not visible', () => {
+        const element = createElement('recipe-hello-conditional-rendering', {
             is: HelloConditionalRendering
         });
 

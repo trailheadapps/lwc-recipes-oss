@@ -37,10 +37,11 @@ describe('recipe-chart-bar', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-chart-bar', {
+        const element = createElement('recipe-chart-bar', {
             is: ChartBar
         });
 
+        element.percentage = 40;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());

@@ -43,7 +43,7 @@ describe('recipe-composition-iteration', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-composition-iteration', {
+        const element = createElement('recipe-composition-iteration', {
             is: CompositionIteration
         });
 

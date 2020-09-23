@@ -42,7 +42,7 @@ describe('recipe-composition-basics', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-composition-basics', {
+        const element = createElement('recipe-composition-basics', {
             is: CompositionBasics
         });
 

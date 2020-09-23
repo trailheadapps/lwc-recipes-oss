@@ -94,11 +94,13 @@ describe('recipe-todo-list', () => {
         });
     });
 
-    it('is accessible', () => {
-        const element = createElement('c-todo-list', {
+    it('is accessible when todo items added', () => {
+        // Create initial element
+        const element = createElement('recipe-todo-list', {
             is: TodoList
         });
 
+        element.todos = TODOS;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());

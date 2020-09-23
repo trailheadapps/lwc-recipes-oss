@@ -54,10 +54,11 @@ describe('recipe-contact-tile', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-contact-tile', {
+        const element = createElement('recipe-contact-tile', {
             is: ContactTile
         });
 
+        element.contact = CONTACT_INPUT;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());

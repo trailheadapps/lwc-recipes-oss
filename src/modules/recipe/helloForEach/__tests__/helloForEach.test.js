@@ -30,7 +30,7 @@ describe('recipe-hello-for-each', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-hello-for-each', {
+        const element = createElement('recipe-hello-for-each', {
             is: HelloForEach
         });
 

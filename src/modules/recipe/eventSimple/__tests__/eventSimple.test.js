@@ -50,7 +50,7 @@ describe('recipe-event-simple', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-event-simple', {
+        const element = createElement('recipe-event-simple', {
             is: EventSimple
         });
 

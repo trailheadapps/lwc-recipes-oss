@@ -47,7 +47,7 @@ describe('recipe-api-setter-getter', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-api-setter-getter', {
+        const element = createElement('recipe-api-setter-getter', {
             is: ApiSetterGetter
         });
 

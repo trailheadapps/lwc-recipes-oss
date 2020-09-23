@@ -27,7 +27,7 @@ describe('recipe-api-function', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-api-function', {
+        const element = createElement('recipe-api-function', {
             is: ApiFunction
         });
 

@@ -26,7 +26,7 @@ describe('recipe-clock', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-clock', {
+        const element = createElement('recipe-clock', {
             is: Clock
         });
 

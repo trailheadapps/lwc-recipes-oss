@@ -68,14 +68,4 @@ describe('lds-utils', () => {
 
         expect(reducedError).toStrictEqual(expected);
     });
-
-    it('is accessible', () => {
-        const element = createElement('c-lds-utils', {
-            is: LdsUtils
-        });
-
-        document.body.appendChild(element);
-
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
-    });
 });

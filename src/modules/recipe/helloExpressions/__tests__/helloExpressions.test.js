@@ -83,7 +83,7 @@ describe('recipe-hello-expressions', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-hello-expressions', {
+        const element = createElement('recipe-hello-expressions', {
             is: HelloExpressions
         });
 

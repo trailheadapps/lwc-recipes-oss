@@ -56,10 +56,11 @@ describe('recipe-contact-list-item', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-contact-list-item', {
+        const element = createElement('recipe-contact-list-item', {
             is: ContactListItem
         });
 
+        element.contact = CONTACT;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());

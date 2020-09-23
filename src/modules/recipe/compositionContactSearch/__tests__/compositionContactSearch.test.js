@@ -121,13 +121,61 @@ describe('recipe-composition-contact-search', () => {
         });
     });
 
-    it('is accessible', () => {
-        const element = createElement('c-composition-contact-search', {
+    it('is accessible when data is returned', () => {
+        const USER_INPUT = 'Amy';
+
+        // Assign mock value for returned data
+        findContacts.mockReturnValue(CONTACTS_SUCCESS);
+
+        // Create initial element
+        const element = createElement('recipe-error-panel', {
             is: CompositionContactSearch
         });
-
         document.body.appendChild(element);
 
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
+        // Simulate search
+        const searchInput = element.shadowRoot.querySelector('ui-input');
+        searchInput.value = USER_INPUT;
+        searchInput.dispatchEvent(new CustomEvent('change'));
+
+        // Disable search throttling
+        jest.runAllTimers();
+
+        // Return a promise to wait for any asynchronous DOM updates. Jest
+        // will automatically wait for the Promise chain to complete before
+        // ending the test and fail the test if the promise rejects.
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
+    });
+
+    it('is accessible when error is returned', () => {
+        const USER_INPUT = 'invalid';
+
+        // Throw error when trying to retrieve data
+        findContacts.mockImplementation(() => {
+            throw new Error();
+        });
+
+        // Create initial element
+        const element = createElement('recipe-error-panel', {
+            is: CompositionContactSearch
+        });
+        document.body.appendChild(element);
+
+        // Simulate search
+        const searchInput = element.shadowRoot.querySelector('ui-input');
+        searchInput.value = USER_INPUT;
+        searchInput.dispatchEvent(new CustomEvent('change'));
+
+        // Disable search throttling
+        jest.runAllTimers();
+
+        // Return a promise to wait for any asynchronous DOM updates. Jest
+        // will automatically wait for the Promise chain to complete before
+        // ending the test and fail the test if the promise rejects.
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
     });
 });

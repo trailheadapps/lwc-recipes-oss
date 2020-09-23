@@ -78,7 +78,7 @@ describe('recipe-api-property', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-api-property', {
+        const element = createElement('recipe-api-property', {
             is: ApiProperty
         });
 

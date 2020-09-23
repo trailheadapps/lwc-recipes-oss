@@ -22,7 +22,7 @@ describe('recipe-hello', () => {
     });
 
     it('is accessible', () => {
-        const element = createElement('c-hello', {
+        const element = createElement('recipe-hello', {
             is: Hello
         });
 
