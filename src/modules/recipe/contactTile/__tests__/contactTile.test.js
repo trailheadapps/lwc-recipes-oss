@@ -52,4 +52,15 @@ describe('recipe-contact-tile', () => {
         const detailEl = element.shadowRoot.querySelector('p');
         expect(detailEl.textContent).toBe(MESSAGE);
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-contact-tile', {
+            is: ContactTile
+        });
+
+        element.contact = CONTACT_INPUT;
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

@@ -24,4 +24,14 @@ describe('recipe-clock', () => {
             expect(uiDateTimeEl.value).not.toBe(currentDateTimeVal);
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-clock', {
+            is: Clock
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

@@ -35,4 +35,15 @@ describe('recipe-chart-bar', () => {
             expect(divEl.style._values.width).toBe('60%');
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-chart-bar', {
+            is: ChartBar
+        });
+
+        element.percentage = 40;
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

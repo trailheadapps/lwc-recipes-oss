@@ -48,4 +48,14 @@ describe('recipe-event-simple', () => {
                 expect(pageEl.textContent).toBe('Page 1');
             });
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-event-simple', {
+            is: EventSimple
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

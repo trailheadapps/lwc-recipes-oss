@@ -81,4 +81,14 @@ describe('recipe-hello-expressions', () => {
             expect(detailEl.textContent).toBe(`${PREFIX} PETER PAN`);
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-hello-expressions', {
+            is: HelloExpressions
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

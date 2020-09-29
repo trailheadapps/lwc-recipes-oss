@@ -41,4 +41,14 @@ describe('recipe-composition-iteration', () => {
         ).map((contactTile) => contactTile.contact.Name);
         expect(contactTileNames).toEqual(CONTACT_LIST_EXPECTED);
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-composition-iteration', {
+            is: CompositionIteration
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

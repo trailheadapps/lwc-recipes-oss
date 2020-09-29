@@ -10,5 +10,6 @@ module.exports = {
         '^ui/(.+)$': '<rootDir>/jest-mocks/ui/$1/$1'
     },
     // Adding canvas mock for Chartjs tests
-    setupFiles: ['jest-canvas-mock']
+    setupFiles: ['jest-canvas-mock'],
+    setupFilesAfterEnv: ['<rootDir>/jest-sa11y-setup.js']
 };

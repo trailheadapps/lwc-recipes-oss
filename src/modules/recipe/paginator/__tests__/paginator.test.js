@@ -38,4 +38,14 @@ describe('recipe-paginator', () => {
             expect(handlerNext).toHaveBeenCalledTimes(1);
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-paginator', {
+            is: Paginator
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

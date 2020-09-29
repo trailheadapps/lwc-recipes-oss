@@ -35,4 +35,14 @@ describe('recipe-hello-binding', () => {
             expect(div.textContent).toBe(`Hello, ${EXPECTED}!`);
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-hello-binding', {
+            is: HelloBinding
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

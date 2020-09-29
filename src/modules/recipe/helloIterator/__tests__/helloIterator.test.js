@@ -38,12 +38,22 @@ describe('recipe-hello-iterator', () => {
 
         // Verify first ul's first child is a div
         expect(
-            element.shadowRoot.querySelector('ul:first-child').firstChild
+            element.shadowRoot.querySelector('li:first-child').firstChild
                 .tagName
         ).toBe('DIV');
         // Verify last li's last child is a div
         expect(
             element.shadowRoot.querySelector('li:last-child').lastChild.tagName
         ).toBe('DIV');
+    });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-hello-iterator', {
+            is: HelloIterator
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

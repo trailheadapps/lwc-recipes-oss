@@ -54,4 +54,15 @@ describe('recipe-contact-list-item-bubbling', () => {
         const selectEvent = mockSelectHandler.mock.calls[0][0];
         expect(selectEvent.bubbles).toBeTruthy();
     });
+
+    it('is accessible', () => {
+        const element = createElement('recipe-contact-list-item-bubbling', {
+            is: ContactListItemBubbling
+        });
+
+        element.contact = CONTACT;
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });
