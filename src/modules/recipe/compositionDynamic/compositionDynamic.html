@@ -4,6 +4,10 @@
         </ui-button>
 
         <div class="dynamic-component">
+            <!-- 
+                You can use any tag name for the dynamic component as long as it belongs to your namespace and it's not an existing component in your project.
+                For example: In this recipe, we use a "recipe-dynamic-import" tag, but there's no dynamicImport component in the recipe namespace.
+            -->
             <recipe-dynamic-import
                 lwc:dynamic={componentConstructor}
             ></recipe-dynamic-import>
