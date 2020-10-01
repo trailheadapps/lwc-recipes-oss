@@ -1,0 +1,18 @@
+.dynamic-component {
+    position: relative;
+    border: solid 1px #ecebea;
+    border-radius: 4px;
+    display: block;
+    padding: 14px 8px 8px 8px;
+    margin-top: 26px;
+}
+
+.dynamic-component:before {
+    content: 'The component will be loaded here';
+    color: #dddbda;
+    position: absolute;
+    top: -16px;
+    left: 4px;
+    background-color: #ffffff;
+    padding: 0 4px;
+}
