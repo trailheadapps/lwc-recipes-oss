@@ -19,7 +19,7 @@
         "lint-staged": "^10.4.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwc-services": "^2.1.9",
-        "moment": "^2.27.0",
+        "moment": "^2.29.1",
         "prettier": "^2.1.1"
     },
     "engines": {
