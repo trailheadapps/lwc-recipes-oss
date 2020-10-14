@@ -16,7 +16,7 @@
         "d3": "^6.1.1",
         "husky": "^4.2.5",
         "jest-canvas-mock": "^2.3.0",
-        "lint-staged": "^10.2.13",
+        "lint-staged": "^10.4.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwc-services": "^2.1.9",
         "moment": "^2.27.0",
