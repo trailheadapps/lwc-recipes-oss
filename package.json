@@ -13,7 +13,7 @@
         "@sa11y/jest": "0.1.4-beta.0",
         "@salesforce/wire-service-jest-util": "^2.4.2",
         "chart.js": "^2.9.3",
-        "d3": "^6.1.1",
+        "d3": "^6.2.0",
         "husky": "^4.2.5",
         "jest-canvas-mock": "^2.2.0",
         "lint-staged": "^10.2.13",
