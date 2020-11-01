@@ -8174,10 +8174,10 @@ lwc-recipes-oss-ui-components@^0.3.2:
   dependencies:
     moment "^2.24.0"
 
-lwc-services@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/lwc-services/-/lwc-services-2.2.2.tgz#813c44add94c30d0a754a42ff0bdc3c9f52540db"
-  integrity sha512-cO70xUNIjg+gcbF416v/TGXmdV8DKLHXJOWDpQYwp8SOCEYlU0VMl43v2cM2LUta6KnOc9RBu8NQN99ktHc+0g==
+lwc-services@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/lwc-services/-/lwc-services-2.2.3.tgz#56d30589c7737d23ac3062937b90ab7d5de9b127"
+  integrity sha512-555V3Pt2dBqprxMGogLF9jdjv3XjWcUBPp5DtA3DBIVeCxgt41VB6WoZdTraRhUusnB+LV0o8BPRg7DXHP6tXg==
   dependencies:
     "@babel/core" "^7.11.6"
     "@babel/plugin-proposal-object-rest-spread" "^7.11.0"
