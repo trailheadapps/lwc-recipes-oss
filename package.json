@@ -12,7 +12,7 @@
     "devDependencies": {
         "@sa11y/jest": "0.1.4-beta.0",
         "@salesforce/wire-service-jest-util": "^2.4.2",
-        "chart.js": "^2.9.3",
+        "chart.js": "^2.9.4",
         "d3": "^6.2.0",
         "husky": "^4.3.0",
         "jest-canvas-mock": "^2.3.0",
