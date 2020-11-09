@@ -1,9 +1,11 @@
 {
+  "$schema": "https://aka.ms/codetour-schema",
   "title": "3 - Events",
   "steps": [
     {
       "directory": "src/modules/recipe/paginator",
-      "description": "Events are used to send data from a child component to its parent component(s) in the heirarchy.\n\nTo see it in action, lets look at the `paginator` component which is embedded inside the `contactList` component. This component facilitates pagination by showing the \"Previous\" and \"Next\" buttons. On click of each of these buttons, events are fired which are handled by the parent component. "
+      "description": "Events are used to send data from a child component to its parent component(s) in the heirarchy.\n\nTo see it in action, lets look at the `paginator` component which is embedded inside the `contactList` component. This component facilitates pagination by showing the \"Previous\" and \"Next\" buttons. On click of each of these buttons, events are fired which are handled by the parent component. ",
+      "title": "The Paginator recipe"
     },
     {
       "file": "src/modules/recipe/paginator/paginator.js",
@@ -17,7 +19,8 @@
           "character": 27
         }
       },
-      "description": "To create an event, use the `CustomEvent()` constructor. To dispatch an event, call `dispatchEvent()`.\n\nHere a `CustomEvent` with the name `previous` is being fired."
+      "description": "To create an event, use the `CustomEvent()` constructor. To dispatch an event, call `dispatchEvent()`.\n\nHere a `CustomEvent` with the name `previous` is being fired.",
+      "title": "Firing an event"
     },
     {
       "file": "src/modules/recipe/eventSimple/eventSimple.html",
@@ -31,7 +34,8 @@
           "character": 27
         }
       },
-      "description": "In the parent component, you can use the `on<eventname>` attribute to add an event handler. Here, we are using the `onprevious` attribute to add the `handlePrevious` function."
+      "description": "In the parent component, you can use the `on<eventname>` attribute to add an event handler. Here, we are using the `onprevious` attribute to add the `handlePrevious` function.",
+      "title": "Handling an event"
     },
     {
       "file": "src/modules/recipe/contactListItem/contactListItem.js",
@@ -45,7 +49,8 @@
           "character": 10
         }
       },
-      "description": "You can optionally send data along with the event.\n\nRead more about events [here](https://lwc.dev/guide/events)"
+      "description": "You can optionally send data along with the event.\n\nRead more about events [here](https://lwc.dev/guide/events)",
+      "title": "Sending data with an event"
     }
   ]
 }

@@ -1,9 +1,11 @@
 {
+  "$schema": "https://aka.ms/codetour-schema",
   "title": "1 - Intro to LWC",
   "steps": [
     {
       "directory": "src/modules/recipe/helloBinding",
-      "description": "Lightning Web Components is all about Web Standards. To see it in action, lets look at the `HelloBinding` recipe. This recipe shows a greeting message on screen, along with a text box that lets you modify the message."
+      "description": "Lightning Web Components is all about Web Standards. To see it in action, lets look at the `HelloBinding` recipe. This recipe shows a greeting message on screen, along with a text box that lets you modify the message.",
+      "title": "The HelloBinding recipe"
     },
     {
       "file": "src/modules/recipe/helloBinding/helloBinding.js",
@@ -17,7 +19,8 @@
           "character": 7
         }
       },
-      "description": "Each component starts with ECMAScript(ES) modules that you import using standard ES syntax."
+      "description": "Each component starts with ECMAScript(ES) modules that you import using standard ES syntax.",
+      "title": "HelloBinding - ES Modules"
     },
     {
       "file": "src/modules/recipe/helloBinding/helloBinding.js",
@@ -31,7 +34,8 @@
           "character": 34
         }
       },
-      "description": "Lightning Web Components also leverage standard ES classes."
+      "description": "Lightning Web Components also leverage standard ES classes.",
+      "title": "HelloBinding - ES Classes"
     },
     {
       "file": "src/modules/recipe/helloBinding/helloBinding.js",
@@ -45,7 +49,8 @@
           "character": 13
         }
       },
-      "description": "These are class properties, which are reactive by default, which means whenever their value changes, the view refreshes automatically."
+      "description": "These are class properties, which are reactive by default, which means whenever their value changes, the view refreshes automatically.",
+      "title": "HelloBinding - Properties"
     },
     {
       "file": "src/modules/recipe/helloBinding/helloBinding.html",
@@ -59,7 +64,8 @@
           "character": 10
         }
       },
-      "description": "The view is defined in a HTML file that starts with the HTML5 template tag, which is a part of the web components standard."
+      "description": "The view is defined in a HTML file that starts with the HTML5 template tag, which is a part of the web components standard.",
+      "title": "HelloBinding - Template"
     },
     {
       "file": "src/modules/recipe/helloBinding/helloBinding.html",
@@ -73,11 +79,13 @@
           "character": 33
         }
       },
-      "description": "You bind a property by enclosing it in {}. Since the property `greeting` is reactive, the message here gets updated whenever the its value changes."
+      "description": "You bind a property by enclosing it in {}. Since the property `greeting` is reactive, the message here gets updated whenever the its value changes.",
+      "title": "HelloBinding - Data Binding"
     },
     {
       "directory": "src/modules/recipe/helloConditionalRendering",
-      "description": "Next, lets look at the `HelloConditionalRendering` recipe. This recipe shows how you can conditionally hide and show HTML nodes based on JavaScript property values."
+      "description": "Next, lets look at the `HelloConditionalRendering` recipe. This recipe shows how you can conditionally hide and show HTML nodes based on JavaScript property values.",
+      "title": "The HelloConditionalRendering recipe"
     },
     {
       "file": "src/modules/recipe/helloConditionalRendering/helloConditionalRendering.html",
@@ -91,7 +99,8 @@
           "character": 34
         }
       },
-      "description": "Use the `if:true` or `if:false` directive to conditionally hide and show the content within the tag. It must be assigned a boolean value."
+      "description": "Use the `if:true` or `if:false` directive to conditionally hide and show the content within the tag. It must be assigned a boolean value.",
+      "title": "HelloConditionalRendering - HTML"
     },
     {
       "file": "src/modules/recipe/helloConditionalRendering/helloConditionalRendering.js",
@@ -105,11 +114,13 @@
           "character": 31
         }
       },
-      "description": "Any update to the boolean value auto triggers a rerender of the UI, thereby showing or hiding the elements needed."
+      "description": "Any update to the boolean value auto triggers a rerender of the UI, thereby showing or hiding the elements needed.",
+      "title": "HelloConditionalRendering - JS"
     },
     {
       "directory": "src/modules/recipe/helloForEach",
-      "description": "Finally, lets look at the `HelloForEach` recipe. This recipe shows a list of values on the UI by iterating over the elements of an array."
+      "description": "Finally, lets look at the `HelloForEach` recipe. This recipe shows a list of values on the UI by iterating over the elements of an array.",
+      "title": "The HelloForEach recipe"
     },
     {
       "file": "src/modules/recipe/helloForEach/helloForEach.html",
@@ -123,7 +134,8 @@
           "character": 31
         }
       },
-      "description": "To display multiple elements by iterating over a list of values, use the `for:each` directive. It takes in an array value."
+      "description": "To display multiple elements by iterating over a list of values, use the `for:each` directive. It takes in an array value.",
+      "title": "HelloForEach - HTML"
     },
     {
       "file": "src/modules/recipe/helloForEach/helloForEach.html",
@@ -137,7 +149,8 @@
           "character": 51
         }
       },
-      "description": "The `for:item` directive holds an individual element within the array based on the current iteration."
+      "description": "The `for:item` directive holds an individual element within the array based on the current iteration.",
+      "title": "HelloForEach - JS"
     }
   ]
 }

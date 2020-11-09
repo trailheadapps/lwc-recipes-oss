@@ -1,9 +1,11 @@
 {
+  "$schema": "https://aka.ms/codetour-schema",
   "title": "2 - Composition in LWC",
   "steps": [
     {
       "directory": "src/modules",
-      "description": "Lightning web components are created as component bundles and are placed in sub-folders inside the `modules` folder. These sub folders denote a `namespace`. A namespace illustrates the concepts of owner and container. Here, we have 3 namespaces - `data`, `recipe` and `ui`.\n\nLearn more about component bundles [here](https://lwc.dev/guide/reference#component-bundles)"
+      "description": "Lightning web components are created as component bundles and are placed in sub-folders inside the `modules` folder. These sub folders denote a `namespace`. A namespace illustrates the concepts of owner and container. Here, we have 3 namespaces - `data`, `recipe` and `ui`.\n\nLearn more about component bundles [here](https://lwc.dev/guide/reference#component-bundles)",
+      "title": "Component Bundles and Namespaces"
     },
     {
       "file": "src/modules/recipe/compositionBasics/compositionBasics.html",
@@ -17,7 +19,8 @@
           "character": 33
         }
       },
-      "description": "You can embed a component inside another component by using custom elements. Each component you create has a corresponding custom element because LWC uses the Custom Elements Web Standard. The custom element of a component follows the kebab case notation. \n\nHere, we have embedded the `contactTile` component that belongs to the `recipe` namespace."
+      "description": "You can embed a component inside another component by using custom elements. Each component you create has a corresponding custom element because LWC uses the Custom Elements Web Standard. The custom element of a component follows the kebab case notation. \n\nHere, we have embedded the `contactTile` component that belongs to the `recipe` namespace.",
+      "title": "Embedding a component"
     },
     {
       "file": "src/modules/recipe/compositionBasics/compositionBasics.html",
@@ -31,7 +34,8 @@
           "character": 41
         }
       },
-      "description": "You can also pass values to the child components by adding their publicly accessible properties as attributes."
+      "description": "You can also pass values to the child components by adding their publicly accessible properties as attributes.",
+      "title": "Attributes"
     },
     {
       "file": "src/modules/recipe/contactTile/contactTile.js",
@@ -45,7 +49,8 @@
           "character": 9
         }
       },
-      "description": "To make a property publicly accessible, denote it with the `@api` decorator. \n\nLearn more about decorators [here](https://lwc.dev/guide/reference#javascript-decorators).\n\nLearn more about composition [here](https://lwc.dev/guide/composition)."
+      "description": "To make a property publicly accessible, denote it with the `@api` decorator. \n\nLearn more about decorators [here](https://lwc.dev/guide/reference#javascript-decorators).\n\nLearn more about composition [here](https://lwc.dev/guide/composition).",
+      "title": "Public Properties"
     }
   ]
 }
