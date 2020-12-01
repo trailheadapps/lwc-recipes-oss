@@ -20,7 +20,7 @@
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwc-services": "^2.2.3",
         "moment": "^2.29.1",
-        "prettier": "^2.1.2"
+        "prettier": "^2.2.1"
     },
     "engines": {
         "node": ">=10.0.0"
