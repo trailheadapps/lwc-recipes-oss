@@ -8219,9 +8219,9 @@ lwc-services@^2.3.0:
     workbox-webpack-plugin "^5.1.4"
 
 lwc-webpack-plugin@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/lwc-webpack-plugin/-/lwc-webpack-plugin-1.1.1.tgz#6e3edbfc805fb6a6d27492b569c86974a55157b8"
-  integrity sha512-faGAf2N0yQcfNJIFUcXCtdeHZIzXN2DXodG7vi/WE2xZ4uZJJa3mcRxci1akwXnqVTh3C8Um4y78h/sE+vyktw==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/lwc-webpack-plugin/-/lwc-webpack-plugin-1.1.2.tgz#dd74d594afb9cd89b4fe9af44142aacb4080075d"
+  integrity sha512-+V7HfekRKKxUqf38e7A+EtD+qoqvgdjZdIPPbMsCvL3gd86KvghdvQB18RE15uBnvJd6vCog9Sw/MSwWbM4qhQ==
   dependencies:
     "@babel/preset-typescript" "^7.12.7"
     "@lwc/babel-plugin-component" "^1.9.3"
