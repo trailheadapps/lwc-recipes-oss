@@ -8,3 +8,5 @@ export default class ApiProperty extends LightningElement {
         this.percentage = percentage <= 100 ? percentage : 100;
     }
 }
+
+//I dont see any api Property in this example. 
