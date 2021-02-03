@@ -17,8 +17,8 @@ app.use(
                 '*.api.exchangeratesapi.io'
             ],
             styleSrc: ["'self'", "'unsafe-inline'"],
-            connectSrc: ['*.google-analytics.com', 'www.googleapis.com','https://api.exchangeratesapi.io'],
-            imgSrc: ["'self'", '*.google-analytics.com']
+            connectSrc: ['*.google-analytics.com', 'www.googleapis.com','*.api.exchangeratesapi.io'],
+            imgSrc: ["'self'", '*.google-analytics.com','*.api.exchangeratesapi.io']
         }
     })
 );

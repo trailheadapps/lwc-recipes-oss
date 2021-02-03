@@ -1,22 +1,24 @@
 <template>
     <div>
     	<ui-input type="search"
-                    onchange={handleSearchKeyChange}
+                    onchange={handleconversionFrom}
                     label="Enter From"
                     value={conversionFrom}
                 ></ui-input>
   <ui-input type="search"
-                    onchange={handleSearchKeyChange}
+                    onchange={handleconversionTo}
                     label="Enter To"
                     value={conversionFrom}
                 ></ui-input>
 
                 <p class="margin-vertical-small">
                     <ui-button
-                        label="Search"
+                        label="Get Result"
                         class="button"
                         onclick={handleSearchClick}
                     ></ui-button>
                 </p>
+
+                The result is: {result}
     </div>
 </template>

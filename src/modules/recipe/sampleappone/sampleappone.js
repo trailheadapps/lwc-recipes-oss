@@ -4,13 +4,21 @@ export default class Paginator extends LightningElement {
 
 @track conversionFrom;
 @track conversionTo;
+@track result;
 
 
- handleSearchKeyChange(event) {
-        this.searchKey = event.target.value;
+ handleconversionFrom(event) {
+        this.conversionFrom = event.target.value;
+    }
+handleconversionTo(event) {
+        this.conversionTo = event.target.value;
     }
 
-    
+handleconversionTo(event) {
+        result=conversionFrom/conversionTo;
+    }
+
+
 connectedCallback(){
 fetch('https://api.exchangeratesapi.io/latest', // End point URL
 {
