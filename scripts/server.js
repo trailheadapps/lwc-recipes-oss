@@ -5,7 +5,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-app.use(
+/*app.use(
     helmet.contentSecurityPolicy({
         directives: {
             defaultSrc: ["'self'"],
@@ -21,7 +21,13 @@ app.use(
             imgSrc: ["'self'", '*.google-analytics.com','*.api.exchangeratesapi.io']
         }
     })
+);*/
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
 );
+
 app.use(compression());
 
 const HOST = process.env.HOST || 'localhost';
