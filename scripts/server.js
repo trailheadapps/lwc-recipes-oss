@@ -28,6 +28,11 @@ app.use(
   })
 );
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 app.use(compression());
 
 const HOST = process.env.HOST || 'localhost';
