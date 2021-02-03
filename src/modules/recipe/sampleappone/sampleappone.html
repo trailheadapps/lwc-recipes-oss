@@ -1,11 +1,22 @@
 <template>
     <div>
-    	Sample App One
-        <ui-button label="Previous" onclick={handlePrevious}> </ui-button>
-        <ui-button
-            label="Next"
-            onclick={handleNext}
-            class="button-right"
-        ></ui-button>
+    	<ui-input type="search"
+                    onchange={handleSearchKeyChange}
+                    label="Enter From"
+                    value={conversionFrom}
+                ></ui-input>
+  <ui-input type="search"
+                    onchange={handleSearchKeyChange}
+                    label="Enter To"
+                    value={conversionFrom}
+                ></ui-input>
+
+                <p class="margin-vertical-small">
+                    <ui-button
+                        label="Search"
+                        class="button"
+                        onclick={handleSearchClick}
+                    ></ui-button>
+                </p>
     </div>
 </template>

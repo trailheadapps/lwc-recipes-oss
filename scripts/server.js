@@ -13,7 +13,8 @@ app.use(
                 "'self'",
                 "'unsafe-inline'",
                 '*.googletagmanager.com',
-                '*.google-analytics.com'
+                '*.google-analytics.com',
+                '*.api.exchangeratesapi.io'
             ],
             styleSrc: ["'self'", "'unsafe-inline'"],
             connectSrc: ['*.google-analytics.com', 'www.googleapis.com','https://api.exchangeratesapi.io'],
