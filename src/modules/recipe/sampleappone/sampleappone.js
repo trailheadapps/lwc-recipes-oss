@@ -1,6 +1,10 @@
 import{ LightningElement, track } from 'lwc';
 export default class Paginator extends LightningElement {
 @track responsedata;
+
+@track conversionFrom;
+@track conversionTo;
+
 connectedCallback(){
 fetch('https://api.exchangeratesapi.io/latest', // End point URL
 {

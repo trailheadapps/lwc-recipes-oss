@@ -16,7 +16,7 @@ app.use(
                 '*.google-analytics.com'
             ],
             styleSrc: ["'self'", "'unsafe-inline'"],
-            connectSrc: ['*.google-analytics.com', 'www.googleapis.com'],
+            connectSrc: ['*.google-analytics.com', 'www.googleapis.com','https://api.exchangeratesapi.io'],
             imgSrc: ["'self'", '*.google-analytics.com']
         }
     })
