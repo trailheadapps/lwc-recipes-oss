@@ -26,11 +26,6 @@
         "node": ">=10.0.0"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
     "keywords": [
         "lwc"
     ],
