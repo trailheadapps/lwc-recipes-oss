@@ -2008,46 +2008,46 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@sa11y/assert@0.2.1-beta.0":
-  version "0.2.1-beta.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/assert/-/assert-0.2.1-beta.0.tgz#534f8a123481ffe8c87519b769ee9f6902a25869"
-  integrity sha512-7+yD0t5STqJlpHNQ7gNqeawJlHQkG7cBm2LF/5pLWuz+uUP8DQ2YwsUncwOGu11CehvOpgXBRhOBzXdbY4xykw==
+"@sa11y/assert@0.2.2-beta.0":
+  version "0.2.2-beta.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/assert/-/assert-0.2.2-beta.0.tgz#0d5d83856b174d234b6d964a24fcd4875128411a"
+  integrity sha512-bxO8R2v2oz1zt4h71T5+vTI4cMpbV2ZHITy2d+6zZEsqaQw0hq/wyOjpOhQ3yZlGSA1YnZ+IKBS3nj9TxZjzuA==
   dependencies:
-    "@sa11y/common" "0.2.4-beta.0"
-    "@sa11y/format" "0.3.2-beta.0"
-    "@sa11y/preset-rules" "0.3.1"
-    axe-core "4.1.1"
+    "@sa11y/common" "0.2.5-beta.0"
+    "@sa11y/format" "0.3.3-beta.0"
+    "@sa11y/preset-rules" "0.3.2"
+    axe-core "4.1.2"
 
-"@sa11y/common@0.2.4-beta.0":
-  version "0.2.4-beta.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/common/-/common-0.2.4-beta.0.tgz#77f71332579398aa8e810029098ef5a414b73194"
-  integrity sha512-3i4xyyjbU2UfzMjyyqjIBQGEhC7MbJ2XtyOtrJ2Iq1tCrZR32/8BVVNzbKhpkxA6ayilFCNGIuXbixUnHMTR/Q==
+"@sa11y/common@0.2.5-beta.0":
+  version "0.2.5-beta.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/common/-/common-0.2.5-beta.0.tgz#c5343b65d1fd5c4f318a9aa240a27d299326fa59"
+  integrity sha512-hkVF75QzAYANtpV9VeeFt2hCz5mtipK2AkjXwLQzh7lP/aTJUBLJnABzxDTKpgEujWVW2wy37cLxf5SsW9Ax0g==
   dependencies:
-    axe-core "4.1.1"
+    axe-core "4.1.2"
 
-"@sa11y/format@0.3.2-beta.0":
-  version "0.3.2-beta.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/format/-/format-0.3.2-beta.0.tgz#9ad98b155970d22f80c69a945b55e80f863f3d5c"
-  integrity sha512-mA6JVORgfT8lIt4XIIALiuqQc+t5Yvtr4LAMvwwEMRQJEreZTPm2WxuOYVQvswJvIJjeGY44fwQPFLTQl4J4eg==
+"@sa11y/format@0.3.3-beta.0":
+  version "0.3.3-beta.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/format/-/format-0.3.3-beta.0.tgz#5bfaf231a7014242016996d96f3ccfafe12dcc20"
+  integrity sha512-3hAGmxb2OEg6jr6OsNHmoeVI4K/VZs8N5P3OSJkzwqVNUE2cLc+T0to+wIXr4lzAlSQSBLHIfs8QtDqiAW6XzA==
   dependencies:
-    axe-core "4.1.1"
+    axe-core "4.1.2"
 
-"@sa11y/jest@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@sa11y/jest/-/jest-0.2.1.tgz#7eb9f635ea74628d97a37705e01b4457b15c4552"
-  integrity sha512-VZlgNGGlPfWtumfBVKA+M57z+7vkoTxtdySVv8SqHvJenNHHPWcXcXf7iGsSbCYqPvge7Qjj4mBz6Tn4T2923Q==
+"@sa11y/jest@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/jest/-/jest-0.3.0.tgz#225dd9f8b5064142631749aac5e603f9e183a2cc"
+  integrity sha512-NoXQ3rMHUkxla7C8IfjUFDCboyKbtkPUVtfDcBiII6LISYavPUe4KyESyXk2U0fVQT+h+PXWVDk5XYweQqSy2w==
   dependencies:
-    "@sa11y/assert" "0.2.1-beta.0"
-    "@sa11y/format" "0.3.2-beta.0"
-    "@sa11y/preset-rules" "0.3.1"
+    "@sa11y/assert" "0.2.2-beta.0"
+    "@sa11y/format" "0.3.3-beta.0"
+    "@sa11y/preset-rules" "0.3.2"
     jest-matcher-utils "26.6.2"
 
-"@sa11y/preset-rules@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@sa11y/preset-rules/-/preset-rules-0.3.1.tgz#dc2b1f0d2012040db616fd8ac4c700b9aefc7229"
-  integrity sha512-1jeIbzwQ+GUuct3DZ8BUahUbBFYvxuBQCt/cKuzQwr9RPqBDvJpivQI349K6cTm7YMd3a3R3730oRTtnt30lzQ==
+"@sa11y/preset-rules@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@sa11y/preset-rules/-/preset-rules-0.3.2.tgz#996a104880a2e8dbf569cc008d6b462424581908"
+  integrity sha512-hqQboQr2D8FfB5AJMv/0WNaJ0AxYe0WsO5Pz8uov3zZRUCV4b+q5EjdtuenRU7TP4AlcMJudZpQdR54GTHwpUw==
   dependencies:
-    axe-core "4.1.1"
+    axe-core "4.1.2"
 
 "@salesforce/eslint-config-lwc@^0.9.0":
   version "0.9.0"
@@ -2885,10 +2885,10 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.11.0.tgz#d61f46d83b2519250e2784daf5b09479a8b41c59"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axe-core@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.1.1.tgz#70a7855888e287f7add66002211a423937063eaf"
-  integrity sha512-5Kgy8Cz6LPC9DJcNb3yjAXTu3XihQgEdnIg50c//zOC/MyLP0Clg+Y8Sh9ZjjnvBrDZU4DgXS9C3T9r4/scGZQ==
+axe-core@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.1.2.tgz#7cf783331320098bfbef620df3b3c770147bc224"
+  integrity sha512-V+Nq70NxKhYt89ArVcaNL9FDryB3vQOd+BFXZIfO3RP6rwtj+2yqqqdHEkacutglPaZLkJeuXKCjCJDMGPtPqg==
 
 babel-compat@0.22.1:
   version "0.22.1"
@@ -5989,6 +5989,11 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+human-signals@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
+  integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
+
 human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
@@ -5999,7 +6004,7 @@ humps@^2.0.1:
   resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.1.tgz#dd02ea6081bd0568dc5d073184463957ba9ef9aa"
   integrity sha1-3QLqYIG9BWjcXQcxhEY5V7qe+ao=
 
-husky@^4.3.6, husky@^4.3.8:
+husky@^4.3.8:
   version "4.3.8"
   resolved "https://registry.yarnpkg.com/husky/-/husky-4.3.8.tgz#31144060be963fd6850e5cc8f019a1dfe194296d"
   integrity sha512-LCqqsB0PzJQ/AlCgfrfzRe3e3+NvmefAdKQhRYpxS4u6clblBoDdzzvHi8fmxKRzvMxPY/1WZWzomPZww0Anow==
@@ -8631,13 +8636,6 @@ pkg-dir@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-5.0.0.tgz#a02d6aebe6ba133a928f74aec20bafdfe6b8e760"
   integrity sha512-NPE8TDbzl/3YQYY7CSS228s3g2ollTFnc+Qi3tqmqJp9Vg2ovUpixcJEo2HJScN2Ez+kEaal6y70c0ehqJBJeA==
-  dependencies:
-    find-up "^5.0.0"
-
-pkg-up@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
-  integrity sha1-yBmscoBZpGHKscOImivjxJoATX8=
   dependencies:
     find-up "^5.0.0"
 
