@@ -16,7 +16,6 @@
         "d3": "^6.5.0",
         "husky": "^5.1.2",
         "jest-canvas-mock": "^2.3.1",
-        "lint-staged": "^10.5.4",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwc-services": "^3.0.4",
         "moment": "^2.29.1",
@@ -30,14 +29,6 @@
         "lwc"
     ],
     "license": "CC0-1.0",
-    "lint-staged": {
-        "**/*.{css,html,js,json,yaml,yml,md}": [
-            "prettier --write"
-        ],
-        "**/modules/**/*.js": [
-            "eslint"
-        ]
-    },
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
         "build": "lwc-services build --mode production",
