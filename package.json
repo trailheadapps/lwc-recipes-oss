@@ -16,7 +16,6 @@
         "d3": "^6.5.0",
         "husky": "^5.1.2",
         "jest-canvas-mock": "^2.3.1",
-        "lint-staged": "^10.5.2",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwc-services": "^3.0.4",
         "moment": "^2.29.1",
@@ -26,23 +25,10 @@
         "node": ">=10.0.0"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
     "keywords": [
         "lwc"
     ],
     "license": "CC0-1.0",
-    "lint-staged": {
-        "**/*.{css,html,js,json,yaml,yml,md}": [
-            "prettier --write"
-        ],
-        "**/modules/**/*.js": [
-            "eslint"
-        ]
-    },
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
         "build": "lwc-services build --mode production",
@@ -56,6 +42,8 @@
         "test:unit:debug": "lwc-services test:unit --debug",
         "test:unit:watch": "lwc-services test:unit --watch",
         "watch": "lwc-services watch",
-        "watch:production": "lwc-services watch --mode=production"
+        "watch:production": "lwc-services watch --mode=production",
+        "postinstall": "husky install",
+        "precommit": "yarn prettier && yarn lint && yarn test:unit"
     }
 }
