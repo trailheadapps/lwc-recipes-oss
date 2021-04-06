@@ -11,7 +11,7 @@ describe('recipe-view-source', () => {
 
     it('renders an a href that points to the LWC Recipes OSS GitHub repo', () => {
         const BASE_URL =
-            'https://github.com/trailheadapps/lwc-recipes-oss/tree/master/src/modules/';
+            'https://github.com/trailheadapps/lwc-recipes-oss/tree/main/src/modules/';
         const LWC_PARAMETER = 'superLwc';
         const RESULT = BASE_URL + LWC_PARAMETER;
 
