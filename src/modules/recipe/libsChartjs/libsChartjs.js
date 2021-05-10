@@ -1,4 +1,5 @@
 import { LightningElement } from 'lwc';
+import Chart from 'chart.js/auto';
 
 const generateRandomNumber = () => {
     return Math.round(Math.random() * 100);
@@ -34,8 +35,10 @@ export default class LibsChartjs extends LightningElement {
         },
         options: {
             responsive: true,
-            legend: {
-                position: 'right'
+            plugins: {
+                legend: {
+                    position: 'right'
+                }
             },
             animation: {
                 animateScale: true,
@@ -52,11 +55,10 @@ export default class LibsChartjs extends LightningElement {
         this.loadChartJs();
     }
 
-    async loadChartJs() {
-        await require(/* webpackChunkName: "chartJs" */ 'chart.js');
+    loadChartJs() {
         const ctx = this.template
             .querySelector('canvas.donut')
             .getContext('2d');
-        this.chart = new window.Chart(ctx, this.config);
+        this.chart = new Chart(ctx, this.config);
     }
 }
