@@ -1,5 +1,6 @@
 import { createElement } from 'lwc';
 import LibsChartjs from 'recipe/libsChartjs';
+import ResizeObserver from './resizeObserverMock.js';
 
 describe('recipe-libs-chartjs', () => {
     afterEach(() => {
@@ -14,6 +15,8 @@ describe('recipe-libs-chartjs', () => {
         const element = createElement('recipe-libs-chartjs', {
             is: LibsChartjs
         });
+        const ro = new ResizeObserver();
+        ro.observe(document.body);
         document.body.appendChild(element);
 
         // Querying the DOM element that has the lwc:dom directive set.
