@@ -10,7 +10,7 @@
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",
-      "description": "Load the libraries in your Lightning web component using the `require` keyword.",
+      "description": "Import the library in your Lightning web component.",
       "line": 2,
       "title": "Import the library"
     },
@@ -22,7 +22,7 @@
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",
-      "line": 61,
+      "line": 59,
       "description": "In a Lightning web component, you can’t use `document` to query for DOM elements. Instead, use `this.template`",
       "title": "Interacting with DOM - JS"
     },
