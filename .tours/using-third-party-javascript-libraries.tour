@@ -4,78 +4,31 @@
   "steps": [
     {
       "file": "package.json",
-      "selection": {
-        "start": {
-          "line": 15,
-          "character": 9
-        },
-        "end": {
-          "line": 15,
-          "character": 30
-        }
-      },
       "description": "Install the npm package corresponding to the libraries you want to use. Here we've installed the `chart.js` library which we've used in the `libsChartjs` recipe.",
       "line": 15,
       "title": "Install a library"
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",
-      "selection": {
-        "start": {
-          "line": 56,
-          "character": 15
-        },
-        "end": {
-          "line": 56,
-          "character": 22
-        }
-      },
       "description": "Load the libraries in your Lightning web component using the `require` keyword.",
-      "line": 56,
+      "line": 2,
       "title": "Import the library"
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",
-      "selection": {
-        "start": {
-          "line": 47,
-          "character": 5
-        },
-        "end": {
-          "line": 47,
-          "character": 23
-        }
-      },
+      "line": 50,
       "description": "Initialize the libraries in the `renderedCallback()` lifecycle hook. Learn more about Lifecycle hooks [here](https://lwc.dev/guide/lifecycle)",
       "title": "Initialize the library"
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",
-      "selection": {
-        "start": {
-          "line": 57,
-          "character": 21
-        },
-        "end": {
-          "line": 57,
-          "character": 34
-        }
-      },
+      "line": 61,
       "description": "In a Lightning web component, you can’t use `document` to query for DOM elements. Instead, use `this.template`",
       "title": "Interacting with DOM - JS"
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.html",
-      "selection": {
-        "start": {
-          "line": 4,
-          "character": 35
-        },
-        "end": {
-          "line": 4,
-          "character": 51
-        }
-      },
+      "line": 4,
       "description": "Add `lwc:dom=\"manual\"` to any empty native HTML element that you want to manipulate with JavaScript. This also allows the element to be modified by third-party JavaScript libraries as well.",
       "title": "Interacting with DOM - HTML"
     }
