@@ -1,14 +1,7 @@
 class ResizeObserver {
-    observe() {
-        // do nothing
-    }
-    unobserve() {
-        // do nothing
-    }
-
-    disconnect(){
-        
-    }
+    observe() {}
+    unobserve() {}
+    disconnect() {}
 }
 
 window.ResizeObserver = ResizeObserver;
