@@ -1,7 +1,7 @@
 export default class Engine {
     canvas;
     resolvers = [];
-    speed = 10;
+    speed = 50;
     
     constructor(canvas) {
         this.canvas = canvas;
