@@ -1,6 +1,10 @@
 # LWC-TRIS
 Just a fun/side project
 
+
+The main branch get automatically deployed to:
+https://lwc-tris.herokuapp.com/
+
 ## Local Development
 
 1. Clone the `lwc-tris` repository:

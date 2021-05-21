@@ -1,6 +1,0 @@
-{
-    "extends": ["@salesforce/eslint-config-lwc/recommended"],
-    "rules": {
-        "@lwc/lwc/no-unknown-wire-adapters": "off"
-    }
-}

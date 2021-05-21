@@ -5,14 +5,7 @@
         "helmet": "^4.5.0"
     },
     "devDependencies": {
-        "@sa11y/jest": "0.3.1",
-        "@salesforce/wire-service-jest-util": "^2.4.2",
-        "chart.js": "^3.2.1",
-        "husky": "^6.0.0",
-        "jest-canvas-mock": "^2.3.1",
-        "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwc-services": "^3.0.4",
-        "moment": "^2.29.1"
+        "lwc-services": "^3.0.4"
     },
     "engines": {
         "node": ">=10.0.0"
@@ -21,15 +14,8 @@
     "scripts": {
         "build": "lwc-services build --mode production",
         "build:development": "lwc-services build",
-        "lint": "eslint ./src/**/*.js",
         "serve": "node scripts/server.js",
-        "test:unit": "lwc-services test:unit",
-        "test:unit:coverage": "lwc-services test:unit --coverage",
-        "test:unit:debug": "lwc-services test:unit --debug",
-        "test:unit:watch": "lwc-services test:unit --watch",
         "watch": "lwc-services watch",
-        "watch:production": "lwc-services watch --mode=production",
-        "postinstall": "husky install",
-        "precommit": "yarn lint && yarn test:unit"
+        "watch:production": "lwc-services watch --mode=production"
     }
 }
