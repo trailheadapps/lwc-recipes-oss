@@ -9,12 +9,9 @@ app.use(
     helmet.contentSecurityPolicy({
         directives: {
             defaultSrc: ["'self'"],
-            scriptSrcElem: [
-                "'self'",
-                "'unsafe-inline'",
-            ],
+            fontSrc: ["'self'", "data:"],
             styleSrc: ["'self'", "'unsafe-inline'"],
-            imgSrc: ["'self'"]
+            scriptSrcElem: ["'self'", "'unsafe-inline'"]
         }
     })
 );
