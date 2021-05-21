@@ -6,8 +6,8 @@
         "type": "image/png",
         "sizes": "512x512"
     }],
-    "name": "Lightning Web Components Recipes",
+    "name": "LWC-TRIS",
     "short_name": "LWC Recipes",
-    "start_url": "/#hello",
+    "start_url": "/#tetris",
     "theme_color": "#fff"
 }

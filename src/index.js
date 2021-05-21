@@ -1,9 +1,9 @@
 import { createElement, register } from 'lwc';
 import { registerWireService } from '@lwc/wire-service';
-import UiApp from 'ui/app';
+import View from 'tetris/view';
 
 registerWireService(register);
 
-const app = createElement('my-app', { is: UiApp });
+const app = createElement('tetris-view', { is: View });
 // eslint-disable-next-line @lwc/lwc/no-document-query
 document.querySelector('#main').appendChild(app);

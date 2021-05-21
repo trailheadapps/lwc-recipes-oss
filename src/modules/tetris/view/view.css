@@ -1,0 +1,13 @@
+div.canvas {
+    display: table;
+}
+
+div.row {
+    display: table-row;
+}
+
+div.pixel {
+    display: table-cell;
+    width: 20px;
+    height: 20px;
+}
