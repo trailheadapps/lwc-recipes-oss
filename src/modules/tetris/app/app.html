@@ -1,0 +1,10 @@
+<template>
+	<select name="mode">
+		<option value="paint">Paint</option>
+		<option value="brick">Brick</option>
+		<option value="start" selected>Start</option>
+		<option value="reset">Reset</option>
+	</select>
+    
+    <game-view canvas={canvas} scale={pixelScale} background="black" onpixelclick={handleClick}></game-view>
+</template>

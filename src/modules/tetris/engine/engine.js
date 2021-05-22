@@ -3,21 +3,58 @@ const bricks = [O, I, L, J, E, S, Z];
 
 export default class Engine {
     canvas;
-    
-    nextDrop;
-    speed = 100;
     current;
+    
+    speed = 200;
+    nextTick;
+    state = 'new';
     
     constructor(canvas) {
         this.canvas = canvas;
     }
     
     run() {
-       this.insert();
+       this.state === "new" && this.insert();
+       this.state = "running";
+    }
+    
+    pause() {
+        clearTimeout(this.nextTick);
+        this.state = "paused";
+    }
+    
+    rotate() {
+        this.hide();
+        this.current.brick.shape.rotate();
+        this.visualize();
     }
     
     hardDrop() {
-        this.move(0, this.canvas.height + 1);
+        this.current && this.move(0, this.canvas.height + 1);
+    }
+    
+    move(xOffset, yOffset = 0, {x, y, brick: {shape}} = this.current) {
+        const newX = x+xOffset;
+        const newY = y+yOffset;
+    
+        this.hide();
+        this.current.x = this.lastPossible(x, newX, (x) => this.canvas.valid(x, y, shape));
+        this.current.y = this.lastPossible(y, newY, (y) => this.canvas.valid(x, y, shape));
+        this.visualize();
+    
+        if(yOffset) {
+            clearTimeout(this.nextTick);
+    
+            if(this.current.y === newY) {
+                this.nextTick = setTimeout(() => this.move(0, 1), this.speed)
+            }
+            else {
+                const visible = this.visible();
+                delete this.current;
+        
+                visible ? this.insert() : this.gameOver();
+            }
+        }
     }
     
     insert(brick = this.randomBrick()) {
@@ -25,37 +62,16 @@ export default class Engine {
         this.move(0, 1);
     }
     
-    move(xOffset, yOffset, {x, y} = this.current) {
-        const newX = x+xOffset;
-        const newY = y+yOffset;
-        
-        if(this.movedTo(newX, newY)) {
-            this.nextDrop = setTimeout(() => this.move(0, 1), this.speed)
-        }
-        else {
-            const visible = this.visible();
-            this.current = undefined;
-            clearTimeout(this.nextDrop);
-    
-            visible ? this.insert() : alert('Game Over');
-        }
-    }
-    
-    movedTo(newX, newY, {x, y, brick: {shape}} = this.current) {
-        this.hide();
-        
-        this.current.x = this.lastPossible(x, newX, (x) => this.canvas.valid(x, y, shape));
-        this.current.y = this.lastPossible(y, newY, (y) => this.canvas.valid(x, y, shape));
-        
-        this.visualize();
-        
-        return (this.current.x === newX && this.current.y === newY);
+    gameOver() {
+        alert('Game Over');
+        this.state = "game over";
     }
     
     lastPossible(start, destination, valid) {
-        for(let possible = start; possible < destination; possible++) {
-            const next = (start < destination) ? possible + 1 : possible -1;
-            
+        const modifier = (start < destination) ? +1 : -1;
+        
+        for(let possible = start; possible !== destination; possible += modifier) {
+            const next = possible + modifier;
             if(!valid(next)) {
                 return possible;
             }

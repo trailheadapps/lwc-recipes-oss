@@ -1,13 +1,13 @@
 div.canvas {
     display: table;
+    width: 200px;
 }
 
 div.row {
     display: table-row;
+    height: 20px;
 }
 
 div.pixel {
     display: table-cell;
-    width: 20px;
-    height: 20px;
 }

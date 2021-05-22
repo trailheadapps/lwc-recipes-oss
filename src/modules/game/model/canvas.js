@@ -1,9 +1,27 @@
 export default class Canvas extends Array {
-    
-    constructor(color = 'black', width = 30, height = 30) {
+    constructor(width, height, color) {
         super();
-        this.push(...this.array(height).map((y) => this.array(width).map((x) => this.newPixel(x, y, color))));
-        this.forEach((row, i) => row.key = i);
+        this.array(height)
+            .forEach((y) => {
+                const row = this.array(width).map((x) => this.newPixel(x, y, color));
+                row.key = y;
+                this.push(row);
+            });
+        console.log(this);
+    }
+    
+    newPixel(x, y, color) {
+        return {
+            x, y, color,
+            key: y + '_' + x,
+            default: color,
+            style: 'background-color: ' + color,
+            paint: function(color = this.default) {
+                this.color = color;
+                this.style = 'background-color: ' + color;
+            },
+            get empty() { return this.color === this.default; }
+        };
     }
     
     paint(x, y, color) {
@@ -12,7 +30,7 @@ export default class Canvas extends Array {
     }
     
     draw(x, y, shape, color) {
-        shape.perPixel((xOffset, yOffset) => this.paint(x+xOffset, y+yOffset, color));
+        shape.forPixel((xOffset, yOffset) => this.paint(x + xOffset, y + yOffset, color));
     }
     
     valid(x, y, shape) {
@@ -21,7 +39,7 @@ export default class Canvas extends Array {
     
     free(x, y, shape) {
         let result = true;
-        shape.perPixel((xOffset, yOffset) => result = (result && this.empty(x+xOffset, y+yOffset)));
+        shape.forPixel((xOffset, yOffset) => result = (result && this.empty(x + xOffset, y + yOffset)));
         return result;
     }
     
@@ -49,23 +67,10 @@ export default class Canvas extends Array {
     }
     
     get center() {
-        return Math.floor((this.width)/2);
+        return Math.floor((this.width) / 2);
     }
     
     array(n) {
         return [...Array(n).keys()];
-    }
-    
-    newPixel(x, y, color) {
-        return { x, y, color,
-            key: y+'_'+x,
-            default: color,
-            style: 'background-color: ' + color,
-            paint: function(color = this.default) {
-                this.color = color;
-                this.style = 'background-color: ' + color;
-            },
-            get empty() { return this.color === this.default }
-        };
     }
 }

@@ -1,9 +1,5 @@
-import { createElement, register } from 'lwc';
-import { registerWireService } from '@lwc/wire-service';
-import View from 'tetris/view';
+import { createElement } from 'lwc';
+import App from 'tetris/app';
 
-registerWireService(register);
-
-const app = createElement('tetris-view', { is: View });
-// eslint-disable-next-line @lwc/lwc/no-document-query
-document.querySelector('#main').appendChild(app);
+document.querySelector('main')
+        .appendChild(createElement('tetris-app', { is: App }));
