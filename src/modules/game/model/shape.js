@@ -1,4 +1,9 @@
 export default class Shape extends Array {
+    
+    clone() {
+        return new Shape(...this);
+    }
+    
     forPixel(callback) {
         this.forEach((row, yOffset) => {
             row.forEach((binary, xOffset) => binary && callback(xOffset, yOffset));
@@ -11,11 +16,17 @@ export default class Shape extends Array {
         );
     }
     
+    rotated() {
+        const result = this.clone();
+        result.rotate();
+        return result;
+    }
+    
     get height() {
         return this.length;
     }
     
     get width() {
-        return this[0].length;
+        return this.length;
     }
 }

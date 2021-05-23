@@ -1,5 +1,5 @@
 <template>
-    <div class="canvas" style={canvasStyle} tabindex="0">
+    <div class="canvas" style={canvasStyle}>
         <div for:each={canvas} for:item="row" key={row.key} class="row" style={rowHeight}>
             <div for:each={row} for:item="pixel" key={pixel.key}
                 class="pixel" style={pixel.style}

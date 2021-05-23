@@ -1,10 +1,21 @@
 <template>
-	<select name="mode">
-		<option value="paint">Paint</option>
-		<option value="brick">Brick</option>
-		<option value="start" selected>Start</option>
-		<option value="reset">Reset</option>
-	</select>
+    <h1>LWC-TRIS</h1>
     
-    <game-view canvas={canvas} scale={pixelScale} background="black" onpixelclick={handleClick}></game-view>
+    <game-view canvas={canvas} scale="20" background="black"></game-view>
+    <table>
+        <thead>
+            <tr>
+                <td><b>Key</b></td>
+                <td><b>Action</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>[🡅]</td><td>rotate</td></tr>
+            <tr><td>[🡄][🡆]</td><td>move</td></tr>
+            <tr><td>[🡇]</td><td>soft drop</td></tr>
+            <tr><td>[space]</td><td>hard drop</td></tr>
+            <tr><td>[esc]</td><td>reset</td></tr>
+            <tr><td>[enter]</td><td>start | pause | resume</td></tr>
+        </tbody>
+    </table>
 </template>

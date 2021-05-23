@@ -1,27 +1,10 @@
+import Shape from './shape';
+
 export default class Canvas extends Array {
     constructor(width, height, color) {
         super();
-        this.array(height)
-            .forEach((y) => {
-                const row = this.array(width).map((x) => this.newPixel(x, y, color));
-                row.key = y;
-                this.push(row);
-            });
-        console.log(this);
-    }
-    
-    newPixel(x, y, color) {
-        return {
-            x, y, color,
-            key: y + '_' + x,
-            default: color,
-            style: 'background-color: ' + color,
-            paint: function(color = this.default) {
-                this.color = color;
-                this.style = 'background-color: ' + color;
-            },
-            get empty() { return this.color === this.default; }
-        };
+        array(height).forEach((y) => this.push(new Row(y, color, width)));
+        console.log('warum 3 mal?');
     }
     
     paint(x, y, color) {
@@ -31,6 +14,11 @@ export default class Canvas extends Array {
     
     draw(x, y, shape, color) {
         shape.forPixel((xOffset, yOffset) => this.paint(x + xOffset, y + yOffset, color));
+    }
+    
+    move(source, target) {
+        target.copyFrom(source);
+        source.clear();
     }
     
     valid(x, y, shape) {
@@ -44,9 +32,10 @@ export default class Canvas extends Array {
     }
     
     inside(x, y, shape) {
-        const yInside = (y <= this.height - shape.height);
-        const xInside = (x >= 0 && x <= this.width - shape.width);
-        return yInside && xInside;
+        let result = true;
+        shape.forPixel((xOffset, yOffset) => result &&= y + yOffset < this.height);
+        shape.forPixel((xOffset) => result &&= x + xOffset >= 0 && x + xOffset < this.width);
+        return result;
     }
     
     empty(x, y) {
@@ -69,8 +58,47 @@ export default class Canvas extends Array {
     get center() {
         return Math.floor((this.width) / 2);
     }
+}
+
+class Row extends Array {
+    key;
     
-    array(n) {
-        return [...Array(n).keys()];
+    constructor(y, color, width) {
+        super(...array(width).map((x) => newPixel(x, y, color)));
+        this.key = y;
     }
+    
+    get empty() {
+        return this.every(((pixel) => pixel.empty));
+    }
+    
+    get full() {
+        return this.every(((pixel) => !pixel.empty));
+    }
+    
+    copyFrom(other) {
+        other.forEach((pixel, x) => this[x].paint(pixel.color));
+    }
+    
+    clear() {
+        return this.forEach(((pixel) => pixel.paint()));
+    }
+}
+
+function newPixel(x, y, color) {
+    return {
+        x, y, color,
+        key: y + '_' + x,
+        default: color,
+        style: 'background-color: ' + color,
+        paint: function(color = this.default) {
+            this.color = color;
+            this.style = 'background-color: ' + color;
+        },
+        get empty() { return this.color === this.default; }
+    };
+}
+
+function array(n) {
+    return [...Array(n).keys()];
 }
