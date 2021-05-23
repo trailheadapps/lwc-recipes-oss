@@ -3,21 +3,23 @@ const bricks = [O, I, L, J, E, S, Z];
 
 export default class Engine {
     canvas;
+    nextView;
     current;
     
-    speed = 200;
+    speed = 500;
     nextTick;
     state = 'new';
     
-    constructor(canvas) {
+    constructor(canvas, nextView) {
         this.canvas = canvas;
+        this.nextView = nextView;
     }
     
     playPause() {
         switch(this.state) {
             case 'new':
                 this.state = "running";
-                this.insert();
+                this.insert(this.randomBrick());
                 break;
             case 'paused':
                 this.state = "running";
@@ -43,10 +45,10 @@ export default class Engine {
         if(this.canvas.valid(x, y, shape.rotated())) {
             shape.rotate();
         }
-        this.visualize();
+        this.draw();
     }
     
-    speedDrop() {
+    softDrop() {
         if(this.state !== "running") return;
         clearTimeout(this.nextTick);
         this.move(0, 1);
@@ -59,6 +61,7 @@ export default class Engine {
     
     move(xOffset, yOffset = 0) {
         if(this.state !== "running") return;
+        
         const {x, y, brick: {shape}} = this.current;
         
         const newX = x+xOffset;
@@ -67,19 +70,24 @@ export default class Engine {
         this.hide();
         this.current.x = this.lastPossible(x, newX, (x) => this.canvas.valid(x, y, shape));
         this.current.y = this.lastPossible(y, newY, (y) => this.canvas.valid(x, y, shape));
-        this.visualize();
+        this.draw();
     
-        clearTimeout(this.nextTick);
-        this.nextTick = setTimeout(() => this.move(0, 1), this.speed);
-        
-        const locked = (this.current.y !== newY);
-        if(locked) {
-            delete this.current;
+        if(yOffset) {
             clearTimeout(this.nextTick);
-            this.clearTetris();
-            
-            this.insert();
+            if(this.current.y !== newY) {
+                this.lock();
+            }
+            else {
+                this.nextTick = setTimeout(() => this.move(0, 1), this.speed);
+            }
         }
+    }
+    
+    lock() {
+        delete this.current;
+        this.clearTetris();
+    
+        this.insert();
     }
     
     clearTetris() {
@@ -88,18 +96,19 @@ export default class Engine {
         const scope = [...this.canvas].reverse();
         for(let row of [...this.canvas].reverse()) {
             if(scope.shift().empty) {
-                const pivot = scope.find((pivot) => !pivot.empty);
-                if(!pivot) break;
-                this.canvas.move(pivot, row);
+                const nextBricks = scope.find((pivot) => !pivot.empty);
+                if(!nextBricks) break;
+                
+                this.canvas.move(nextBricks, row);
             }
         }
     }
     
-    insert(x = this.canvas.center, y = -1, brick = this.randomBrick()) {
-        
+    insert(brick = this.next, x = this.canvas.center-2, y = -1) {
         if(this.canvas.valid(x, y, brick.shape)) {
             this.current = {x, y, brick};
-            this.move(0, 0);
+            this.createNext(brick);
+            this.move(0, 1);
         }
         else {
             this.gameOver();
@@ -108,6 +117,8 @@ export default class Engine {
     }
     
     gameOver() {
+        delete this.current;
+        clearTimeout(this.nextTick);
         alert('Game Over');
         this.state = "game over";
     }
@@ -129,15 +140,17 @@ export default class Engine {
         this.canvas.draw(x, y, shape);
     }
     
-    visualize({x, y, brick: {shape, color}} = this.current) {
+    draw({x, y, brick: {shape, color}} = this.current) {
         this.canvas.draw(x, y, shape, color);
-    }
-    
-    visible({y, brick: {shape: {height}}} = this.current) {
-        return (y + height > 0);
     }
     
     randomBrick() {
         return new Brick(bricks[Math.floor(Math.random() * bricks.length)]);
+    }
+    
+    createNext() {
+        this.next && this.nextView.draw(0, 0, this.next.shape);
+        this.next = this.randomBrick();
+        this.nextView.draw(0, 0, this.next.shape, this.next.color);
     }
 }

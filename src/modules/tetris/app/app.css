@@ -1,0 +1,9 @@
+.game, .stats {
+  padding: 20px;
+}
+
+.main {
+  border-radius: 25px;
+  background-color: #00a1e0;
+  display: inline-flex;
+}

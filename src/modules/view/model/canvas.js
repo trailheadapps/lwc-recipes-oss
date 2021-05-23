@@ -1,5 +1,3 @@
-import Shape from './shape';
-
 export default class Canvas extends Array {
     constructor(width, height, color) {
         super();

@@ -1,21 +1,30 @@
 <template>
-    <h1>LWC-TRIS</h1>
-    
-    <game-view canvas={canvas} scale="20" background="black"></game-view>
-    <table>
-        <thead>
-            <tr>
-                <td><b>Key</b></td>
-                <td><b>Action</b></td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>[🡅]</td><td>rotate</td></tr>
-            <tr><td>[🡄][🡆]</td><td>move</td></tr>
-            <tr><td>[🡇]</td><td>soft drop</td></tr>
-            <tr><td>[space]</td><td>hard drop</td></tr>
-            <tr><td>[esc]</td><td>reset</td></tr>
-            <tr><td>[enter]</td><td>start | pause | resume</td></tr>
-        </tbody>
-    </table>
+    <div class="main">
+        <div class="game">
+            <h2>LWC-TRIS</h2>
+            <view-pixels canvas={canvas} scale="20" background="black"></view-pixels>
+        </div>
+        <div class="stats">
+            <h2>Control</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td><b>Key</b></td>
+                        <td><b>Action</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>[🡅]</td><td>rotate</td></tr>
+                    <tr><td>[🡄][🡆]</td><td>move</td></tr>
+                    <tr><td>[🡇]</td><td>soft drop</td></tr>
+                    <tr><td>[space]</td><td>hard drop</td></tr>
+                    <tr><td>[esc]</td><td>reset</td></tr>
+                    <tr><td>[enter]</td><td>start | pause | resume</td></tr>
+                </tbody>
+            </table>
+            <h2>Next</h2>
+            <view-pixels canvas={next} scale="20" background="black"></view-pixels>
+        
+        </div>
+    </div>
 </template>
