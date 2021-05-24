@@ -1,13 +1,13 @@
 # LWC-TRIS
 Just a fun/side project
 
-The main branch get automatically deployed to:
+The main branch gets automatically deployed to:
 https://lwc-tris.herokuapp.com/
 
 It is following (mostly) the physics of the original GameBoy Tetris.
-Wall Kicks are not supported
-Lock Delay is not supported
-Hard Drops are supported
+- Wall Kicks are not supported
+- Lock Delay is not supported
+- Hard Drops are supported
 
 ## Local Development
 
