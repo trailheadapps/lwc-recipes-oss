@@ -1,14 +1,16 @@
 div.canvas {
   display: table;
-  width: 200px;
 }
 
 div.row {
   display: table-row;
-  height: 20px;
+}
+
+div.border {
+  display: table-cell;
+  height: 100%;
 }
 
 div.pixel {
-  border:1px solid #200000;
-  display: table-cell;
+  height: 100%;
 }

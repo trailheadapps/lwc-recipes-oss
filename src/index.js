@@ -1,5 +1,5 @@
 import { createElement } from 'lwc';
-import App from 'tetris/app';
+import Tetris from 'arcade/tetris';
 
 document.querySelector('main')
-        .appendChild(createElement('tetris-app', { is: App }));
+        .appendChild(createElement('arcade-tetris', { is: Tetris }));

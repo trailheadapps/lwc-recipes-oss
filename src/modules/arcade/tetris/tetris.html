@@ -2,15 +2,14 @@
     <div class="main">
         <div class="game">
             <h2>LWC-TRIS</h2>
-            <view-pixels canvas={canvas} scale="20" background="black"></view-pixels>
+            <view-div-canvas canvas={canvas} scale="20" background="black" border="1px solid #000066"></view-div-canvas>
         </div>
         <div class="stats">
             <h2>Control</h2>
             <table>
                 <thead>
                     <tr>
-                        <td><b>Key</b></td>
-                        <td><b>Action</b></td>
+                        <td><b>Key</b></td><td><b>Action</b></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,8 +22,11 @@
                 </tbody>
             </table>
             <h2>Next</h2>
-            <view-pixels canvas={next} scale="20" background="black"></view-pixels>
-        
+            <view-div-canvas canvas={nextView} scale="20" background="black" border="1px solid #000066"></view-div-canvas>
+            
+            <h2>Level: {level}</h2>
+            
+            <h2>Score: {score}</h2>
         </div>
     </div>
 </template>

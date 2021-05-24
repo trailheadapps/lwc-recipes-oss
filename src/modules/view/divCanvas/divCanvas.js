@@ -1,11 +1,20 @@
 import { LightningElement, api } from "lwc";
 
-export default class Pixels extends LightningElement {
+export default class DivCanvas extends LightningElement {
     @api canvas = [];
     @api scale = 20;
     @api background;
+    _border;
     
-    rethrowClick({target: {dataset: {x, y}}}) {
+    @api set border(value) {
+        this._border = 'border: ' + value;
+    }
+    
+    get border() {
+        return this._border;
+    }
+    
+    dispatchClick({target: {dataset: {x, y}}}) {
         x = Number(x);
         y = Number(y);
         this.dispatchEvent(new CustomEvent('pixelclick', {detail: {x, y}}))

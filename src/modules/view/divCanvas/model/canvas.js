@@ -4,13 +4,13 @@ export default class Canvas extends Array {
         array(height).forEach((y) => this.push(new Row(y, color, width)));
     }
     
+    draw(x, y, shape, color) {
+        shape.forPixel((xOffset, yOffset) => this.paint(x + xOffset, y + yOffset, color));
+    }
+    
     paint(x, y, color) {
         const pixel = this.pixel(x, y);
         pixel && pixel.paint(color);
-    }
-    
-    draw(x, y, shape, color) {
-        shape.forPixel((xOffset, yOffset) => this.paint(x + xOffset, y + yOffset, color));
     }
     
     move(source, target) {

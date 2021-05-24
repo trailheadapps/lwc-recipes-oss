@@ -6,13 +6,23 @@ export default class Engine {
     nextView;
     current;
     
-    speed = 500;
+    tetris = 0;
+    score = 0;
+    tick = 500;
     nextTick;
     state = 'new';
     
     constructor(canvas, nextView) {
         this.canvas = canvas;
         this.nextView = nextView;
+    }
+    
+    get level() {
+        return (1 + this.tetris / 10) | 0;
+    }
+    
+    get speed() {
+        return Math.max(200, this.tick - this.level * 5);
     }
     
     playPause() {
@@ -90,6 +100,9 @@ export default class Engine {
     clearTetris() {
         return new Promise((resolve) => {
             const tetris = this.canvas.filter((row) => row.full);
+            
+            this.tetris -= tetris.length;
+            this.score = this.tetris * this.tetris * 100;
             
             if(tetris.length > 0) {
                 this.animate(tetris)

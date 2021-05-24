@@ -1,4 +1,4 @@
-import Shape from '../../view/model/shape';
+import Shape from '../../../view/divCanvas/model/shape';
 
 export const O = {color: 'yellow', shape: new Shape([0,0,0,0],[0,1,1,0], [0,1,1,0],[0,0,0,0],)};
 export const E = {color: 'green', shape: new Shape([0,0,0], [1,1,1], [0,1,0])};
