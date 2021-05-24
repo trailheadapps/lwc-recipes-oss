@@ -2,7 +2,6 @@ export default class Canvas extends Array {
     constructor(width, height, color) {
         super();
         array(height).forEach((y) => this.push(new Row(y, color, width)));
-        console.log('warum 3 mal?');
     }
     
     paint(x, y, color) {
@@ -66,20 +65,24 @@ class Row extends Array {
         this.key = y;
     }
     
+    copyFrom(other) {
+        other.forEach((pixel, x) => this[x].paint(pixel.color));
+    }
+    
+    fill(color) {
+        this.forEach(((pixel) => pixel.paint(color)));
+    }
+    
+    clear() {
+        this.fill();
+    }
+    
     get empty() {
         return this.every(((pixel) => pixel.empty));
     }
     
     get full() {
         return this.every(((pixel) => !pixel.empty));
-    }
-    
-    copyFrom(other) {
-        other.forEach((pixel, x) => this[x].paint(pixel.color));
-    }
-    
-    clear() {
-        return this.forEach(((pixel) => pixel.paint()));
     }
 }
 

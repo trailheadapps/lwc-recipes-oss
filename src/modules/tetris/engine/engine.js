@@ -38,7 +38,7 @@ export default class Engine {
     }
     
     rotate() {
-        if(this.state !== "running") return;
+        if(this.state !== "running" || !this.current) return;
         const {x, y, brick: {shape}} = this.current;
         
         this.hide();
@@ -49,18 +49,18 @@ export default class Engine {
     }
     
     softDrop() {
-        if(this.state !== "running") return;
+        if(this.state !== "running" || !this.current) return;
         clearTimeout(this.nextTick);
         this.move(0, 1);
     }
     
     hardDrop() {
-        if(this.state !== "running") return;
+        if(this.state !== "running" || !this.current) return;
         this.current && this.move(0, this.canvas.height + 1);
     }
     
     move(xOffset, yOffset = 0) {
-        if(this.state !== "running") return;
+        if(this.state !== "running" || !this.current) return;
         
         const {x, y, brick: {shape}} = this.current;
         
@@ -75,7 +75,10 @@ export default class Engine {
         if(yOffset) {
             clearTimeout(this.nextTick);
             if(this.current.y !== newY) {
-                this.lock();
+                delete this.current;
+                
+                this.clearTetris()
+                    .then(() => this.insert());
             }
             else {
                 this.nextTick = setTimeout(() => this.move(0, 1), this.speed);
@@ -83,25 +86,45 @@ export default class Engine {
         }
     }
     
-    lock() {
-        delete this.current;
-        this.clearTetris();
-    
-        this.insert();
-    }
     
     clearTetris() {
-        this.canvas.forEach((row) => row.full && row.clear());
-        
+        return new Promise((resolve) => {
+            const tetris = this.canvas.filter((row) => row.full);
+            
+            if(tetris.length > 0) {
+                this.animate(tetris)
+                    .then(() => this.floodEmptyRows())
+                    .then(() => resolve());
+            }
+            else {
+                resolve();
+            }
+        })
+    }
+    
+    floodEmptyRows() {
         const scope = [...this.canvas].reverse();
         for(let row of [...this.canvas].reverse()) {
             if(scope.shift().empty) {
                 const nextBricks = scope.find((pivot) => !pivot.empty);
                 if(!nextBricks) break;
-                
+            
                 this.canvas.move(nextBricks, row);
             }
         }
+    }
+    
+    animate(tetris) {
+        const blink = (color) => {
+            tetris.forEach((row) => row.fill(color));
+            return new Promise((resolve) => setTimeout(resolve, this.speed/5))
+        }
+        
+        return blink()
+            .then(() => blink('grey'))
+            .then(() => blink())
+            .then(() => blink('grey'))
+            .then(() => blink());
     }
     
     insert(brick = this.next, x = this.canvas.center-2, y = -1) {
@@ -113,7 +136,6 @@ export default class Engine {
         else {
             this.gameOver();
         }
-        
     }
     
     gameOver() {
