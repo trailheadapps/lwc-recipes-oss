@@ -12,9 +12,19 @@ export default class Engine {
     nextTick;
     state = 'new';
     
+    
+    rowClearSound = new Audio("resources/audio/row-clear.wav");
+    gameOverSound = new Audio("resources/audio/game-over.wav");
+    rotateSound = new Audio("resources/audio/rotate.wav");
+    tetrisMusic = new Audio("resources/audio/tetris.wav");
+    
+    soundFxClips = [this.rowClearSound, this.gameOverSound, this.rotateSound ]
+    musicClips = [this.tetrisMusic ]
+    
     constructor(canvas, nextView) {
         this.canvas = canvas;
         this.nextView = nextView;
+        this.tetrisMusic.loop = true;
     }
     
     get level() {
@@ -28,14 +38,17 @@ export default class Engine {
     playPause() {
         switch(this.state) {
             case 'new':
+                this.playMusic();
                 this.state = "running";
                 this.insert(this.randomBrick());
                 break;
             case 'paused':
+                this.playMusic();
                 this.state = "running";
                 this.nextTick = setTimeout(() => this.move(0, 1), this.speed);
                 break;
             case 'running':
+                this.tetrisMusic.pause();
                 clearTimeout(this.nextTick);
                 this.state = "paused";
                 break;
@@ -43,11 +56,14 @@ export default class Engine {
     }
     
     stop() {
+        this.tetrisMusic.pause();
         clearTimeout(this.nextTick);
         this.state = "paused";
     }
     
     rotate() {
+        this.rotateSound.currentTime = 0;
+        this.rotateSound.play();
         if(this.state !== "running" || !this.current) return;
         const {x, y, brick: {shape}} = this.current;
         
@@ -105,6 +121,11 @@ export default class Engine {
             this.score = this.tetris * this.tetris * 100;
             
             if(tetris.length > 0) {
+                this.rowClearSound.currentTime = 0;
+                this.rowClearSound.play();
+                if (this.tetrisMusic.playbackRate < 1.5) {
+                    this.tetrisMusic.playbackRate += 0.05;
+                }
                 this.animate(tetris)
                     .then(() => this.floodEmptyRows())
                     .then(() => resolve());
@@ -154,6 +175,9 @@ export default class Engine {
     gameOver() {
         delete this.current;
         clearTimeout(this.nextTick);
+        this.tetrisMusic.pause();
+        this.tetrisMusic.currentTime = 0;
+        this.gameOverSound.play();
         alert('Game Over');
         this.state = "game over";
     }
@@ -187,5 +211,16 @@ export default class Engine {
         this.next && this.nextView.draw(0, 0, this.next.shape);
         this.next = this.randomBrick();
         this.nextView.draw(0, 0, this.next.shape, this.next.color);
+    }
+    
+    playMusic() {
+        if (this.tetrisMusic.paused) {
+            this.tetrisMusic.play();
+        }
+    }
+    
+    toggleAudio() {
+        this.soundFxClips.forEach(audio => audio.muted = !audio.muted);
+        this.musicClips.forEach(audio => audio.muted = !audio.muted);
     }
 }

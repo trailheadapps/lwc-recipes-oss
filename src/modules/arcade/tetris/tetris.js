@@ -15,7 +15,8 @@ export default class Tetris extends LightningElement {
         'ArrowDown': () => this.engine.softDrop(),
         ' ': () => this.engine.hardDrop(),
         'Escape': () => this.reset(),
-        'Enter': () => this.engine.playPause()
+        'Enter': () => this.engine.playPause(),
+        'm': () => this.engine.toggleAudio()
     };
     
     reset() {
