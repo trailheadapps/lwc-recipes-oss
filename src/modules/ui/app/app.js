@@ -62,35 +62,47 @@ export default class App extends LightningElement {
 
     handleNavigateNext() {
         this.hideCurrentNavigationItemFromNav();
-        this.currentNavigationItem = this.navigationItems[
-            this.navigationElements[
-                this.navigationElements.indexOf(this.currentNavigationItem) + 1
-            ]
-        ].value;
+        this.currentNavigationItem =
+            this.navigationItems[
+                this.navigationElements[
+                    this.navigationElements.indexOf(
+                        this.currentNavigationItem
+                    ) + 1
+                ]
+            ].value;
         this.handleCategoryChange();
     }
 
     handleNavigatePrevious() {
         this.hideCurrentNavigationItemFromNav();
-        this.currentNavigationItem = this.navigationItems[
-            this.navigationElements[
-                this.navigationElements.indexOf(this.currentNavigationItem) - 1
-            ]
-        ].value;
+        this.currentNavigationItem =
+            this.navigationItems[
+                this.navigationElements[
+                    this.navigationElements.indexOf(
+                        this.currentNavigationItem
+                    ) - 1
+                ]
+            ].value;
         this.handleCategoryChange();
     }
 
     calculateNavFooterElements() {
-        this.nextNavigationItem = this.navigationItems[
-            this.navigationElements[
-                this.navigationElements.indexOf(this.currentNavigationItem) + 1
-            ]
-        ];
-        this.previousNavigationItem = this.navigationItems[
-            this.navigationElements[
-                this.navigationElements.indexOf(this.currentNavigationItem) - 1
-            ]
-        ];
+        this.nextNavigationItem =
+            this.navigationItems[
+                this.navigationElements[
+                    this.navigationElements.indexOf(
+                        this.currentNavigationItem
+                    ) + 1
+                ]
+            ];
+        this.previousNavigationItem =
+            this.navigationItems[
+                this.navigationElements[
+                    this.navigationElements.indexOf(
+                        this.currentNavigationItem
+                    ) - 1
+                ]
+            ];
     }
 
     hideCurrentNavigationItemFromNav() {

@@ -81,13 +81,11 @@ describe('recipe-todo-list', () => {
 
         // Validate that we only render items with priority
         return Promise.resolve().then(() => {
-            const todoItemsEls = element.shadowRoot.querySelectorAll(
-                '.todo-content'
-            );
+            const todoItemsEls =
+                element.shadowRoot.querySelectorAll('.todo-content');
             expect(todoItemsEls.length).toBe(1);
-            const todoDescriptionEl = element.shadowRoot.querySelector(
-                '.todo-content > p'
-            );
+            const todoDescriptionEl =
+                element.shadowRoot.querySelector('.todo-content > p');
             expect(todoDescriptionEl.textContent).toBe(
                 TODOS[PRIORITY_TODO_INDEX].description
             );

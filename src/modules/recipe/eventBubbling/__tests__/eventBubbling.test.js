@@ -81,9 +81,8 @@ describe('recipe-event-bubbling', () => {
 
             // Check rendered elements
             return Promise.resolve().then(() => {
-                const errorPanelEl = element.shadowRoot.querySelector(
-                    'recipe-error-panel'
-                );
+                const errorPanelEl =
+                    element.shadowRoot.querySelector('recipe-error-panel');
                 expect(errorPanelEl).not.toBeNull();
             });
         });
