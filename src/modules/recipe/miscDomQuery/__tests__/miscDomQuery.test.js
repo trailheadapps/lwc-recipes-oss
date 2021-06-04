@@ -17,9 +17,8 @@ describe('recipe-misc-dom-query', () => {
         document.body.appendChild(element);
 
         // Query all ui-input fields
-        const uiInputCheckedEls = element.shadowRoot.querySelectorAll(
-            'ui-input'
-        );
+        const uiInputCheckedEls =
+            element.shadowRoot.querySelectorAll('ui-input');
         uiInputCheckedEls.forEach((input) => {
             expect(input.checked).toBeFalsy();
         });

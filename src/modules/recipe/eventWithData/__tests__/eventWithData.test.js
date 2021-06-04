@@ -85,9 +85,8 @@ describe('recipe-event-with-data', () => {
             // will automatically wait for the Promise chain to complete before
             // ending the test and fail the test if the promise rejects.
             return Promise.resolve().then(() => {
-                const errorPanelEl = element.shadowRoot.querySelector(
-                    'recipe-error-panel'
-                );
+                const errorPanelEl =
+                    element.shadowRoot.querySelector('recipe-error-panel');
                 expect(errorPanelEl).not.toBeNull();
             });
         });

@@ -14,9 +14,8 @@ describe('recipe-api-setter-getter', () => {
         // Query ui-input elements
         const uiInputEls = element.shadowRoot.querySelectorAll('ui-input');
 
-        const todoCountPrevious = element.shadowRoot.querySelector(
-            'recipe-todo-list'
-        ).todos.length;
+        const todoCountPrevious =
+            element.shadowRoot.querySelector('recipe-todo-list').todos.length;
 
         // Select input fields for simulating user input
         uiInputEls.forEach((el) => {
@@ -37,9 +36,8 @@ describe('recipe-api-setter-getter', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Compare if tracked property has been assigned a new value.
-            const todoListEl = element.shadowRoot.querySelector(
-                'recipe-todo-list'
-            );
+            const todoListEl =
+                element.shadowRoot.querySelector('recipe-todo-list');
             expect(todoListEl.todos.length).toBe(todoCountPrevious + 1);
             expect(todoListEl.todos[2].description).toBe(TODO_DESCRIPTION);
             expect(todoListEl.todos[2].priority).toBe(true);

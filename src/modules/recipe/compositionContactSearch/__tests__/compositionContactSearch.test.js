@@ -114,9 +114,8 @@ describe('recipe-composition-contact-search', () => {
                 'recipe-contact-tile'
             );
             expect(contactTileEl.length).toBe(0);
-            const errorPanelEl = element.shadowRoot.querySelectorAll(
-                'recipe-error-panel'
-            );
+            const errorPanelEl =
+                element.shadowRoot.querySelectorAll('recipe-error-panel');
             expect(errorPanelEl).not.toBeNull();
         });
     });

@@ -16,9 +16,8 @@ describe('recipe-event-simple', () => {
         });
         document.body.appendChild(element);
 
-        const paginatorEl = element.shadowRoot.querySelector(
-            'recipe-paginator'
-        );
+        const paginatorEl =
+            element.shadowRoot.querySelector('recipe-paginator');
 
         // Send event to increment page number
         paginatorEl.dispatchEvent(new CustomEvent('next'));
