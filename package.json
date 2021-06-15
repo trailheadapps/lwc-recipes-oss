@@ -17,6 +17,7 @@
         "eslint": "^7.28.0",
         "husky": "^6.0.0",
         "jest-canvas-mock": "^2.3.1",
+        "lint-staged": "^11.0.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwc-services": "^3.1.2",
         "moment": "^2.29.1",
@@ -45,6 +46,17 @@
         "watch": "lwc-services watch",
         "watch:production": "lwc-services watch --mode=production",
         "postinstall": "husky install",
-        "precommit": "yarn prettier && yarn lint && yarn test:unit"
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
+            "prettier --write"
+        ],
+        "**/{aura,lwc}/**": [
+            "eslint"
+        ],
+        "**/lwc/**": [
+            "sfdx-lwc-jest --skipApiVersionCheck -- --bail --findRelatedTests"
+        ]
     }
 }
