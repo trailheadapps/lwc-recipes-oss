@@ -12,7 +12,7 @@
     "devDependencies": {
         "@sa11y/jest": "0.3.1",
         "@salesforce/wire-service-jest-util": "^4.0.0",
-        "chart.js": "^3.3.2",
+        "chart.js": "^3.4.0",
         "d3": "^6.7.0",
         "eslint": "^7.28.0",
         "husky": "^6.0.0",
