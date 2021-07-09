@@ -1468,7 +1468,7 @@
     graceful-fs "^4.2.4"
     source-map "^0.6.0"
 
-"@jest/test-result@^26.6.2":
+"@jest/test-result@26.6.2", "@jest/test-result@^26.6.2":
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/@jest/test-result/-/test-result-26.6.2.tgz#55da58b62df134576cc95476efa5f7949e3f5f18"
   integrity sha512-5O7H5c/7YlojphYNrK02LlDIV2GNPYisKwHm2QTKjNZeEzezCbwYs9swJySv2UfPMyZ0VdsmMv7jIlD/IKYQpQ==
@@ -1849,47 +1849,48 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@sa11y/assert@0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@sa11y/assert/-/assert-0.2.3.tgz#42930670b8651faef2a138b25f56cc8d076473af"
-  integrity sha512-wxupgjKPqlt/kDmDeMznCuPhjTmck9AmBEtosRP0LAe2GIO8xKnMcfMIaCHaBiWmjVJOWSU/7HwtMXj0UaRt1Q==
+"@sa11y/assert@0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@sa11y/assert/-/assert-0.2.5.tgz#810a740260c6ac1465ae120a8f7604a1dd946635"
+  integrity sha512-PTGQLM2Kdv5c/HyQZU7BJ9WoKT5JX4vxQsz9lIPCh+U9WzkUFFwTgNnyX8jbFaFBSOpudbCwWcJ5n+Qmng/Jcw==
   dependencies:
-    "@sa11y/common" "0.3.0"
-    "@sa11y/format" "0.3.4"
-    "@sa11y/preset-rules" "0.3.3"
-    axe-core "4.1.4"
+    "@sa11y/common" "0.3.2"
+    "@sa11y/format" "0.4.1"
+    "@sa11y/preset-rules" "0.3.4"
+    axe-core "4.2.3"
 
-"@sa11y/common@0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/common/-/common-0.3.0.tgz#f9ba131fb1ae9b8cf2a2e638b978b3e37f53b495"
-  integrity sha512-lPCyG9a5G9O2/pdb+0i0RN8VgOXXMx4ASxFKJJpR03XfcECPlmeSaqdhRvba2SG075qCA1rweZe1RlqCykmMHQ==
+"@sa11y/common@0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@sa11y/common/-/common-0.3.2.tgz#1368ac4604a4f17f29451b39f509df9eefb4fd64"
+  integrity sha512-us3tTHMdQqbRTh5F4TxnBRxt/H4z2M7eAQAyedIFTOFKXy5JdfU8PGQBx5vElxMWwCaWt+0xCTPKqabgUFVEig==
   dependencies:
-    axe-core "4.1.4"
+    axe-core "4.2.3"
     webdriverio "6.12.1"
 
-"@sa11y/format@0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@sa11y/format/-/format-0.3.4.tgz#7e39601a0f3b276c84ec7bf069d57a0e5246f717"
-  integrity sha512-FzEleVidyH8h70uUkTxRDuBdqK2Pcxb0vzDhxiCkIQ3L9Rw6zx4626Yup/vLsyDbx1PDqP3w7rS8corbLAjfGg==
+"@sa11y/format@0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@sa11y/format/-/format-0.4.1.tgz#e73b91b7884382cc8be98b093162f64405e94343"
+  integrity sha512-ixUiQw+9qhSovolLXn9wX9wditIpXQ8Usy2Ej8DEyildnVbszIsaKb4H9LwdhSBlPWr+w4xt9mt4Cf7tGyGMHg==
   dependencies:
-    axe-core "4.1.4"
+    axe-core "4.2.3"
 
-"@sa11y/jest@0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@sa11y/jest/-/jest-0.3.1.tgz#72383facfe61c8fc5fb9aa9842b713e2ee3566bf"
-  integrity sha512-V94Z7nkPhF6CojleuYsVSq/GDnjxG3t7AJ9RpUoJOfqLNrT9de+X/JMrIoBW10sT1ELV9ywwBIcOLKaAnBhPVQ==
+"@sa11y/jest@0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@sa11y/jest/-/jest-0.4.1.tgz#9f2ca062561c1b3793bd1b4632335209ecfdc958"
+  integrity sha512-xoTPuhU7ovjvCzP8FgfNI+hn1nw8HIekryKmzm/7CudU7LtoxmdTRe55ou7f24nLm0Ux2KJ6CalRi8cJW/6YNQ==
   dependencies:
-    "@sa11y/assert" "0.2.3"
-    "@sa11y/format" "0.3.4"
-    "@sa11y/preset-rules" "0.3.3"
+    "@jest/test-result" "26.6.2"
+    "@sa11y/assert" "0.2.5"
+    "@sa11y/format" "0.4.1"
+    "@sa11y/preset-rules" "0.3.4"
     jest-matcher-utils "26.6.2"
 
-"@sa11y/preset-rules@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@sa11y/preset-rules/-/preset-rules-0.3.3.tgz#9f0beaa68242e6bb33b1df6f37ce45fd86c2a84d"
-  integrity sha512-1me7o5YZlUdYXZwPCXDG4TOni4UdP6hS1cE/V9CA7K1V/xd4x/w/T/66ViU3fZ1XJFJeZcBxeUeVrweFwZprkg==
+"@sa11y/preset-rules@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@sa11y/preset-rules/-/preset-rules-0.3.4.tgz#017d72600f0f9ae92e7fbc16ba21dfeea9e349a2"
+  integrity sha512-D3oXSG87qQAQgcsMA9zfgZZC8zZz+F+v/d9i51cLZeR5W8c9Eb1yhizpx4phVatE2x3tGuN3vtqO/yzoJnGdlQ==
   dependencies:
-    axe-core "4.1.4"
+    axe-core "4.2.3"
 
 "@salesforce/eslint-config-lwc@~2.0.0":
   version "2.0.0"
@@ -2863,10 +2864,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-axe-core@4.1.4:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.1.4.tgz#f19cd99a84ee32a318b9c5b5bb8ed373ad94f143"
-  integrity sha512-Pdgfv6iP0gNx9ejRGa3zE7Xgkj/iclXqLfe7BnatdZz0QnLZ3jrRHUVH8wNSdN68w05Sk3ShGTb3ydktMTooig==
+axe-core@4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.2.3.tgz#2a3afc332f0031b42f602f4a3de03c211ca98f72"
+  integrity sha512-pXnVMfJKSIWU2Ml4JHP7pZEPIrgBO1Fd3WGx+fPBsS+KRGhE4vxooD8XBGWbQOIVSZsVK7pUDBBkCicNu80yzQ==
 
 babel-compat@0.22.2:
   version "0.22.2"
