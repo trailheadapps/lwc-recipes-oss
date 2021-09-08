@@ -15,7 +15,7 @@
         "chart.js": "^3.5.1",
         "d3": "^7.0.1",
         "eslint": "^7.32.0",
-        "husky": "^7.0.1",
+        "husky": "^7.0.2",
         "jest-canvas-mock": "^2.3.1",
         "lint-staged": "^11.1.2",
         "lwc-recipes-oss-ui-components": "^0.3.2",
