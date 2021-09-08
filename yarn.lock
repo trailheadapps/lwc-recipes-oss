@@ -1863,47 +1863,46 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@sa11y/assert@0.2.7":
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/@sa11y/assert/-/assert-0.2.7.tgz#cd9aad4f96593a33898ba3f72266444673c50dd8"
-  integrity sha512-N1IHtUIcCTUlW8FDfItvdFxN7weHQlJeOMTA8tfswIusAk94UuDPcYN2JTfiNP68T6nhxIK0MspTnUkn1UCWug==
+"@sa11y/assert@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/assert/-/assert-1.0.0.tgz#ad79c3db036a4f53d1fe1335104666480867f57a"
+  integrity sha512-VNm/6Saw2XkjXdCNh2QKFXy3nsYTz77zjnTQ3Dk+nc/x4vPM0bqcmtRFrYJ5teL7/8OHlYTJJ36QstAihIt/6w==
   dependencies:
-    "@sa11y/common" "0.3.4"
-    "@sa11y/format" "0.4.3"
-    "@sa11y/preset-rules" "0.3.6"
-    axe-core "4.3.1"
+    "@sa11y/common" "0.4.0"
+    "@sa11y/format" "0.5.0"
+    "@sa11y/preset-rules" "1.0.0"
+    axe-core "4.3.3"
 
-"@sa11y/common@0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@sa11y/common/-/common-0.3.4.tgz#c0ae12440279c9c0acb29753589105028115b873"
-  integrity sha512-HYAAP2jsM5eIwlY37bKIzNqNRsTTErACTcYSJmTl5+V5jHRGD+D/eVHJp/yb2g5d0TuuqZwkVLqHlD/IjdGlww==
+"@sa11y/common@0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/common/-/common-0.4.0.tgz#1212dcfbbb435e9afe92f41340c93b69df4fab9c"
+  integrity sha512-F2Irtqek8ttWd0KdvdS4IBAwx4FHO2d1yLev+qhzqKR+WylgKoade89IfqRzXByQGfedKpuJabsDa2Kyly6asg==
   dependencies:
-    axe-core "4.3.1"
+    axe-core "4.3.3"
 
-"@sa11y/format@0.4.3":
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/@sa11y/format/-/format-0.4.3.tgz#17dbf7d1d44484366c8b1c8ad3fb0f0e79d616f6"
-  integrity sha512-xpsuq1Awr9PKU5+MMkGjh0ilEB8W2vMA/y6xb/r7+yHr2gLkX5GmhPbpqicRjmG/fxUMTz5J2UGBfAEKOcG+6Q==
+"@sa11y/format@0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/format/-/format-0.5.0.tgz#3531274322be052e8173b97057ff3f1476af086e"
+  integrity sha512-25WMz8xaHs7qnwoTSz5okKg3gwRrWrONqnTuc4vODkzERQzMN1st/9BJ3XIqpqIV0tEDxPgjCLloxkv7/pghpg==
   dependencies:
-    axe-core "4.3.1"
+    "@sa11y/preset-rules" "1.0.0"
+    axe-core "4.3.3"
 
-"@sa11y/jest@0.4.3":
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/@sa11y/jest/-/jest-0.4.3.tgz#a57c0ebcc953863e7176f36536df6d0cc59b9e66"
-  integrity sha512-CHrbyGNCjDDYTH6WPlKKiqnJKuLGVMB/to2SNYOsN5kL/yKUHTiF4vYTcgJ6QvR240RH5c9rEg3/7pbnRjlX5Q==
+"@sa11y/jest@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/jest/-/jest-1.0.0.tgz#8f0f024fac4a4f86ae98fe4eef35560dfe55e140"
+  integrity sha512-W5FFVA562sDBB8Gt9VajhO7blc+Zk1CDzpnSOl1f8PwOpj9YBytVQKRgW/mq0JapznWfBfTg6WYpyFs7AWBbUA==
   dependencies:
     "@jest/test-result" "26.6.2"
-    "@sa11y/assert" "0.2.7"
-    "@sa11y/format" "0.4.3"
-    "@sa11y/preset-rules" "0.3.6"
+    "@sa11y/assert" "1.0.0"
+    "@sa11y/format" "0.5.0"
+    "@sa11y/preset-rules" "1.0.0"
     jest-matcher-utils "26.6.2"
 
-"@sa11y/preset-rules@0.3.6":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@sa11y/preset-rules/-/preset-rules-0.3.6.tgz#5b2dc3e6a97aa74354e081cf231e3a2dc70215b4"
-  integrity sha512-F5QYSye8o5rVdRqAldAuo+d0xW+gxngpz3oXK9rD+1gSAz2CSzmC7JIhbiQQoWlTgZkyoCFETaFjG4M4Z5HGzQ==
-  dependencies:
-    axe-core "4.3.1"
+"@sa11y/preset-rules@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/preset-rules/-/preset-rules-1.0.0.tgz#f4c5d65a513fdeda2e601d8739bc26af381b65d0"
+  integrity sha512-bMaqm2T4wEClyDuqjPpdYU3PqWz0CKUVpm8JxfKDlpFlQvGphVHI6PSIUCEGFbzxzb69jqSP9EArZ+fWP6uY/A==
 
 "@salesforce/eslint-config-lwc@~2.0.0":
   version "2.0.0"
@@ -2728,10 +2727,10 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-axe-core@4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.3.1.tgz#0c6a076e4a1c3e0544ba6a9479158f9be7a7928e"
-  integrity sha512-3WVgVPs/7OnKU3s+lqMtkv3wQlg3WxK1YifmpJSDO0E1aPBrZWlrrTO6cxRqCXLuX2aYgCljqXIQd0VnRidV0g==
+axe-core@4.3.3:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.3.3.tgz#b55cd8e8ddf659fe89b064680e1c6a4dceab0325"
+  integrity sha512-/lqqLAmuIPi79WYfRpy2i8z+x+vxU3zX2uAm0gs1q52qTuKwolOj1P8XbufpXcsydrpKx2yGn2wzAnxCMV86QA==
 
 babel-compat@0.22.2:
   version "0.22.2"
