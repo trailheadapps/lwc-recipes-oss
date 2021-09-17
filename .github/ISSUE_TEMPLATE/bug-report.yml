@@ -17,19 +17,6 @@ body:
           description: Short summary of what is going on or to provide context
       validations:
           required: true
-    - type: dropdown
-      id: orgType
-      attributes:
-          label: Salesforce Org Type
-          description: What type of Salesforce org are you deploying to?
-          options:
-              - Scratch Org
-              - Developer Edition Org
-              - Trailhead Playground
-              - Sandbox
-              - Production Org
-      validations:
-          required: true
     - type: textarea
       attributes:
           label: Steps To Reproduce
