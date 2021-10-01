@@ -1863,46 +1863,46 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@sa11y/assert@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/assert/-/assert-1.0.0.tgz#ad79c3db036a4f53d1fe1335104666480867f57a"
-  integrity sha512-VNm/6Saw2XkjXdCNh2QKFXy3nsYTz77zjnTQ3Dk+nc/x4vPM0bqcmtRFrYJ5teL7/8OHlYTJJ36QstAihIt/6w==
+"@sa11y/assert@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/assert/-/assert-3.0.0.tgz#8bc1f9349f3efe76cf792ed3a65b21f5d41bd8c2"
+  integrity sha512-lOCL9NFYBaDbwjsYtHAAiQYbSZO0Voyl+y4bpB2MtIfUMmbeI5tB65HSeFBHDWUew42z8iB+Of/1GyS+ZP5MHQ==
   dependencies:
-    "@sa11y/common" "0.4.0"
-    "@sa11y/format" "0.5.0"
-    "@sa11y/preset-rules" "1.0.0"
+    "@sa11y/common" "3.0.0"
+    "@sa11y/format" "3.0.0"
+    "@sa11y/preset-rules" "3.0.0"
     axe-core "4.3.3"
 
-"@sa11y/common@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/common/-/common-0.4.0.tgz#1212dcfbbb435e9afe92f41340c93b69df4fab9c"
-  integrity sha512-F2Irtqek8ttWd0KdvdS4IBAwx4FHO2d1yLev+qhzqKR+WylgKoade89IfqRzXByQGfedKpuJabsDa2Kyly6asg==
+"@sa11y/common@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/common/-/common-3.0.0.tgz#a4f9f2819f9accd5e0e062560a2aef66a69fe6c5"
+  integrity sha512-hOw05NUgSg0DbKvxmSVPYCn1ssn1EQTzwx3hOXnzVO0G5wLr+/5oUHAS+xS4ybglgWIVk4uJysnI/LXONezUxg==
   dependencies:
     axe-core "4.3.3"
 
-"@sa11y/format@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/format/-/format-0.5.0.tgz#3531274322be052e8173b97057ff3f1476af086e"
-  integrity sha512-25WMz8xaHs7qnwoTSz5okKg3gwRrWrONqnTuc4vODkzERQzMN1st/9BJ3XIqpqIV0tEDxPgjCLloxkv7/pghpg==
+"@sa11y/format@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/format/-/format-3.0.0.tgz#d07731b42a11c3e86e0c228ae6bca37d24f09e46"
+  integrity sha512-HzHp0c8TBZrESY2HAck1rKV+EVxEyMYHcHUUM6dUcsvqsYMOQqMuxdgmo7ZXPbMN/ZJsJ/RxaI+s60hbohw/ZA==
   dependencies:
-    "@sa11y/preset-rules" "1.0.0"
+    "@sa11y/preset-rules" "3.0.0"
     axe-core "4.3.3"
 
-"@sa11y/jest@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/jest/-/jest-1.0.0.tgz#8f0f024fac4a4f86ae98fe4eef35560dfe55e140"
-  integrity sha512-W5FFVA562sDBB8Gt9VajhO7blc+Zk1CDzpnSOl1f8PwOpj9YBytVQKRgW/mq0JapznWfBfTg6WYpyFs7AWBbUA==
+"@sa11y/jest@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/jest/-/jest-3.0.0.tgz#d30021b889282820730201ffe166208c1f32080d"
+  integrity sha512-ILwsGYufxKXqUJPe8S4VaJUKfXbTHo2qYkjMI9FNqYzJh2tk011mawPyPRPf4g4w8IINkjPegx4pQv89koVJyQ==
   dependencies:
     "@jest/test-result" "26.6.2"
-    "@sa11y/assert" "1.0.0"
-    "@sa11y/format" "0.5.0"
-    "@sa11y/preset-rules" "1.0.0"
+    "@sa11y/assert" "3.0.0"
+    "@sa11y/format" "3.0.0"
+    "@sa11y/preset-rules" "3.0.0"
     jest-matcher-utils "26.6.2"
 
-"@sa11y/preset-rules@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@sa11y/preset-rules/-/preset-rules-1.0.0.tgz#f4c5d65a513fdeda2e601d8739bc26af381b65d0"
-  integrity sha512-bMaqm2T4wEClyDuqjPpdYU3PqWz0CKUVpm8JxfKDlpFlQvGphVHI6PSIUCEGFbzxzb69jqSP9EArZ+fWP6uY/A==
+"@sa11y/preset-rules@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@sa11y/preset-rules/-/preset-rules-3.0.0.tgz#c7fd579c88b6c6f5cf8baecc8861660bd94a014b"
+  integrity sha512-+QSOskVOcSZEDszUHxLSs37C4g4FFGIfkr5mNLu8vOj3q+JPZEyvyZ8Lu374A2OQEsO/cDBAMv+t5H4hlFR3UQ==
 
 "@salesforce/eslint-config-lwc@~2.0.0":
   version "2.0.0"
