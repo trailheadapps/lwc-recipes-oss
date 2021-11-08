@@ -12,14 +12,14 @@
     "devDependencies": {
         "@sa11y/jest": "3.0.0",
         "@salesforce/wire-service-jest-util": "^4.0.0",
-        "chart.js": "^3.5.1",
+        "chart.js": "^3.6.0",
         "d3": "^7.0.4",
         "eslint": "^7.32.0",
         "husky": "^7.0.2",
         "jest-canvas-mock": "^2.3.1",
         "lint-staged": "^11.2.6",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwc-services": "^3.1.2",
+        "lwc-services": "^3.2.2",
         "prettier": "^2.4.1"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
