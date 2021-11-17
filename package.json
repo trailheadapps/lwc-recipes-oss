@@ -33,7 +33,7 @@
         "build:development": "lwc-services build",
         "lint": "eslint **/src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
-        "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,yaml,yml}\"",
+        "prettier:verify": "prettier --check \"**/*.{css,html,js,json,md,yaml,yml}\"",
         "serve": "node scripts/server.js",
         "test:unit": "lwc-services test:unit",
         "test:unit:coverage": "lwc-services test:unit --coverage",
