@@ -30,6 +30,7 @@ jobs:
             # Install npm dependencies for Prettier and Jest
             - name: 'Install npm dependencies'
               if: steps.cache-yarn.outputs.cache-hit != 'true'
+              uses: volta-cli/action@v1
               run: yarn install --frozen-lockfile
 
             # Prettier formatting
