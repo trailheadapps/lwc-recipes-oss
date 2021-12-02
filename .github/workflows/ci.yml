@@ -17,6 +17,10 @@ jobs:
             - name: 'Checkout source code'
               uses: actions/checkout@v2
 
+            # Checkout the code in the pull request
+            - name: 'Use Volta'
+              uses: volta-cli/action@v1
+
             # Cache node_modules to speed up the process
             - name: Restore node_modules cache
               id: cache-yarn
