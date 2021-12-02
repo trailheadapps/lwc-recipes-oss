@@ -16,6 +16,8 @@ jobs:
             - name: 'Checkout source code'
               uses: actions/checkout@v2
 
+            - uses: volta-cli/action@v1
+
             # Cache node_modules to speed up the process
             - name: Restore node_modules cache
               id: cache-yarn
@@ -30,7 +32,6 @@ jobs:
             # Install npm dependencies for Prettier and Jest
             - name: 'Install npm dependencies'
               if: steps.cache-yarn.outputs.cache-hit != 'true'
-              uses: volta-cli/action@v1
               run: yarn install --frozen-lockfile
 
             # Prettier formatting
