@@ -4,7 +4,7 @@ import getContactList from 'data/wireGetContactListProvider';
 export default class EventWithData extends LightningElement {
     selectedContact;
 
-    @wire(getContactList) contacts;
+    @wire(getContactList) contacts = {};
 
     handleSelect(event) {
         const contactId = event.detail;

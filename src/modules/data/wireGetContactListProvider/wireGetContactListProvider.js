@@ -1,15 +1,28 @@
-import { register, ValueChangedEvent } from '@lwc/wire-service';
 import { contacts } from 'data/contacts';
 
-export default function getContactList() {
-    // eslint-disable-next-line no-unused-vars
-    return new Promise((resolve, reject) => {
-        resolve();
-    });
-}
+export default class getContactList {
+    connected = false;
 
-register(getContactList, (eventTarget) => {
-    eventTarget.addEventListener('connect', () => {
-        eventTarget.dispatchEvent(new ValueChangedEvent({ data: contacts }));
-    });
-});
+    constructor(dataCallback) {
+        this.dataCallback = dataCallback;
+    }
+
+    connect() {
+        this.connected = true;
+        this.provideContactList();
+    }
+
+    disconnect() {
+        this.connected = false;
+    }
+
+    update() {
+        this.provideContactList();
+    }
+
+    provideContactList() {
+        if (this.connected) {
+            this.dataCallback({ data: contacts });
+        }
+    }
+}

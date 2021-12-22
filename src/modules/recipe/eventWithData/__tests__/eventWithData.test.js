@@ -1,6 +1,5 @@
 import { createElement } from 'lwc';
 import EventWithData from 'recipe/eventWithData';
-import { registerLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
 import getContactList from 'data/wireGetContactListProvider';
 
 // Realistic data with a list of records
@@ -10,9 +9,6 @@ const mockGetContactList = require('./data/getContactList.json');
 // when there is no data to display
 const mockGetContactListNoRecords = require('./data/getContactListNoRecords.json');
 
-// Register as data prodider wire adapter. Some tests verify that provisioned values trigger desired behavior.
-const getContactListAdapter = registerLdsTestWireAdapter(getContactList);
-
 describe('recipe-event-with-data', () => {
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM
@@ -21,8 +17,14 @@ describe('recipe-event-with-data', () => {
         }
     });
 
+    // Helper function to wait until the microtask queue is empty. This is needed for promise
+    // timing when calling imperative Apex.
+    async function flushPromises() {
+        return Promise.resolve();
+    }
+
     describe('getContactList @wire data', () => {
-        it('renders two crecipe-contact-list-item elements', () => {
+        it('renders multiple recipe-contact-list-item elements', async () => {
             // Create initial element
             const element = createElement('recipe-event-with-data', {
                 is: EventWithData
@@ -30,22 +32,18 @@ describe('recipe-event-with-data', () => {
             document.body.appendChild(element);
 
             // Send data to wire service
-            getContactListAdapter.emit(mockGetContactList);
+            getContactList.emit({ data: mockGetContactList });
 
-            // Return a promise to wait for any asynchronous DOM updates. Jest
-            // will automatically wait for the Promise chain to complete before
-            // ending the test and fail the test if the promise rejects.
-            return Promise.resolve().then(() => {
-                const contactListItemEls = element.shadowRoot.querySelectorAll(
-                    'recipe-contact-list-item'
-                );
-                expect(contactListItemEls.length).toBe(
-                    mockGetContactList.length
-                );
-            });
+            // Wait for any asynchronous DOM updates
+            await flushPromises();
+
+            const contactListItemEls = element.shadowRoot.querySelectorAll(
+                'recipe-contact-list-item'
+            );
+            expect(contactListItemEls.length).toBe(mockGetContactList.length);
         });
 
-        it('renders no recipe-contact-list-item-bubbling elements when no data', () => {
+        it('renders no recipe-contact-list-item-bubbling elements when no data', async () => {
             // Create initial element
             const element = createElement('recipe-event-with-data', {
                 is: EventWithData
@@ -53,25 +51,23 @@ describe('recipe-event-with-data', () => {
             document.body.appendChild(element);
 
             // Emit data from @wire
-            getContactListAdapter.emit(mockGetContactListNoRecords);
+            getContactList.emit({ data: mockGetContactListNoRecords });
 
-            // Return a promise to wait for any asynchronous DOM updates. Jest
-            // will automatically wait for the Promise chain to complete before
-            // ending the test and fail the test if the promise rejects.
-            return Promise.resolve().then(() => {
-                // Select elements for validation
-                const contactListItemEls = element.shadowRoot.querySelectorAll(
-                    'recipe-contact-list-item'
-                );
-                expect(contactListItemEls.length).toBe(
-                    mockGetContactListNoRecords.length
-                );
-            });
+            // Wait for any asynchronous DOM updates
+            await flushPromises();
+
+            // Select elements for validation
+            const contactListItemEls = element.shadowRoot.querySelectorAll(
+                'recipe-contact-list-item'
+            );
+            expect(contactListItemEls.length).toBe(
+                mockGetContactListNoRecords.length
+            );
         });
     });
 
     describe('getContactList @wire error', () => {
-        it('shows error panel element', () => {
+        it('shows error panel element', async () => {
             // Create initial element
             const element = createElement('recipe-event-with-data', {
                 is: EventWithData
@@ -79,20 +75,18 @@ describe('recipe-event-with-data', () => {
             document.body.appendChild(element);
 
             // Emit error from @wire
-            getContactListAdapter.error();
+            getContactList.emit({ error: 'an error' });
 
-            // Return a promise to wait for any asynchronous DOM updates. Jest
-            // will automatically wait for the Promise chain to complete before
-            // ending the test and fail the test if the promise rejects.
-            return Promise.resolve().then(() => {
-                const errorPanelEl =
-                    element.shadowRoot.querySelector('recipe-error-panel');
-                expect(errorPanelEl).not.toBeNull();
-            });
+            // Wait for any asynchronous DOM updates
+            await flushPromises();
+
+            const errorPanelEl =
+                element.shadowRoot.querySelector('recipe-error-panel');
+            expect(errorPanelEl).not.toBeNull();
         });
     });
 
-    it('shows selected contact data after event', () => {
+    it('shows selected contact data after event', async () => {
         // Create initial element
         const element = createElement('recipe-event-with-data', {
             is: EventWithData
@@ -100,38 +94,33 @@ describe('recipe-event-with-data', () => {
         document.body.appendChild(element);
 
         // Emit data from @wire
-        getContactListAdapter.emit(mockGetContactList);
+        getContactList.emit({ data: mockGetContactList });
 
-        // Return a promise to wait for any asynchronous DOM updates. Jest
-        // will automatically wait for the Promise chain to complete before
-        // ending the test and fail the test if the promise rejects.
-        return Promise.resolve()
-            .then(() => {
-                // Select element for validation
-                const contactListItemEls = element.shadowRoot.querySelectorAll(
-                    'recipe-contact-list-item'
-                );
-                expect(contactListItemEls.length).toBe(
-                    mockGetContactList.length
-                );
-                // Dispatch event from child element to validate
-                // behavior in current component.
-                contactListItemEls[0].dispatchEvent(
-                    new CustomEvent('select', {
-                        detail: mockGetContactList[0].Id
-                    })
-                );
+        // Wait for any asynchronous DOM updates
+        await flushPromises();
+
+        // Select element for validation
+        const contactListItemEls = element.shadowRoot.querySelectorAll(
+            'recipe-contact-list-item'
+        );
+        expect(contactListItemEls.length).toBe(mockGetContactList.length);
+        // Dispatch event from child element to validate
+        // behavior in current component.
+        contactListItemEls[0].dispatchEvent(
+            new CustomEvent('select', {
+                detail: mockGetContactList[0].Id
             })
-            .then(() => {
-                // Select element for validation
-                const contactNameEl = element.shadowRoot.querySelector('p');
-                expect(contactNameEl.textContent).toBe(
-                    mockGetContactList[0].Name
-                );
-            });
+        );
+
+        // Wait for any asynchronous DOM updates
+        await flushPromises();
+
+        // Select element for validation
+        const contactNameEl = element.shadowRoot.querySelector('p');
+        expect(contactNameEl.textContent).toBe(mockGetContactList[0].Name);
     });
 
-    it('is accessible when data is returned', () => {
+    it('is accessible when data is returned', async () => {
         // Create initial element
         const element = createElement('recipe-event-with-data', {
             is: EventWithData
@@ -139,12 +128,15 @@ describe('recipe-event-with-data', () => {
         document.body.appendChild(element);
 
         // Emit data from @wire
-        getContactListAdapter.emit(mockGetContactList);
+        getContactList.emit({ data: mockGetContactList });
 
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
+        // Wait for any asynchronous DOM updates
+        await flushPromises();
+
+        await expect(element).toBeAccessible();
     });
 
-    it('is accessible when error is returned', () => {
+    it('is accessible when error is returned', async () => {
         // Create initial element
         const element = createElement('recipe-event-with-data', {
             is: EventWithData
@@ -152,12 +144,15 @@ describe('recipe-event-with-data', () => {
         document.body.appendChild(element);
 
         // Emit error from @wire
-        getContactListAdapter.error();
+        getContactList.emit({ error: 'an error' });
 
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
+        // Wait for any asynchronous DOM updates
+        await flushPromises();
+
+        await expect(element).toBeAccessible();
     });
 
-    it('is accessible when contact is selected', () => {
+    it('is accessible when contact is selected', async () => {
         // Create initial element
         const element = createElement('recipe-event-with-data', {
             is: EventWithData
@@ -165,25 +160,24 @@ describe('recipe-event-with-data', () => {
         document.body.appendChild(element);
 
         // Emit data from @wire
-        getContactListAdapter.emit(mockGetContactList);
+        getContactList.emit({ data: mockGetContactList });
 
-        return Promise.resolve()
-            .then(() => {
-                // Select element for validation
-                const contactListItemEls = element.shadowRoot.querySelectorAll(
-                    'recipe-contact-list-item'
-                );
-                expect(contactListItemEls.length).toBe(
-                    mockGetContactList.length
-                );
-                // Dispatch event from child element to validate
-                // behavior in current component.
-                contactListItemEls[0].dispatchEvent(
-                    new CustomEvent('select', {
-                        detail: mockGetContactList[0].Id
-                    })
-                );
+        // Wait for any asynchronous DOM updates
+        await flushPromises();
+
+        // Select element for validation
+        const contactListItemEls = element.shadowRoot.querySelectorAll(
+            'recipe-contact-list-item'
+        );
+        expect(contactListItemEls.length).toBe(mockGetContactList.length);
+        // Dispatch event from child element to validate
+        // behavior in current component.
+        contactListItemEls[0].dispatchEvent(
+            new CustomEvent('select', {
+                detail: mockGetContactList[0].Id
             })
-            .then(() => expect(element).toBeAccessible());
+        );
+
+        await expect(element).toBeAccessible();
     });
 });
