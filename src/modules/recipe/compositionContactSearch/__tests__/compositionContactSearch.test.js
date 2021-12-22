@@ -36,7 +36,25 @@ describe('recipe-composition-contact-search', () => {
         while (document.body.firstChild) {
             document.body.removeChild(document.body.firstChild);
         }
+
+        // Prevent data saved on mocks from leaking between tests
+        jest.clearAllMocks();
     });
+
+    // Helper function to wait until the microtask queue is empty. This is needed for promise
+    // timing when calling imperative Apex.
+    async function flushPromises() {
+        return Promise.resolve();
+    }
+
+    // Helper function to wait for a duration.
+    // This is used for accessibility tests where fake timers aren't supported.
+    async function wait(duration) {
+        return new Promise((resolve) => {
+            // eslint-disable-next-line @lwc/lwc/no-async-operation
+            setTimeout(() => resolve(), duration);
+        });
+    }
 
     it('does not render contact tiles by default', () => {
         // Create initial element
@@ -52,7 +70,7 @@ describe('recipe-composition-contact-search', () => {
         expect(contactTileEls.length).toBe(0);
     });
 
-    it('renders one contact tile based on user input', () => {
+    it('renders one contact tile based on user input', async () => {
         const USER_INPUT = 'Amy';
 
         // Assign mock value for returned data
@@ -69,22 +87,20 @@ describe('recipe-composition-contact-search', () => {
         searchInput.value = USER_INPUT;
         searchInput.dispatchEvent(new CustomEvent('change'));
 
-        // Disable search throttling
+        // Run all fake timers.
         jest.runAllTimers();
 
-        // Return a promise to wait for any asynchronous DOM updates. Jest
-        // will automatically wait for the Promise chain to complete before
-        // ending the test and fail the test if the promise rejects.
-        return Promise.resolve().then(() => {
-            const contactTileEl = element.shadowRoot.querySelector(
-                'recipe-contact-tile'
-            );
-            expect(contactTileEl).not.toBeNull();
-            expect(contactTileEl.contact.Name).toBe(CONTACTS_SUCCESS[0].Name);
-        });
+        // Wait for any asynchronous DOM updates.
+        await flushPromises();
+
+        const contactTileEl = element.shadowRoot.querySelector(
+            'recipe-contact-tile'
+        );
+        expect(contactTileEl).not.toBeNull();
+        expect(contactTileEl.contact.Name).toBe(CONTACTS_SUCCESS[0].Name);
     });
 
-    it('renders the error panel when the data provider returns an error', () => {
+    it('renders the error panel when the data provider returns an error', async () => {
         const USER_INPUT = 'invalid';
 
         // Throw error when trying to retrieve data
@@ -106,21 +122,21 @@ describe('recipe-composition-contact-search', () => {
         // Disable search throttling
         jest.runAllTimers();
 
-        // Return a promise to wait for any asynchronous DOM updates. Jest
-        // will automatically wait for the Promise chain to complete before
-        // ending the test and fail the test if the promise rejects.
-        return Promise.resolve().then(() => {
-            const contactTileEl = element.shadowRoot.querySelectorAll(
-                'recipe-contact-tile'
-            );
-            expect(contactTileEl.length).toBe(0);
-            const errorPanelEl =
-                element.shadowRoot.querySelectorAll('recipe-error-panel');
-            expect(errorPanelEl).not.toBeNull();
-        });
+        // Wait for any asynchronous DOM updates.
+        await flushPromises();
+
+        const contactTileEl = element.shadowRoot.querySelectorAll(
+            'recipe-contact-tile'
+        );
+        expect(contactTileEl.length).toBe(0);
+        const errorPanelEl =
+            element.shadowRoot.querySelectorAll('recipe-error-panel');
+        expect(errorPanelEl).not.toBeNull();
     });
 
-    it('is accessible when data is returned', () => {
+    it('is accessible when data is returned', async () => {
+        jest.useRealTimers();
+
         const USER_INPUT = 'Amy';
 
         // Assign mock value for returned data
@@ -137,18 +153,15 @@ describe('recipe-composition-contact-search', () => {
         searchInput.value = USER_INPUT;
         searchInput.dispatchEvent(new CustomEvent('change'));
 
-        // Disable search throttling
-        jest.runAllTimers();
+        // Wait for component update
+        await wait(400);
 
-        // Return a promise to wait for any asynchronous DOM updates. Jest
-        // will automatically wait for the Promise chain to complete before
-        // ending the test and fail the test if the promise rejects.
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        await expect(element).toBeAccessible();
     });
 
-    it('is accessible when error is returned', () => {
+    it('is accessible when error is returned', async () => {
+        jest.useRealTimers();
+
         const USER_INPUT = 'invalid';
 
         // Throw error when trying to retrieve data
@@ -167,14 +180,9 @@ describe('recipe-composition-contact-search', () => {
         searchInput.value = USER_INPUT;
         searchInput.dispatchEvent(new CustomEvent('change'));
 
-        // Disable search throttling
-        jest.runAllTimers();
+        // Wait for component update
+        await wait(400);
 
-        // Return a promise to wait for any asynchronous DOM updates. Jest
-        // will automatically wait for the Promise chain to complete before
-        // ending the test and fail the test if the promise rejects.
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        await expect(element).toBeAccessible();
     });
 });
