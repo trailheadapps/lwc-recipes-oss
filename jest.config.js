@@ -8,11 +8,13 @@ setupFilesAfterEnv.push('<rootDir>/jest-sa11y-setup.js');
 
 module.exports = {
     ...jestConfig,
-    // Stubs for 3rd party components
+    // Stubs for 3rd party components and wire adapters
     moduleNameMapper: {
-        '^ui/(.+)$': '<rootDir>/jest-mocks/ui/$1/$1'
+        '^ui/(.+)$': '<rootDir>/jest-mocks/ui/$1/$1',
+        'data/wireGetContactListProvider':
+            '<rootDir>/jest-mocks/data/wireGetContactListProvider/wireGetContactListProvider'
     },
-    // Adding canvas mock for Chartjs tests
+    // Adding canvas mock for Chart.js tests
     setupFiles: ['jest-canvas-mock'],
     setupFilesAfterEnv
 };

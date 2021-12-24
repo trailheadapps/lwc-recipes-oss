@@ -1,13 +1,11 @@
 import { LightningElement } from 'lwc';
 import DATA from './data';
+import * as d3 from 'd3';
 
 export default class LibsD3 extends LightningElement {
     svgWidth = 0;
     svgHeight = 400;
-
     d3Initialized = false;
-
-    disconnectedCallback() {}
 
     renderedCallback() {
         if (this.d3Initialized) {
@@ -15,13 +13,11 @@ export default class LibsD3 extends LightningElement {
         }
         this.d3Initialized = true;
         this.initializeD3();
-
-        const div = this.template.querySelector('div');
-        this.svgHeight = this.svgWidth = div.clientWidth;
     }
 
     async initializeD3() {
-        const d3 = await require(/* webpackChunkName: "d3js" */ 'd3');
+        const div = this.template.querySelector('div');
+        this.svgHeight = this.svgWidth = div.clientWidth;
 
         // Example adopted from https://observablehq.com/@d3/force-directed-graph
         const svg = d3.select(this.template.querySelector('svg.d3'));
@@ -77,7 +73,6 @@ export default class LibsD3 extends LightningElement {
                 .attr('y1', (d) => d.source.y)
                 .attr('x2', (d) => d.target.x)
                 .attr('y2', (d) => d.target.y);
-
             node.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
         });
 
