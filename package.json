@@ -20,7 +20,7 @@
         "lint-staged": "^12.1.2",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwc-services": "^3.2.2",
-        "prettier": "^2.5.0"
+        "prettier": "^2.5.1"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "keywords": [
