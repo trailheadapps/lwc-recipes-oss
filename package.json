@@ -5,7 +5,7 @@
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
         "compression": "^1.7.4",
-        "express": "^4.17.1",
+        "express": "^4.17.2",
         "helmet": "^4.6.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
