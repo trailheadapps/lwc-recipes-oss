@@ -5,7 +5,7 @@ export const contacts = [
         Title: 'VP of Engineering',
         Phone: '4152568563',
         Email: 'amy@demo.net',
-        Picture: '/resources/images/demo/amy_taylor.jpg'
+        Picture: '/assets/images/demo/amy_taylor.jpg'
     },
     {
         Id: '0031700000pJRRTAA4',
@@ -13,7 +13,7 @@ export const contacts = [
         Title: 'VP of Sales',
         Phone: '4158526633',
         Email: 'michael@demo.net',
-        Picture: '/resources/images/demo/michael_jones.jpg'
+        Picture: '/assets/images/demo/michael_jones.jpg'
     },
     {
         Id: '0031700000pJRRUAA4',
@@ -21,7 +21,7 @@ export const contacts = [
         Title: 'CEO',
         Phone: '4158521463',
         Email: 'jennifer@demo.net',
-        Picture: '/resources/images/demo/jennifer_wu.jpg'
+        Picture: '/assets/images/demo/jennifer_wu.jpg'
     },
     {
         Id: '0031700000pJRRVAA4',
@@ -29,7 +29,7 @@ export const contacts = [
         Title: 'VP of Products',
         Phone: '4158526398',
         Email: 'anup@demo.net',
-        Picture: '/resources/images/demo/anup_gupta.jpg'
+        Picture: '/assets/images/demo/anup_gupta.jpg'
     },
     {
         Id: '0031700000pJRRWAA4',
@@ -37,7 +37,7 @@ export const contacts = [
         Title: 'VP of Technology',
         Phone: '4158753654',
         Email: 'caroline@demo.net',
-        Picture: '/resources/images/demo/caroline_kingsley.jpg'
+        Picture: '/assets/images/demo/caroline_kingsley.jpg'
     },
     {
         Id: '0031700000pJRRXAA4',
@@ -45,6 +45,6 @@ export const contacts = [
         Title: 'VP of Opearations',
         Phone: '4158885522',
         Email: 'jonathan@demo.net',
-        Picture: '/resources/images/demo/jonathan_bradley.jpg'
+        Picture: '/assets/images/demo/jonathan_bradley.jpg'
     }
 ];

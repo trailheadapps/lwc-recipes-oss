@@ -6,6 +6,7 @@ logs
 
 # Standard dist folder
 /dist
+/build
 
 # Tooling files
 node_modules
@@ -13,6 +14,7 @@ jsconfig.json
 
 # Temp directory
 /tmp
+/__lwr_cache__
 
 # Jest coverage folder
 /coverage

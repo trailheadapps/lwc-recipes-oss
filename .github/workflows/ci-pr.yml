@@ -21,32 +21,32 @@ jobs:
               uses: volta-cli/action@v1
 
             # Cache node_modules to speed up the process
-            - name: Restore node_modules cache
-              id: cache-yarn
+            - name: 'Restore node_modules cache'
+              id: cache-npm
               uses: actions/cache@v1
               with:
                   path: node_modules
-                  key: yarn-${{ hashFiles('**/yarn.lock') }}
+                  key: npm-${{ hashFiles('**/package-lock.json') }}
                   restore-keys: |
-                      yarn-${{ env.cache-name }}-
-                      yarn-
+                      npm-${{ env.cache-name }}-
+                      npm-
 
             # Install npm dependencies for Prettier and Jest
             - name: 'Install npm dependencies'
-              if: steps.cache-yarn.outputs.cache-hit != 'true'
-              run: yarn install --frozen-lockfile
+              if: steps.cache-npm.outputs.cache-hit != 'true'
+              run: npm ci
 
             # Prettier formatting
             - name: 'Code formatting verification with Prettier'
-              run: yarn prettier:verify
+              run: npm run prettier:verify
 
             # ESlint
             - name: 'Lint Lightning Web Components'
-              run: yarn lint
+              run: npm run lint
 
             # Unit tests
             - name: 'Unit test Lightning Web Components'
-              run: yarn test:unit:coverage
+              run: npm run test:unit:coverage
 
             # Upload code coverage data
             - name: 'Upload code coverage for LWC to Codecov.io'

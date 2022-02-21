@@ -5,7 +5,7 @@
     {
       "file": "package.json",
       "description": "Install the npm package corresponding to the libraries you want to use. Here we've installed the `chart.js` library which we've used in the `libsChartjs` recipe.",
-      "line": 15,
+      "line": 7,
       "title": "Install a library"
     },
     {
@@ -16,13 +16,13 @@
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",
-      "line": 50,
+      "line": 57,
       "description": "Initialize the libraries in the `renderedCallback()` lifecycle hook. Learn more about Lifecycle hooks [here](https://lwc.dev/guide/lifecycle)",
       "title": "Initialize the library"
     },
     {
       "file": "src/modules/recipe/libsChartjs/libsChartjs.js",
-      "line": 59,
+      "line": 61,
       "description": "In a Lightning web component, you can’t use `document` to query for DOM elements. Instead, use `this.template`",
       "title": "Interacting with DOM - JS"
     },

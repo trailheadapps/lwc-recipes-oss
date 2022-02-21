@@ -1,9 +1,11 @@
 import { LightningElement } from 'lwc';
-import Chart from 'chart.js/auto';
+import { Chart, registerables } from 'chart.js';
 
 const generateRandomNumber = () => {
     return Math.round(Math.random() * 100);
 };
+
+Chart.register(...registerables);
 
 export default class LibsChartjs extends LightningElement {
     chart;

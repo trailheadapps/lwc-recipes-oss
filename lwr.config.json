@@ -1,0 +1,26 @@
+{
+    "lwc": {
+        "modules": [
+            { "dir": "$rootDir/src/modules" },
+            {
+                "npm": "lwc-recipes-oss-ui-components"
+            }
+        ]
+    },
+    "bundleConfig": { "exclude": ["lwc"] },
+    "assets": [
+        {
+            "alias": "assetsDir",
+            "dir": "$rootDir/src/assets",
+            "urlPath": "/assets"
+        }
+    ],
+    "routes": [
+        {
+            "id": "home",
+            "path": "/",
+            "rootComponent": "ui/app",
+            "layoutTemplate": "$layoutsDir/index.html"
+        }
+    ]
+}

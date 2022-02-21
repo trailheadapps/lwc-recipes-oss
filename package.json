@@ -1,25 +1,30 @@
 {
     "name": "lwc-recipes-oss",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
-        "compression": "^1.7.4",
-        "express": "^4.17.2",
-        "helmet": "^5.0.2"
+        "chart.js": "^3.7.1",
+        "d3": "^7.3.0",
+        "lwc": "^2.5.1",
+        "lwc-recipes-oss-ui-components": "^0.3.2",
+        "lwr": "^0.4.4"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
+        "@lwc/eslint-plugin-lwc": "^1.1.1",
+        "@lwc/jest-preset": "^11.2.2",
         "@sa11y/jest": "3.1.0",
+        "@salesforce/eslint-config-lwc": "^3.2.1",
+        "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/wire-service-jest-util": "^4.0.0",
-        "chart.js": "^3.7.0",
-        "d3": "^7.3.0",
-        "eslint": "^7.32.0",
+        "eslint": "^8.9.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jest": "^26.1.1",
         "husky": "^7.0.4",
+        "jest": "^27.5.1",
         "jest-canvas-mock": "^2.3.1",
         "lint-staged": "^12.3.2",
-        "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwc-services": "^3.2.2",
         "prettier": "^2.5.1"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
@@ -29,20 +34,22 @@
     "license": "CC0-1.0",
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
-        "build": "lwc-services build --mode production",
-        "build:development": "lwc-services build",
+        "clean": "rm -rf __lwr_cache__",
+        "dev": "node scripts/start-server.mjs",
         "lint": "eslint **/src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{css,html,js,json,md,yaml,yml}\"",
-        "serve": "node scripts/server.js",
-        "test:unit": "lwc-services test:unit",
-        "test:unit:coverage": "lwc-services test:unit --coverage",
-        "test:unit:debug": "lwc-services test:unit --debug",
-        "test:unit:watch": "lwc-services test:unit --watch",
-        "watch": "lwc-services watch",
-        "watch:production": "lwc-services watch --mode=production",
         "postinstall": "husky install",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged",
+        "start": "MODE=prod node scripts/start-server.mjs",
+        "start:amd": "MODE=compat node scripts/start-server.mjs",
+        "test:unit": "jest",
+        "test:unit:watch": "jest --watch",
+        "test:unit:coverage": "jest --coverage",
+        "test:unit:debug": "jest --debug"
+    },
+    "engines": {
+        "node": ">=14.15.4 <15"
     },
     "lint-staged": {
         "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
@@ -52,7 +59,7 @@
             "eslint"
         ],
         "**/src/**": [
-            "sfdx-lwc-jest --skipApiVersionCheck -- --bail --findRelatedTests"
+            "jest"
         ]
     },
     "volta": {

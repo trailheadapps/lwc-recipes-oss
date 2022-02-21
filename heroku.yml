@@ -2,4 +2,4 @@ build:
     docker:
         web: Dockerfile
 run:
-    web: yarn serve
+    web: npm run start

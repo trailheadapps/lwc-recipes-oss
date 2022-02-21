@@ -1,5 +1,6 @@
 import { createElement } from 'lwc';
 import MiscRestApiCall from 'recipe/miscRestApiCall';
+import { setImmediate } from 'timers';
 
 // Query URL for connecting to Google API
 const QUERY_URL =

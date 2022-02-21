@@ -30,16 +30,16 @@ git clone https://github.com/trailheadapps/lwc-recipes-oss
 cd lwc-recipes-oss
 ```
 
-2. Install the project dependencies using `yarn` (or `npm`, if you prefer that alternatively)
+2. Install the project dependencies using `npm` (or `yarn`, if you prefer that alternatively)
 
 ```
-yarn install
+npm install
 ```
 
 3. Start the app in watch mode.
 
 ```
-yarn watch
+npm run dev
 ```
 
 4. Enjoy the app!
