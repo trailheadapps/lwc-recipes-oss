@@ -6,19 +6,19 @@
     "dependencies": {
         "chart.js": "^3.7.1",
         "d3": "^7.3.0",
-        "lwc": "^2.5.1",
+        "lwc": "^2.10.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.5.12"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
         "@lwc/eslint-plugin-lwc": "^1.1.1",
-        "@lwc/jest-preset": "^11.2.2",
+        "@lwc/jest-preset": "^11.3.0",
         "@sa11y/jest": "3.1.0",
         "@salesforce/eslint-config-lwc": "^3.2.1",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/wire-service-jest-util": "^4.0.0",
-        "eslint": "^8.9.0",
+        "eslint": "^8.10.0",
         "eslint-plugin-import": "^2.25.4",
         "eslint-plugin-jest": "^26.1.1",
         "husky": "^7.0.4",
