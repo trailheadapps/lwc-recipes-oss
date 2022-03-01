@@ -2,6 +2,15 @@ import { createElement } from 'lwc';
 import LibsChartjs from 'recipe/libsChartjs';
 import ResizeObserver from './resizeObserverMock.js';
 
+jest.mock('chart.js', () => {
+    const { Chart } = jest.requireActual('chart.js');
+    return {
+        __esModule: true,
+        Chart,
+        registerables: []
+    };
+});
+
 describe('recipe-libs-chartjs', () => {
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM

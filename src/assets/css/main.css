@@ -9,8 +9,8 @@
     --color-bg-footer: #f7f7f7;
     --color-bg-card: #e4f2f8;
     --color-bg-search: #f4f5f6;
-    --card-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-        0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    --card-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
     --spotlight-bg: #ffffff;
     --sizebar-width: 300px;
     --color-text: #16325c;
@@ -55,8 +55,8 @@
 /* ======================================================== */
 
 html {
-    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
-        'Lucida Grande', sans-serif;
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+        Helvetica, Arial, 'Lucida Grande', sans-serif;
     font-weight: 300;
     font-size: 0.7em;
     box-sizing: border-box;
@@ -80,9 +80,6 @@ body {
 h1 {
     color: var(--primary-color-darkblue);
 }
-
-
-
 
 /* ======================================================== */
 /* HEADER */

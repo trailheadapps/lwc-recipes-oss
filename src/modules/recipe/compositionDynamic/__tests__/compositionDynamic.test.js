@@ -1,5 +1,6 @@
 import { createElement } from 'lwc';
 import CompositionDynamic from 'recipe/compositionDynamic';
+import { setImmediate } from 'timers';
 
 describe('recipe-composition-dynamic', () => {
     afterEach(() => {
