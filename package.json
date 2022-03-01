@@ -18,7 +18,7 @@
         "@salesforce/eslint-config-lwc": "^3.2.1",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/wire-service-jest-util": "^4.0.0",
-        "eslint": "^8.9.0",
+        "eslint": "^8.10.0",
         "eslint-plugin-import": "^2.25.4",
         "eslint-plugin-jest": "^26.1.1",
         "husky": "^7.0.4",
