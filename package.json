@@ -5,27 +5,27 @@
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
         "chart.js": "^3.7.1",
-        "d3": "^7.3.0",
-        "lwc": "^2.10.0",
+        "d3": "^7.4.3",
+        "lwc": "^2.12.1",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwr": "^0.5.12"
+        "lwr": "^0.6.4"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
-        "@lwc/eslint-plugin-lwc": "^1.1.1",
+        "@lwc/eslint-plugin-lwc": "^1.2.1",
         "@lwc/jest-preset": "^11.3.0",
         "@sa11y/jest": "3.1.0",
-        "@salesforce/eslint-config-lwc": "^3.2.1",
+        "@salesforce/eslint-config-lwc": "^3.2.4",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/wire-service-jest-util": "^4.0.0",
-        "eslint": "^8.12.0",
-        "eslint-plugin-import": "^2.25.4",
-        "eslint-plugin-jest": "^26.1.1",
+        "eslint": "^8.13.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jest": "^26.1.4",
         "husky": "^7.0.4",
         "jest": "^27.5.1",
         "jest-canvas-mock": "^2.3.1",
-        "lint-staged": "^12.3.2",
-        "prettier": "^2.5.1"
+        "lint-staged": "^12.3.7",
+        "prettier": "^2.6.2"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "keywords": [
