@@ -5,8 +5,8 @@
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
         "chart.js": "^3.7.1",
-        "d3": "^7.4.3",
-        "lwc": "^2.12.1",
+        "d3": "^7.4.4",
+        "lwc": "^2.13.1",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.6.4"
     },
@@ -20,11 +20,11 @@
         "@salesforce/wire-service-jest-util": "^4.0.0",
         "eslint": "^8.13.0",
         "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-jest": "^26.1.4",
+        "eslint-plugin-jest": "^26.1.5",
         "husky": "^7.0.4",
         "jest": "^27.5.1",
         "jest-canvas-mock": "^2.3.1",
-        "lint-staged": "^12.3.7",
+        "lint-staged": "^12.4.1",
         "prettier": "^2.6.2"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
