@@ -6,7 +6,7 @@
     "dependencies": {
         "chart.js": "^3.7.1",
         "d3": "^7.4.4",
-        "lwc": "^2.12.1",
+        "lwc": "^2.13.1",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.6.4"
     },
