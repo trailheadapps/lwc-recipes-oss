@@ -9,7 +9,7 @@ on:
 
 # Jobs to be executed
 jobs:
-    formatting-and-linting:
+    format-lint-lwc-tests:
         runs-on: ubuntu-latest
         steps:
             # Checkout the code in the pull request
