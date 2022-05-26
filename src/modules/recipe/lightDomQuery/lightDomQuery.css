@@ -1,0 +1,18 @@
+recipe-light-dom-query-child {
+    position: relative;
+    border: solid 1px #ecebea;
+    border-radius: 4px;
+    display: block;
+    padding: 0 12px 12px;
+    margin-top: 25px;
+}
+
+recipe-light-dom-query-child:before {
+    content: 'recipe-light-dom-query-child';
+    color: #dddbda;
+    position: absolute;
+    top: -16px;
+    left: 4px;
+    background-color: #ffffff;
+    padding: 0 4px;
+}

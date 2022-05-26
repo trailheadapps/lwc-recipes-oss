@@ -1,0 +1,4 @@
+/* These styles apply to this Light DOM component, and also to the parent component */
+.unscoped {
+    background: rgb(252, 219, 225);
+}

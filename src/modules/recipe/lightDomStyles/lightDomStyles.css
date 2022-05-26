@@ -1,0 +1,27 @@
+/* These styles apply to elements in this component and also to the elements inside a Light DOM child component */
+p {
+    background: yellow;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+recipe-light-dom-styles-child {
+    position: relative;
+    border: solid 1px #ecebea;
+    border-radius: 4px;
+    display: block;
+    padding: 0 12px;
+    margin-top: 25px;
+}
+
+recipe-light-dom-styles-child:before {
+    content: 'recipe-light-dom-styles-child';
+    color: #dddbda;
+    position: absolute;
+    top: -16px;
+    left: 4px;
+    background-color: #ffffff;
+    padding: 0 4px;
+}
