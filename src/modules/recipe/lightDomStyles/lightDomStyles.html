@@ -1,0 +1,17 @@
+<template>
+    <ui-card title="LightDomStyles">
+        <p>This is a paragraph in parent</p>
+        <div class="scoped">
+            This element remains unstyled by Light DOM child's scoped styles
+        </div>
+        <div class="unscoped">
+            This element is styled by Light DOM child's unscoped styles
+        </div>
+        <recipe-light-dom-styles-child></recipe-light-dom-styles-child>
+        <recipe-view-source source="recipe/lightDomStyles" slot="footer">
+            Styles from the parent component cascade into the child component,
+            and unscoped styles from the child are applied to the parent
+            component.
+        </recipe-view-source>
+    </ui-card>
+</template>

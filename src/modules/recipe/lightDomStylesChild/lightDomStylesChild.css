@@ -1,0 +1,6 @@
+/* These styles apply to this Light DOM component, and also to the parent component 
+ * As a best practice, we recommend using scoped styles where possible
+ */
+.unscoped {
+    background: rgb(252, 219, 225);
+}
