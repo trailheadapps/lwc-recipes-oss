@@ -10,7 +10,7 @@ on:
 # Jobs to be executed
 jobs:
     format-lint-lwc-tests:
-        runs-on: ubuntu-latest
+        runs-on: trailheadapps-Ubuntu
         steps:
             # Checkout the code in the pull request
             - name: 'Checkout source code'
@@ -58,7 +58,7 @@ jobs:
     dependabot-auto-merge:
         # Only run for Dependabot PRs
         if: ${{ github.actor == 'dependabot[bot]' }}
-        runs-on: ubuntu-latest
+        runs-on: trailheadapps-Ubuntu
         needs: format-lint-lwc-tests
         permissions:
             pull-requests: write
