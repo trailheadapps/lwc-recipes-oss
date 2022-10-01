@@ -9,7 +9,7 @@
         "jest-environment-jsdom": "^28.1.3",
         "lwc": "^2.23.2",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwr": "^0.7.4"
+        "lwr": "^0.7.6"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
