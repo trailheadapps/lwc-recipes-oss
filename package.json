@@ -7,7 +7,7 @@
         "chart.js": "^3.9.1",
         "d3": "^7.6.1",
         "jest-environment-jsdom": "^29.1.2",
-        "lwc": "^2.24.0",
+        "lwc": "^2.29.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.7.6"
     },
