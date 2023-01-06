@@ -6,7 +6,7 @@
     "dependencies": {
         "chart.js": "^3.9.1",
         "d3": "^7.6.1",
-        "jest-environment-jsdom": "^29.2.2",
+        "jest-environment-jsdom": "^29.3.1",
         "lwc": "^2.35.1",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.8.8"
@@ -15,7 +15,7 @@
     "devDependencies": {
         "@lwc/eslint-plugin-lwc": "^1.5.0",
         "@lwc/jest-preset": "^11.7.0",
-        "@sa11y/jest": "3.1.0",
+        "@sa11y/jest": "4.1.1",
         "@salesforce/eslint-config-lwc": "^3.3.3",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/wire-service-jest-util": "^4.0.1",
