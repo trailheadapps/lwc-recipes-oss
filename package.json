@@ -5,7 +5,7 @@
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
         "chart.js": "^3.9.1",
-        "d3": "^7.6.1",
+        "d3": "^7.8.0",
         "jest-environment-jsdom": "^29.3.1",
         "lwc": "^2.35.1",
         "lwc-recipes-oss-ui-components": "^0.3.2",
