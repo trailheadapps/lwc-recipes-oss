@@ -3,11 +3,11 @@ import LibsChartjs from 'recipe/libsChartjs';
 import ResizeObserver from './resizeObserverMock.js';
 
 jest.mock('chart.js', () => {
-    const { Chart } = jest.requireActual('chart.js');
+    const { Chart, registerables } = jest.requireActual('chart.js');
     return {
         __esModule: true,
         Chart,
-        registerables: []
+        registerables
     };
 });
 

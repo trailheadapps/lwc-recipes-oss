@@ -4,12 +4,12 @@
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
-        "chart.js": "^3.9.1",
+        "chart.js": "^4.1.2",
         "d3": "^7.8.0",
         "jest-environment-jsdom": "^29.3.1",
         "lwc": "^2.35.1",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwr": "^0.8.8"
+        "lwr": "^0.8.9"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
@@ -21,12 +21,12 @@
         "@salesforce/wire-service-jest-util": "^4.0.1",
         "eslint": "^8.31.0",
         "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-jest": "^27.2.0",
-        "husky": "^8.0.2",
-        "jest": "^29.2.2",
+        "eslint-plugin-jest": "^27.2.1",
+        "husky": "^8.0.3",
+        "jest": "^29.3.1",
         "jest-canvas-mock": "^2.4.0",
         "lint-staged": "^13.1.0",
-        "prettier": "^2.8.0"
+        "prettier": "^2.8.2"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "keywords": [
@@ -64,7 +64,7 @@
         ]
     },
     "volta": {
-        "node": "14.17.0",
+        "node": "14.19.1",
         "yarn": "1.22.10"
     }
 }
