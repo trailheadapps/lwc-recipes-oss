@@ -99,7 +99,7 @@
           "character": 34
         }
       },
-      "description": "Use the `if:true` or `if:false` directive to conditionally hide and show the content within the tag. It must be assigned a boolean value.",
+      "description": "Use the `lwc:if` directive to conditionally show the content within the tag. It must be assigned a boolean value.",
       "title": "HelloConditionalRendering - HTML"
     },
     {

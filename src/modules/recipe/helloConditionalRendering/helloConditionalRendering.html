@@ -8,12 +8,10 @@
             ></ui-input>
 
             <div class="details">
-                <template if:true={areDetailsVisible}>
+                <template lwc:if={areDetailsVisible}>
                     These are the details!
                 </template>
-                <template if:false={areDetailsVisible}>
-                    Not showing details.
-                </template>
+                <template lwc:else>Not showing details.</template>
             </div>
         </div>
 

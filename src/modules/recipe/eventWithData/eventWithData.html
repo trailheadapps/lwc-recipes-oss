@@ -1,6 +1,6 @@
 <template>
     <ui-card title="EventWithData">
-        <template if:true={contacts.data}>
+        <template lwc:if={contacts.data}>
             <div class="contacts">
                 <!-- recipe-contact-list-item emits a non-bubbling event so each element must have a listener-->
                 <div class="contact-list">
@@ -13,7 +13,7 @@
                     </template>
                 </div>
                 <div class="contact-details">
-                    <template if:true={selectedContact}>
+                    <template lwc:if={selectedContact}>
                         <img
                             src={selectedContact.Picture}
                             alt="Profile photo"
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </template>
-        <template if:true={contacts.error}>
+        <template lwc:if={contacts.error}>
             <recipe-error-panel errors={contacts.error}></recipe-error-panel>
         </template>
         <recipe-view-source source="recipe/eventWithData" slot="footer">

@@ -9,7 +9,7 @@
 
         <article class="container">
             <div>
-                <template if:true={navigationItems.hello.visible}>
+                <template lwc:if={navigationItems.hello.visible}>
                     <recipe-hello></recipe-hello>
                     <recipe-hello-binding></recipe-hello-binding>
                     <recipe-hello-expressions></recipe-hello-expressions>
@@ -18,33 +18,33 @@
                     <recipe-hello-for-each></recipe-hello-for-each
                     ><recipe-hello-iterator></recipe-hello-iterator>
                 </template>
-                <template if:true={navigationItems.composition.visible}>
+                <template lwc:if={navigationItems.composition.visible}>
                     <recipe-composition-basics></recipe-composition-basics>
                     <recipe-composition-iteration></recipe-composition-iteration>
                     <recipe-composition-contact-search></recipe-composition-contact-search>
                     <recipe-composition-dynamic></recipe-composition-dynamic>
                 </template>
-                <template if:true={navigationItems.child.visible}>
+                <template lwc:if={navigationItems.child.visible}>
                     <recipe-event-simple></recipe-event-simple>
                     <recipe-event-with-data></recipe-event-with-data>
                     <recipe-event-bubbling></recipe-event-bubbling>
                 </template>
-                <template if:true={navigationItems.parent.visible}>
+                <template lwc:if={navigationItems.parent.visible}>
                     <recipe-api-property></recipe-api-property>
                     <recipe-api-function></recipe-api-function>
                     <recipe-api-setter-getter></recipe-api-setter-getter>
                 </template>
-                <template if:true={navigationItems.misc.visible}>
+                <template lwc:if={navigationItems.misc.visible}>
                     <recipe-misc-shared-java-script></recipe-misc-shared-java-script>
                     <recipe-misc-rest-api-call></recipe-misc-rest-api-call>
                     <recipe-misc-dom-query></recipe-misc-dom-query>
                     <recipe-misc-multiple-templates></recipe-misc-multiple-templates>
                 </template>
-                <template if:true={navigationItems.party.visible}>
+                <template lwc:if={navigationItems.party.visible}>
                     <recipe-libs-d3></recipe-libs-d3>
                     <recipe-libs-chartjs></recipe-libs-chartjs>
                 </template>
-                <template if:true={navigationItems.lightDom.visible}>
+                <template lwc:if={navigationItems.lightDom.visible}>
                     <recipe-light-dom-query></recipe-light-dom-query>
                     <recipe-light-dom-styles></recipe-light-dom-styles>
                 </template>

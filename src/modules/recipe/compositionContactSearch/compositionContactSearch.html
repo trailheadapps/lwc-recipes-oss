@@ -6,7 +6,7 @@
                 onchange={handleKeyChange}
                 label="Search"
             ></ui-input>
-            <template if:true={contacts}>
+            <template lwc:if={contacts}>
                 <template for:each={contacts} for:item="contact">
                     <recipe-contact-tile
                         key={contact.Id}
@@ -15,7 +15,7 @@
                 </template>
             </template>
         </div>
-        <template if:true={error}>
+        <template lwc:if={error}>
             <recipe-error-panel errors={error}></recipe-error-panel>
         </template>
         <recipe-view-source

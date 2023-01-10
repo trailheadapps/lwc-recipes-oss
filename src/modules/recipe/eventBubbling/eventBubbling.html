@@ -1,6 +1,6 @@
 <template>
     <ui-card title="EventBubbling">
-        <template if:true={contacts.data}>
+        <template lwc:if={contacts.data}>
             <div class="contacts">
                 <!-- recipe-contact-list-item-bubbling emits a bubbling event so a single listener on a containing element works -->
                 <div class="contact-list" oncontactselect={handleContactSelect}>
@@ -12,7 +12,7 @@
                     </template>
                 </div>
                 <div class="contact-details">
-                    <template if:true={selectedContact}>
+                    <template lwc:if={selectedContact}>
                         <img
                             src={selectedContact.Picture}
                             alt="Profile photo"
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </template>
-        <template if:true={contacts.error}>
+        <template lwc:if={contacts.error}>
             <recipe-error-panel errors={contacts.error}></recipe-error-panel>
         </template>
         <recipe-view-source source="recipe/eventBubbling" slot="footer">
