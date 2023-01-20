@@ -4,12 +4,12 @@
             <template iterator:it={contacts}>
                 <li key={it.value.Id}>
                     <div
-                        if:true={it.first}
+                        lwc:if={it.first}
                         key={it.value.Id}
                         class="list-first"
                     ></div>
                     {it.value.Name}, {it.value.Title}
-                    <div if:true={it.last} class="list-last"></div>
+                    <div lwc:if={it.last} class="list-last"></div>
                 </li>
             </template>
         </ul>

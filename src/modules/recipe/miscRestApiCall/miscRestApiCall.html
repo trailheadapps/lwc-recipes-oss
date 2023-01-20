@@ -16,7 +16,7 @@
                     ></ui-button>
                 </p>
             </div>
-            <template if:true={books}>
+            <template lwc:if={books}>
                 <ul>
                     <template for:each={books.items} for:item="book">
                         <li key={book.id} class="search-results">
@@ -25,7 +25,7 @@
                     </template>
                 </ul>
             </template>
-            <template if:true={error}>
+            <template lwc:if={error}>
                 <recipe-error-panel errors={error}></recipe-error-panel>
             </template>
         </div>

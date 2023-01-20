@@ -36,14 +36,15 @@ describe('recipe-hello-iterator', () => {
         });
         document.body.appendChild(element);
 
-        // Verify first ul's first child is a div
+        // Verify first ul's child is a div
         expect(
-            element.shadowRoot.querySelector('li:first-child').firstChild
+            element.shadowRoot.querySelector('li:first-child').children[0]
                 .tagName
         ).toBe('DIV');
-        // Verify last li's last child is a div
+        // Verify last li's child is a div
         expect(
-            element.shadowRoot.querySelector('li:last-child').lastChild.tagName
+            element.shadowRoot.querySelector('li:last-child').children[0]
+                .tagName
         ).toBe('DIV');
     });
 

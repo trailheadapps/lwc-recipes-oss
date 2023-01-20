@@ -1,5 +1,5 @@
 <template>
-    <template if:true={contact}>
+    <template lwc:if={contact}>
         <img src={contact.Picture} alt="Profile photo" />
         <p>{contact.Name}</p>
         <p>{contact.Title}</p>
@@ -7,5 +7,5 @@
             <ui-output type="phone" value={contact.Phone}></ui-output>
         </p>
     </template>
-    <template if:false={contact}><p>No contact data available.</p></template>
+    <template lwc:else><p>No contact data available.</p></template>
 </template>
