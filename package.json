@@ -14,7 +14,7 @@
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
         "@lwc/eslint-plugin-lwc": "^1.5.1",
-        "@lwc/jest-preset": "^11.7.0",
+        "@lwc/jest-preset": "^11.7.1",
         "@sa11y/jest": "4.1.3",
         "@salesforce/eslint-config-lwc": "^3.3.4",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
