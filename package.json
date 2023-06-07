@@ -20,14 +20,14 @@
         "@salesforce/eslint-config-lwc": "^3.4.0",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/wire-service-jest-util": "^4.0.1",
-        "eslint": "^8.37.0",
+        "eslint": "^8.41.0",
         "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jest": "^27.2.1",
         "husky": "^8.0.3",
         "jest": "^29.5.0",
         "jest-canvas-mock": "^2.5.1",
-        "lint-staged": "^13.2.0",
-        "prettier": "^2.8.4"
+        "lint-staged": "^13.2.2",
+        "prettier": "^2.8.8"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "keywords": [
