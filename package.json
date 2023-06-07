@@ -6,10 +6,11 @@
     "dependencies": {
         "chart.js": "^4.2.1",
         "d3": "^7.8.4",
-        "jest-environment-jsdom": "^29.4.3",
-        "lwc": "^2.35.1",
+        "jest-environment-jsdom": "^29.5.0",
+        "lwc": "^2.48.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwr": "^0.8.14"
+        "lwr": "^0.9.4",
+        "time-elements": "^3.0.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
@@ -24,7 +25,7 @@
         "eslint-plugin-jest": "^27.2.1",
         "husky": "^8.0.3",
         "jest": "^29.5.0",
-        "jest-canvas-mock": "^2.5.0",
+        "jest-canvas-mock": "^2.5.1",
         "lint-staged": "^13.2.0",
         "prettier": "^2.8.4"
     },
@@ -36,7 +37,7 @@
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
         "clean": "rm -rf __lwr_cache__",
-        "dev": "node scripts/start-server.mjs",
+        "dev": "MODE=dev node scripts/start-server.mjs",
         "lint": "eslint **/src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{css,html,js,json,md,yaml,yml}\"",
