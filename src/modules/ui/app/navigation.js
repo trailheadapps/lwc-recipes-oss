@@ -38,6 +38,11 @@ const navigationItems = {
         title: 'Light DOM',
         value: 'lightDom',
         visible: false
+    },
+    externalWc: {
+        title: '3rd Party Web Components',
+        value: 'externalWc',
+        visible: false
     }
 };
 
@@ -48,7 +53,8 @@ const navigationElements = [
     'parent',
     'misc',
     'party',
-    'lightDom'
+    'lightDom',
+    'externalWc'
 ];
 
 export { navigationItems, navigationElements };

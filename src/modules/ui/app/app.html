@@ -48,6 +48,10 @@
                     <recipe-light-dom-query></recipe-light-dom-query>
                     <recipe-light-dom-styles></recipe-light-dom-styles>
                 </template>
+                <template lwc:elseif={navigationItems.externalWc.visible}>
+                    <recipe-external-component-cdn></recipe-external-component-cdn>
+                    <recipe-external-component-npm></recipe-external-component-npm>
+                </template>
                 <ui-navfooter
                     label-next={nextNavigationItem}
                     label-previous={previousNavigationItem}
