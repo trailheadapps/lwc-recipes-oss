@@ -16,8 +16,8 @@ describe('recipe-external-component-npm', () => {
         });
         document.body.appendChild(element);
 
-        const divElement = element.shadowRoot.querySelector('div');
-        expect(divElement.textContent).toBe('You loaded this component now');
+        const timeElement = element.shadowRoot.querySelector('relative-time');
+        expect(timeElement.textContent).toBe('now');
     });
 
     it('is accessible', () => {

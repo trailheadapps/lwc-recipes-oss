@@ -1,12 +1,14 @@
 <template>
     <ui-card title="ExternalComponentCDN">
         <!-- 
-            The JavaScript and CSS files needed for the below component 
+            The JavaScript and CSS files needed for the below third-party component 
             are loaded from a CDN in the src/layouts/index.html file.
+
+            Documentation for the third party component: https://shoelace.style/components/rating
         -->
         <sl-rating lwc:external label="Rating" value={rating}></sl-rating>
-        <br />
-        Selected Rating is: {rating}
+
+        <p>Selected Rating is: {rating}</p>
 
         <recipe-view-source source="recipe/externalComponentCdn" slot="footer">
             Import a third-party web component from a CDN.

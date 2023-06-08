@@ -1,8 +1,15 @@
 <template>
     <ui-card title="ExternalComponentNPM">
-        <!-- prettier-ignore -->
+        <div>Component Load time: {date}</div>
         <div>
-            You loaded this component <relative-time datetime={date} lwc:external></relative-time>
+            <!--
+                Documentation for the third-party component: 
+                https://www.webcomponents.org/element/time-elements
+            -->
+            <p>
+                Relative time (auto-updated every minute):
+                <relative-time datetime={date} lwc:external></relative-time>
+            </p>
         </div>
 
         <recipe-view-source source="recipe/externalComponentNpm" slot="footer">

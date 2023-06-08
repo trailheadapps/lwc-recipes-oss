@@ -1,0 +1,18 @@
+sl-rating {
+    position: relative;
+    border: solid 1px #ecebea;
+    border-radius: 4px;
+    display: block;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+sl-rating:before {
+    content: 'Third Party Web Component';
+    color: #dddbda;
+    position: absolute;
+    top: -16px;
+    left: 4px;
+    background-color: #ffffff;
+    padding: 0 4px;
+}
