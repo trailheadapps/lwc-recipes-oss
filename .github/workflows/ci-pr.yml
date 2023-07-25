@@ -57,7 +57,7 @@ jobs:
     # - minor updates on dev dependencies
     dependabot-auto-merge:
         # Only run for Dependabot PRs
-        if: ${{ github.actor == 'dependabot[bot]' }}
+        if: github.actor == 'dependabot[bot]'
         runs-on: trailheadapps-Ubuntu
         needs: format-lint-lwc-tests
         permissions:
@@ -81,7 +81,7 @@ jobs:
               run: echo "::notice ::auto-merge conditions satisfied"
 
             - name: 'Approve and merge PR'
-              if: ${{ steps.auto-merge.conclusion == 'success' }}
+              if: steps.auto-merge.conclusion == 'success'
               run: |
                   gh pr review --approve "$PR_URL"
                   gh pr merge --auto --rebase "$PR_URL"
