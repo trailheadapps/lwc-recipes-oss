@@ -6,7 +6,7 @@
     "dependencies": {
         "chart.js": "^4.3.0",
         "d3": "^7.8.5",
-        "jest-environment-jsdom": "^29.5.0",
+        "jest-environment-jsdom": "^29.7.0",
         "lwc": "^2.48.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.9.5",
