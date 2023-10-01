@@ -4,7 +4,7 @@
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
-        "chart.js": "^4.3.0",
+        "chart.js": "^4.4.0",
         "d3": "^7.8.5",
         "jest-environment-jsdom": "^29.5.0",
         "lwc": "^2.48.0",
