@@ -12,7 +12,8 @@ module.exports = {
         '^recipe/(.+)$': '<rootDir>/src/modules/recipe/$1/$1',
         '^ui/(.+)$': '<rootDir>/jest-mocks/ui/$1/$1',
         'data/wireGetContactListProvider':
-            '<rootDir>/jest-mocks/data/wireGetContactListProvider/wireGetContactListProvider'
+            '<rootDir>/jest-mocks/data/wireGetContactListProvider/wireGetContactListProvider',
+        'wired-elements': '<rootDir>/jest-mocks/wired-elements/wiredElements'
     },
     globals: {
         'lwc-jest': {
