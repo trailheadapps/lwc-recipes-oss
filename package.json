@@ -4,30 +4,30 @@
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
-        "chart.js": "^4.3.0",
+        "chart.js": "^4.4.0",
         "d3": "^7.8.5",
-        "jest-environment-jsdom": "^29.5.0",
-        "lwc": "^2.48.0",
+        "lwc": "^3.5.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwr": "^0.9.5",
+        "lwr": "^0.10.9",
         "time-elements": "^3.0.0"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
         "@lwc/eslint-plugin-lwc": "^1.6.3",
-        "@lwc/jest-preset": "^11.8.0",
+        "@lwc/jest-preset": "^14.1.0",
         "@sa11y/jest": "5.3.0",
         "@salesforce/eslint-config-lwc": "^3.5.2",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/wire-service-jest-util": "^4.0.2",
-        "eslint": "^8.46.0",
+        "eslint": "^8.50.0",
         "eslint-plugin-import": "^2.28.1",
-        "eslint-plugin-jest": "^27.2.3",
+        "eslint-plugin-jest": "^27.4.2",
         "husky": "^8.0.3",
-        "jest": "^29.6.2",
+        "jest": "^29.7.0",
         "jest-canvas-mock": "^2.5.2",
-        "lint-staged": "^13.2.3",
-        "prettier": "^2.8.8"
+        "jest-environment-jsdom": "^29.7.0",
+        "lint-staged": "^14.0.1",
+        "prettier": "^3.0.3"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "keywords": [
@@ -51,7 +51,7 @@
         "test:unit:debug": "jest --debug"
     },
     "engines": {
-        "node": ">=14.15.4 <17"
+        "node": ">=14 <=20"
     },
     "lint-staged": {
         "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
@@ -65,7 +65,6 @@
         ]
     },
     "volta": {
-        "node": "14.19.1",
-        "yarn": "1.22.10"
+        "node": "18.18.0"
     }
 }
