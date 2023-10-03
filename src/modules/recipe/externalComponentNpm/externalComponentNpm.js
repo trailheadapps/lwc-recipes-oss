@@ -1,10 +1,15 @@
 import { LightningElement } from 'lwc';
-import 'time-elements';
+import 'wired-elements';
 
 export default class ExternalComponentNPM extends LightningElement {
-    date;
+    greeting = 'World';
 
-    connectedCallback() {
-        this.date = new Date();
+    handleChange(event) {
+        this.greeting = event.target.value;
+    }
+
+    handleSayHelloClick() {
+        // eslint-disable-next-line no-alert
+        alert(`Hello ${this.greeting}`);
     }
 }

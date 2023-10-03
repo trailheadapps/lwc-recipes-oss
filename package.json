@@ -9,7 +9,7 @@
         "lwc": "^3.5.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.10.9",
-        "time-elements": "^3.0.0"
+        "wired-elements": "^3.0.0-rc.6"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
