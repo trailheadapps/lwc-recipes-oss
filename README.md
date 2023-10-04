@@ -17,9 +17,19 @@ Check out [https://lwc-recipes-oss.herokuapp.com](https://lwc-recipes-oss.heroku
 
 ## Deploy to Heroku
 
-If you want to deploy LWC Recipes Open Source to Heroku - there's a button for that.
+If you want to deploy LWC Recipes Open Source to Heroku, you can do the following:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+1. Create a Heroku application:
+
+```
+heroku create <app name>
+```
+
+2. Deploy the application:
+
+```
+git push heroku main
+```
 
 ## Local Development
 
@@ -36,13 +46,19 @@ cd lwc-recipes-oss
 npm install
 ```
 
-3. Start the app in watch mode.
+3. Build the LWR static site.
+
+```
+npm run build
+```
+
+4. Start the app in watch mode.
 
 ```
 npm run dev
 ```
 
-4. Enjoy the app!
+5. Enjoy the app!
 
 ## Code Tours
 

@@ -4,8 +4,10 @@
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
+        "@fastify/static": "^6.11.2",
         "chart.js": "^4.4.0",
         "d3": "^7.8.5",
+        "fastify": "^4.23.2",
         "lwc": "^3.5.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.10.10",
@@ -36,15 +38,16 @@
     "license": "CC0-1.0",
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
-        "clean": "rm -rf __lwr_cache__",
+        "build": "lwr build",
+        "clean": "rm -rf __lwr_cache__ && rm -rf site",
         "dev": "MODE=dev node scripts/start-server.mjs",
         "lint": "eslint **/src/**/*.js",
-        "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
-        "prettier:verify": "prettier --check \"**/*.{css,html,js,json,md,yaml,yml}\"",
+        "prettier": "prettier --write \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
+        "prettier:verify": "prettier --check \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
         "postinstall": "husky install",
         "precommit": "lint-staged",
-        "start": "MODE=prod node scripts/start-server.mjs",
-        "start:amd": "MODE=compat node scripts/start-server.mjs",
+        "start": "node scripts/start-server.mjs",
+        "test": "npm run test:unit",
         "test:unit": "jest",
         "test:unit:watch": "jest --watch",
         "test:unit:coverage": "jest --coverage",
@@ -54,7 +57,7 @@
         "node": ">=14 <=20"
     },
     "lint-staged": {
-        "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
+        "**/*.{cls,cmp,component,css,html,js,mjs,json,md,page,trigger,xml,yaml,yml}": [
             "prettier --write"
         ],
         "**/src/**/*.js": [

@@ -7,6 +7,7 @@ logs
 # Standard dist folder
 /dist
 /build
+/site
 
 # Tooling files
 node_modules
