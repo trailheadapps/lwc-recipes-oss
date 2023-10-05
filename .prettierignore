@@ -1,5 +1,6 @@
 .vscode
 coverage/
 dist/
+site/
 src/resources
 __lwr_cache__

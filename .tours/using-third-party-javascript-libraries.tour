@@ -5,7 +5,7 @@
     {
       "file": "package.json",
       "description": "Install the npm package corresponding to the libraries you want to use. Here we've installed the `chart.js` library which we've used in the `libsChartjs` recipe.",
-      "line": 7,
+      "line": 8,
       "title": "Install a library"
     },
     {

@@ -5,9 +5,10 @@
     },
     "overrides": [
         {
-            "files": ["./*.js", "*.test.js"],
+            "files": ["./*.js", "*.test.js", "scripts/*.mjs"],
             "env": {
-                "node": true
+                "node": true,
+                "es6": true
             }
         }
     ]
