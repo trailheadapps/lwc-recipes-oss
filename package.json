@@ -40,7 +40,7 @@
     "scripts": {
         "build": "lwr build",
         "clean": "rm -rf __lwr_cache__ && rm -rf site",
-        "dev": "MODE=dev node scripts/start-server.mjs",
+        "dev": "lwr dev",
         "lint": "eslint **/src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
