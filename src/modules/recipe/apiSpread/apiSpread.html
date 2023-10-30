@@ -1,0 +1,25 @@
+<template>
+    <ui-card title="ApiSpread">
+        <div>
+            <ui-input
+                label="First Name"
+                name="firstName"
+                type="text"
+                value={props.firstName}
+                onchange={handleFirstNameChange}
+            ></ui-input>
+            <ui-input
+                label="Last Name"
+                name="lastName"
+                type="text"
+                value={props.lastName}
+                onchange={handleLastNameChange}
+            ></ui-input>
+            <recipe-child lwc:spread={props}></recipe-child>
+        </div>
+
+        <recipe-view-source source="recipe/apiSpread" slot="footer">
+            Pass data to a child component using lwc:spread directive
+        </recipe-view-source>
+    </ui-card>
+</template>
