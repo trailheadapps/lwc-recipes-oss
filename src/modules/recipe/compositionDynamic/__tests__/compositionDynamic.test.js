@@ -23,10 +23,9 @@ describe('recipe-composition-dynamic', () => {
         document.body.appendChild(element);
 
         // Select the Dynamic Element
-        const dynamicEl = element.shadowRoot.querySelectorAll(
-            'recipe-dynamic-import'
-        );
-        expect(dynamicEl.length).toBe(0);
+        const dynamicEl =
+            element.shadowRoot.querySelector('.dynamic-component');
+        expect(dynamicEl.children.length).toBe(0);
     });
 
     it('renders the Hello component on button click', async () => {
@@ -40,11 +39,15 @@ describe('recipe-composition-dynamic', () => {
         const buttonEl = element.shadowRoot.querySelector('ui-button');
         buttonEl.click();
 
-        return flushPromises().then(() => {
-            const dynamicEl = element.shadowRoot.querySelectorAll(
-                'recipe-dynamic-import'
-            );
-            expect(dynamicEl.length).toBe(1);
-        });
+        await flushPromises();
+
+        const dynamicEl =
+            element.shadowRoot.querySelector('.dynamic-component');
+        expect(dynamicEl.children.length).toBe(1);
+
+        expect(
+            // eslint-disable-next-line @lwc/lwc/no-inner-html
+            dynamicEl.children[0].shadowRoot.innerHTML.includes('Hello, World!')
+        ).toBe(true);
     });
 });
