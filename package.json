@@ -29,7 +29,8 @@
         "jest-canvas-mock": "^2.5.2",
         "jest-environment-jsdom": "^29.7.0",
         "lint-staged": "^14.0.1",
-        "prettier": "^3.0.3"
+        "prettier": "^3.0.3",
+        "rimraf": "^5.0.5"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "keywords": [
@@ -39,7 +40,7 @@
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
         "build": "lwr build",
-        "clean": "rm -rf __lwr_cache__ && rm -rf site",
+        "clean": "rimraf __lwr_cache__ && rimraf site",
         "dev": "lwr dev",
         "lint": "eslint **/src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
