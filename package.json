@@ -10,26 +10,27 @@
         "fastify": "^4.23.2",
         "lwc": "^3.5.0",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwr": "^0.10.10",
+        "lwr": "^0.10.12",
         "wired-elements": "^3.0.0-rc.6"
     },
     "description": "Lightning Web Components Recipes Open Source",
     "devDependencies": {
-        "@lwc/eslint-plugin-lwc": "^1.6.3",
+        "@lwc/eslint-plugin-lwc": "^1.6.4",
         "@lwc/jest-preset": "^14.1.0",
         "@sa11y/jest": "5.3.0",
         "@salesforce/eslint-config-lwc": "^3.5.2",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
-        "@salesforce/wire-service-jest-util": "^4.0.2",
-        "eslint": "^8.50.0",
-        "eslint-plugin-import": "^2.28.1",
-        "eslint-plugin-jest": "^27.4.2",
+        "@salesforce/wire-service-jest-util": "^4.1.0",
+        "eslint": "^8.52.0",
+        "eslint-plugin-import": "^2.29.0",
+        "eslint-plugin-jest": "^27.6.0",
         "husky": "^8.0.3",
         "jest": "^29.7.0",
         "jest-canvas-mock": "^2.5.2",
         "jest-environment-jsdom": "^29.7.0",
         "lint-staged": "^14.0.1",
-        "prettier": "^3.0.3"
+        "prettier": "^3.0.3",
+        "rimraf": "^5.0.5"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
     "keywords": [
@@ -39,7 +40,7 @@
     "repository": "trailheadapps/lwc-recipes-oss",
     "scripts": {
         "build": "lwr build",
-        "clean": "rm -rf __lwr_cache__ && rm -rf site",
+        "clean": "rimraf __lwr_cache__ && rimraf site",
         "dev": "lwr dev",
         "lint": "eslint **/src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
