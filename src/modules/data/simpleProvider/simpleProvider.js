@@ -8,7 +8,3 @@ export function findContacts(searchKey) {
     );
     return results;
 }
-
-export function getContactList() {
-    return { data: contacts };
-}
