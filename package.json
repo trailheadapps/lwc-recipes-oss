@@ -65,7 +65,7 @@
             "eslint"
         ],
         "**/src/**": [
-            "jest --bail --findRelatedTests"
+            "jest --bail --findRelatedTests --passWithNoTests"
         ]
     },
     "volta": {
