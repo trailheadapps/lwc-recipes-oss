@@ -15,9 +15,8 @@ export default class App extends LightningElement {
         window.onpopstate = function (event) {
             if (event.state && event.state.page) {
                 that._isWindowHistoryUpdate = true;
-                that.navigationItems[
-                    that.currentNavigationItem
-                ].visible = false;
+                that.navigationItems[that.currentNavigationItem].visible =
+                    false;
                 that.currentNavigationItem = event.state.page;
                 that.hideCurrentNavigationItemFromNav();
                 that.handleCategoryChange();
@@ -46,9 +45,8 @@ export default class App extends LightningElement {
     handleCategoryChange(event) {
         if (event) {
             if (this.currentNavigationItem !== event.detail) {
-                this.navigationItems[
-                    this.currentNavigationItem
-                ].visible = false;
+                this.navigationItems[this.currentNavigationItem].visible =
+                    false;
                 this.currentNavigationItem = event.detail;
             } else {
                 return;
