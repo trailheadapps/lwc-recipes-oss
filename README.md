@@ -7,7 +7,7 @@ A collection of easy-to-digest code examples for Lightning Web Components Open S
 <div>
    <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/projects/quick-start-explore-the-lightning-web-components-oss-recipes-sample-app/3039bf385440158b5a43a1d42cbbe82d_badge.png" align="left" alt="Trailhead Badge" height="40px" width="40px" style="padding-right: 0.5em;"/>
    <p style="padding-top:0.5em;">
-      Learn more about this app by completing the <a href="https://trailhead.salesforce.com/en/content/learn/projects/quick-start-explore-the-lightning-web-components-oss-recipes-sample-app" >Quick Start: Explore the Lightning Web Components OSS Recipes Sample App</a> Trailhead project.
+      Learn more about this app by completing the <a href="https://trailhead.salesforce.com/en/content/learn/projects/quick-start-explore-the-lightning-web-components-oss-recipes-sample-app" >Quick Start: Explore the Lightning Web Components OSS Recipes Sample App</a> Trailhead project or by watching this <a href="https://www.youtube.com/watch?v=4mXCLJm8KF4&list=PLgIMQe2PKPSJcuCwM61dEc4jFG_jHqV2t&index=6">short presentation video</a>.
    </p>
 </div>
 
