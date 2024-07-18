@@ -18,18 +18,18 @@
         "@lwc/eslint-plugin-lwc": "^1.8.2",
         "@lwc/jest-preset": "^16.0.0",
         "@sa11y/jest": "6.9.5",
-        "@salesforce/eslint-config-lwc": "^3.5.3",
+        "@salesforce/eslint-config-lwc": "^3.6.0",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
         "@salesforce/wire-service-jest-util": "^4.1.4",
         "eslint": "^8.57.0",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jest": "^28.6.0",
-        "husky": "^9.0.11",
+        "husky": "^9.1.0",
         "jest": "^29.7.0",
         "jest-canvas-mock": "^2.5.2",
         "jest-environment-jsdom": "^29.7.0",
         "lint-staged": "^15.2.7",
-        "prettier": "^3.3.2",
+        "prettier": "^3.3.3",
         "rimraf": "^5.0.7"
     },
     "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
@@ -45,7 +45,7 @@
         "lint": "eslint **/src/**/*.js",
         "prettier": "prettier --write \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
-        "postinstall": "husky install",
+        "prepare": "husky || true",
         "precommit": "lint-staged",
         "start": "node scripts/start-server.mjs",
         "test": "npm run test:unit",
@@ -69,6 +69,6 @@
         ]
     },
     "volta": {
-        "node": "18.18.0"
+        "node": "20.15.0"
     }
 }
