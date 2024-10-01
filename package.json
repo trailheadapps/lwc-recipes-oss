@@ -20,7 +20,7 @@
         "@sa11y/jest": "6.10.1",
         "@salesforce/eslint-config-lwc": "^3.6.0",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
-        "@salesforce/wire-service-jest-util": "^4.1.4",
+        "@salesforce/wire-service-jest-util": "^4.1.5",
         "eslint": "^8.57.0",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jest": "^28.8.1",
