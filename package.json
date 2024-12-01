@@ -4,7 +4,7 @@
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
-        "@fastify/static": "^7.0.4",
+        "@fastify/static": "^8.0.3",
         "chart.js": "^4.4.4",
         "d3": "^7.9.0",
         "fastify": "^4.26.2",
