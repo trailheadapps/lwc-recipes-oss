@@ -8,7 +8,7 @@
         "chart.js": "^4.4.8",
         "d3": "^7.9.0",
         "fastify": "^5.2.1",
-        "lwc": "^8.12.7",
+        "lwc": "^8.16.1",
         "lwc-recipes-oss-ui-components": "^0.3.2",
         "lwr": "^0.16.11",
         "wired-elements": "^3.0.0-rc.6"
