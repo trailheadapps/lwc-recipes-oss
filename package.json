@@ -10,7 +10,7 @@
         "fastify": "^5.2.2",
         "lwc": "^8.12.7",
         "lwc-recipes-oss-ui-components": "^0.3.2",
-        "lwr": "^0.16.11",
+        "lwr": "^0.17.2",
         "wired-elements": "^3.0.0-rc.6"
     },
     "description": "Lightning Web Components Recipes Open Source",
