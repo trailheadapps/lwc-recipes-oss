@@ -1,5 +1,5 @@
 {
-    "name": "lwc-recipes-oss",
+    "name": "@salesforce/lwc-recipes-oss",
     "version": "1.0.0",
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
