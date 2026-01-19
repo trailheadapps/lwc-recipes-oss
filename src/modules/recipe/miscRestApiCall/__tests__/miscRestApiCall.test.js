@@ -1,14 +1,12 @@
 import { createElement } from 'lwc';
 import MiscRestApiCall from 'recipe/miscRestApiCall';
 import { setImmediate } from 'timers';
+import FETCH_DATA from './data/fetch.json';
+import FETCH_ERROR from './data/fetchError.json';
 
 // Query URL for connecting to Google API
 const QUERY_URL =
     'https://www.googleapis.com/books/v1/volumes?langRestrict=en&q=';
-// Realistic test data for a successful fetch request.
-const FETCH_DATA = require('./data/fetch.json');
-// Realistic test data for an unsuccessful fetch request.
-const FETCH_ERROR = require('./data/fetchError.json');
 
 describe('recipe-misc-rest-api-call', () => {
     afterEach(() => {
@@ -40,7 +38,6 @@ describe('recipe-misc-rest-api-call', () => {
     // Helper function to wait until the microtask queue is empty.
     // This is needed for promise timing.
     function flushPromises() {
-        // eslint-disable-next-line no-undef
         return new Promise((resolve) => setImmediate(resolve));
     }
 

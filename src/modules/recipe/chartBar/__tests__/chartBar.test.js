@@ -9,7 +9,7 @@ describe('recipe-chart-bar', () => {
         }
     });
 
-    it('renders a div with the percentage value as style attribute', () => {
+    it('renders a div with the percentage value as style attribute', async () => {
         // Create initial element
         const element = createElement('recipe-chart-bar', {
             is: ChartBar
@@ -22,21 +22,19 @@ describe('recipe-chart-bar', () => {
         // Query div for validating computed style attribute value on component init
         const divEl = element.shadowRoot.querySelector('div.bar');
         expect(divEl).not.toBeNull();
-        expect(divEl.style._values.width).toBe('40%');
+        expect(divEl.style.width).toBe('40%');
 
         // Set public property
         element.percentage = 60;
 
-        // Return a promise to wait for any asynchronous DOM updates. Jest
-        // will automatically wait for the Promise chain to complete before
-        // ending the test and fail the test if the promise rejects.
-        return Promise.resolve().then(() => {
-            // Query div for validating computed style attribute value on public property change
-            expect(divEl.style._values.width).toBe('60%');
-        });
+        // Wait for any asynchronous DOM updates.
+        await Promise.resolve();
+
+        // Query div for validating computed style attribute value on public property change
+        expect(divEl.style.width).toBe('60%');
     });
 
-    it('is accessible', () => {
+    it('is accessible', async () => {
         const element = createElement('recipe-chart-bar', {
             is: ChartBar
         });
@@ -44,6 +42,7 @@ describe('recipe-chart-bar', () => {
         element.percentage = 40;
         document.body.appendChild(element);
 
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
+        await Promise.resolve();
+        expect(element).toBeAccessible();
     });
 });

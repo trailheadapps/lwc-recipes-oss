@@ -1,4 +1,6 @@
 import { getTermOptions, calculateMonthlyPayment } from 'recipe/mortgage';
+import INVALID_INPUTS from './data/invalidInputsTestData.json';
+import TERM_OPTIONS from './data/termOptions.json';
 
 describe('recipe-mortgage', () => {
     describe('calculateMonthlyPayment function', () => {
@@ -21,7 +23,6 @@ describe('recipe-mortgage', () => {
 
         it('returns zero with invalid inputs', () => {
             // each value tests each param as falsy, third param also tested for explicit zero value
-            const INVALID_INPUTS = require('./data/invalidInputsTestData.json');
 
             // invoke with 4 invalid input sets and store each return value in an array
             const results = INVALID_INPUTS.inputs.map((item) =>
@@ -33,8 +34,6 @@ describe('recipe-mortgage', () => {
     });
 
     it('getTermOptions returns valid term options', () => {
-        const termOptions = require('./data/termOptions.json');
-
-        expect(getTermOptions()).toMatchObject(termOptions);
+        expect(getTermOptions()).toMatchObject(TERM_OPTIONS);
     });
 });

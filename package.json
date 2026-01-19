@@ -1,6 +1,7 @@
 {
     "name": "@salesforce/lwc-recipes-oss",
     "version": "1.0.0",
+    "type": "module",
     "author": "Salesforce Developer Evangelism",
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
@@ -42,7 +43,7 @@
         "build": "lwr build",
         "clean": "rimraf __lwr_cache__ && rimraf site",
         "dev": "lwr dev",
-        "lint": "eslint **/src/**/*.js",
+        "lint": "eslint .",
         "prettier": "prettier --write \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{css,html,js,mjs,json,md,yaml,yml}\"",
         "prepare": "husky || true",
@@ -61,7 +62,7 @@
         "**/*.{cls,cmp,component,css,html,js,mjs,json,md,page,trigger,xml,yaml,yml}": [
             "prettier --write"
         ],
-        "**/src/**/*.js": [
+        "**/*.js": [
             "eslint"
         ],
         "**/src/**": [

@@ -1,13 +1,8 @@
 import { createElement } from 'lwc';
 import EventBubbling from 'recipe/eventBubbling';
 import getContactList from 'data/wireGetContactListProvider';
-
-// Realistic data with a list of records
-const mockGetContactList = require('./data/getContactList.json');
-
-// An empty list of records to verify the component does something reasonable
-// when there is no data to display
-const mockGetContactListNoRecords = require('./data/getContactListNoRecords.json');
+import mockGetContactList from './data/getContactList.json';
+import mockGetContactListNoRecords from './data/getContactListNoRecords.json';
 
 describe('recipe-event-bubbling', () => {
     afterEach(() => {
