@@ -52,3 +52,15 @@ jobs:
             # Upload code coverage data
             - name: 'Upload code coverage for LWC to Codecov.io'
               uses: codecov/codecov-action@v7.0.0
+
+            # Build the LWR static site. lwr build exits with 0 when a route fails
+            # to build and only logs an [error] line, so fail on such lines as well.
+            # The explicit bash shell adds pipefail to keep the exit code of the build.
+            - name: 'Build LWR static site'
+              shell: bash
+              run: |
+                  npm run build 2>&1 | tee build.log
+                  if grep -q '\[error\]' build.log; then
+                      echo "::error title=Build LWR static site::lwr build logged errors, see the output above"
+                      exit 1
+                  fi
