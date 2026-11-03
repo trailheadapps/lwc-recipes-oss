@@ -9,7 +9,11 @@ const __dirname = dirname(__filename);
 const staticDir = join(__dirname, '..', '/site');
 
 const fastify = new Fastify({
-    logger: true
+    logger: true,
+    // LWR links to its generated files with an encoded path (e.g. %40lwrjs%2Fapp) but stores
+    // them in nested folders (@lwrjs/app). @fastify/static doesn't decode these since v9.1.1.
+    // That's safe to do here: the whole site is public, there are no route guards.
+    rewriteUrl: (req) => req.url.replace(/%2F|%40/gi, decodeURIComponent)
 });
 
 fastify.register(import('@fastify/static'), {
