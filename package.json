@@ -6,7 +6,7 @@
     "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
     "dependencies": {
         "@fastify/static": "^10.1.8",
-        "chart.js": "^4.5.1",
+        "chart.js": "^4.6.1",
         "d3": "^7.9.0",
         "fastify": "^5.12.5",
         "lwc": "^9.5.3",
