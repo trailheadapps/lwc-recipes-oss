@@ -1,0 +1,7 @@
+# Check out text files with LF on every platform. Prettier expects LF, so
+# npm run prettier:verify would fail on Windows with core.autocrlf=true otherwise.
+* text=auto eol=lf
+
+*.ico binary
+*.jpg binary
+*.png binary
